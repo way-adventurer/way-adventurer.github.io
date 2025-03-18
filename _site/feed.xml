@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>WenQi Wei</title>
   <subtitle>这里是，way的世界！welcome！</subtitle>
-  <updated>2025-03-19T01:37:26+08:00</updated>
+  <updated>2025-03-19T01:40:15+08:00</updated>
   <author>
     <name>WenQi Wei</name>
     <uri>http://localhost:4000/</uri>
@@ -40,23 +40,6 @@
 
   <summary>在这个信息爆炸的时代，拥有一个属于自己的博客不仅能够记录知识、分享经验，更是一种个人品牌的打造。本文将带你从零开始，详细讲解如何使用 GitHub Pages 和 Jekyll 搭建一个专业的个人博客网站。
 
-文章导航
-
-
-  一、前期准备：认识你的工具箱
-  二、环境配置：打造完美开发环境
-  三、创建 GitHub Pages 仓库：你的博客基石
-  四、Jekyll 主题安装：打造专业博客外观
-  五、本地运行测试：预览你的博客
-  六、写作与发布：分享你的故事
-  七、个性化定制：打造独一无二的博客
-  八、部署到 GitHub Pages：让世界看到你的博客
-  九、维护与优化：持续打磨你的博客
-  十、常见问题解决方案
-  十一、高级定制技巧
-  十二、维护与更新
-
-
 
 
 一、前期准备：认识你的工具箱
@@ -67,7 +50,32 @@
   
     
       技术
-      说...</summary>
+      说明
+      用途
+    
+  
+  
+    
+      GitHub Pages
+      静态网站托管服务
+      免费托管、自动部署
+    
+    
+      Jekyll
+      静态网站生成器
+      将 Markdown 转换为网站
+    
+    
+      Ruby
+      编程语言
+      Jekyll 的运行环境
+    
+    
+      Git
+      版本控制系统
+      代码管理与部署
+    
+...</summary>
 
   </entry>
 
