@@ -229,8 +229,3 @@ jekyll-archives:
     category: /categories/:name/
   
 backgroud_animation: true
-
-# 只检查 4xx 错误（如 404），并禁用外部链接检查。
-html-proofer:
-  only_4xx: true
-  external_link_check: false
