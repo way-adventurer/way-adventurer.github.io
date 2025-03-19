@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>WenQi Wei</title>
   <subtitle>这里是，way的世界！welcome！</subtitle>
-  <updated>2025-03-19T01:50:23+08:00</updated>
+  <updated>2025-03-19T12:10:47+08:00</updated>
   <author>
     <name>WenQi Wei</name>
     <uri>http://localhost:4000/</uri>
@@ -17,6 +17,36 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>Git 常用指令全攻略：掌握版本控制的艺术</title>
+    <link href="http://localhost:4000/posts/%E5%B8%B8%E7%94%A8Git%E6%8C%87%E4%BB%A4/" rel="alternate" type="text/html" title="Git 常用指令全攻略：掌握版本控制的艺术" />
+    <published>2025-03-19T10:35:00+08:00</published>
+  
+    <updated>2025-03-19T10:35:00+08:00</updated>
+  
+    <id>http://localhost:4000/posts/%E5%B8%B8%E7%94%A8Git%E6%8C%87%E4%BB%A4/</id>
+    <content type="text/html" src="http://localhost:4000/posts/%E5%B8%B8%E7%94%A8Git%E6%8C%87%E4%BB%A4/" />
+    <author>
+      <name>way-adventurer</name>
+    </author>
+
+  
+    
+    <category term="教程" />
+    
+  
+
+  <summary>在当今的软件开发领域，Git 早已成为不可或缺的版本控制系统。它如同一位智慧的守护者，默默记录着代码的每一次变迁，让团队协作变得高效而有序。无论是初出茅庐的开发者，还是经验丰富的技术专家，掌握 Git 的常用指令都是迈向高效开发的关键一步。本文将带你深入 Git 的世界，从基础到进阶，逐一剖析那些常用的 Git 指令，助你轻松驾驭版本控制的精髓。
+
+一、初识 Git：搭建你的版本控制舞台
+
+在踏上 Git 的旅程之前，我们需要先搭建好舞台。安装 Git 是一切的起点。对于 Windows 用户，可以从 Git 官方网站下载安装包，一路点击“Next”即可完成安装；Mac 用户则可以通过 Homebrew（brew install git）轻松搞定；Linux 用户更是简单，使用包管理器（如 apt、yum）就能安装。
+
+安装完成后，别忘了配置你的 Git 环境。使用以下命令设置你的用...</summary>
+
+  </entry>
 
   
   <entry>
