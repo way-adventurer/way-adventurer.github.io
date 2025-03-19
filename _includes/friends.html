@@ -4,9 +4,7 @@
     <p><i class="fas fa-user-friends"></i><span>FRIENDS</span></p>
     <div class="friend-links">
       {% for friend in site.data.friends %}
-      <a href="{{friend.href}}" class="friend-link{% if friend.insecure %} insecure{% endif %}" 
-         target="_blank" rel="noopener" 
-         {% if friend.insecure %}data-proofer-ignore{% endif %}>
+      <a href="{{friend.href}}" class="friend-link" target="_blank" rel="noopener">
         <span class="friend-name">{{friend.title}}</span>
       </a>
       {% endfor %}

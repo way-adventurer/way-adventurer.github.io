@@ -1,2 +1,3 @@
 - title: "Xjh"
-  href: "http://luanyu.xyz/"
+  href: "https://luanyu.xyz/"
+  insecure: true   # 标记为允许 HTTP
