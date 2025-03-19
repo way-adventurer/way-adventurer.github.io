@@ -4,9 +4,17 @@
     <p><i class="fas fa-user-friends"></i><span>FRIENDS</span></p>
     <div class="friend-links">
       {% for friend in site.data.friends %}
-      <a href="{{friend.href}}" class="friend-link" target="_blank" rel="noopener">
-        <span class="friend-name">{{friend.title}}</span>
-      </a>
+        {% assign protocol = friend.href | split: '://' | first %}
+        {% if protocol == 'http' %}
+          <a href="{{friend.href}}" class="friend-link insecure" target="_blank" rel="noopener">
+            <i class="fas fa-unlock"></i>
+            <span class="friend-name">{{friend.title}}</span>
+          </a>
+        {% else %}
+          <a href="{{friend.href}}" class="friend-link" target="_blank" rel="noopener">
+            <span class="friend-name">{{friend.title}}</span>
+          </a>
+        {% endif %}
       {% endfor %}
     </div>
 </div>
