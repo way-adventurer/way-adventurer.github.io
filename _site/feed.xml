@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>WenQi Wei</title>
   <subtitle>这里是，way的世界！welcome！</subtitle>
-  <updated>2025-03-20T20:23:59+08:00</updated>
+  <updated>2025-03-20T20:35:30+08:00</updated>
   <author>
     <name>WenQi Wei</name>
     <uri>http://localhost:4000/</uri>
@@ -34,9 +34,9 @@
 
   
     
-    <category term="Web开发" />
-    
     <category term="实战项目" />
+    
+    <category term="Web开发" />
     
   
 
@@ -82,6 +82,8 @@ dropZone.addEventListener(&amp;#39;drop&amp;#39;, (e)...</summary>
     
     <category term="教程" />
     
+    <category term="Git指令" />
+    
   
 
   <summary>在当今的软件开发领域，Git 早已成为不可或缺的版本控制系统。它如同一位智慧的守护者，默默记录着代码的每一次变迁，让团队协作变得高效而有序。无论是初出茅庐的开发者，还是经验丰富的技术专家，掌握 Git 的常用指令都是迈向高效开发的关键一步。本文将带你深入 Git 的世界，从基础到进阶，逐一剖析那些常用的 Git 指令，助你轻松驾驭版本控制的精髓。
@@ -111,6 +113,8 @@ dropZone.addEventListener(&amp;#39;drop&amp;#39;, (e)...</summary>
   
     
     <category term="教程" />
+    
+    <category term="个人博客" />
     
   
 
