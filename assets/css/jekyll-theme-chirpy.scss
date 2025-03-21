@@ -106,10 +106,19 @@
 
 /* 侧边栏背景及文字样式设置 */
 #sidebar {
-  background-image: url('/assets/img/background-dark.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
+  transition: background-image 0.3s ease;
+}
+
+html:not([data-mode]) #sidebar,
+html[data-mode="dark"] #sidebar {
+  background-image: url('/assets/img/background-dark.jpg');
+}
+
+html[data-mode="light"] #sidebar {
+  background-image: url('/assets/img/background-light.jpg');
 }
 
 #sidebar .site-title a {

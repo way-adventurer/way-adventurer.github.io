@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>WenQi Wei</title>
   <subtitle>这里是，way的世界！welcome！</subtitle>
-  <updated>2025-03-20T20:35:30+08:00</updated>
+  <updated>2025-03-21T10:43:54+08:00</updated>
   <author>
     <name>WenQi Wei</name>
     <uri>http://localhost:4000/</uri>
@@ -24,7 +24,7 @@
     <link href="http://localhost:4000/posts/%E5%9B%BE%E7%89%87%E5%8E%8B%E7%BC%A9/" rel="alternate" type="text/html" title="从零搭建Web图片压缩工具：前端技术实战" />
     <published>2025-03-20T10:35:00+08:00</published>
   
-    <updated>2025-03-20T10:35:00+08:00</updated>
+    <updated>2025-03-20T20:36:07+08:00</updated>
   
     <id>http://localhost:4000/posts/%E5%9B%BE%E7%89%87%E5%8E%8B%E7%BC%A9/</id>
     <content type="text/html" src="http://localhost:4000/posts/%E5%9B%BE%E7%89%87%E5%8E%8B%E7%BC%A9/" />
@@ -35,8 +35,6 @@
   
     
     <category term="实战项目" />
-    
-    <category term="Web开发" />
     
   
 
@@ -70,7 +68,7 @@ dropZone.addEventListener(&amp;#39;drop&amp;#39;, (e)...</summary>
     <link href="http://localhost:4000/posts/%E5%B8%B8%E7%94%A8Git%E6%8C%87%E4%BB%A4/" rel="alternate" type="text/html" title="Git 常用指令全攻略：掌握版本控制的艺术" />
     <published>2025-03-19T10:35:00+08:00</published>
   
-    <updated>2025-03-19T10:35:00+08:00</updated>
+    <updated>2025-03-20T20:36:07+08:00</updated>
   
     <id>http://localhost:4000/posts/%E5%B8%B8%E7%94%A8Git%E6%8C%87%E4%BB%A4/</id>
     <content type="text/html" src="http://localhost:4000/posts/%E5%B8%B8%E7%94%A8Git%E6%8C%87%E4%BB%A4/" />
@@ -81,8 +79,6 @@ dropZone.addEventListener(&amp;#39;drop&amp;#39;, (e)...</summary>
   
     
     <category term="教程" />
-    
-    <category term="Git指令" />
     
   
 
@@ -102,7 +98,7 @@ dropZone.addEventListener(&amp;#39;drop&amp;#39;, (e)...</summary>
     <link href="http://localhost:4000/posts/%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA/" rel="alternate" type="text/html" title="搭建个人博客网站：从零开始的 GitHub Pages + Jekyll 之旅" />
     <published>2025-03-19T00:44:00+08:00</published>
   
-    <updated>2025-03-19T12:12:04+08:00</updated>
+    <updated>2025-03-20T20:36:07+08:00</updated>
   
     <id>http://localhost:4000/posts/%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA/</id>
     <content type="text/html" src="http://localhost:4000/posts/%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA/" />
@@ -113,8 +109,6 @@ dropZone.addEventListener(&amp;#39;drop&amp;#39;, (e)...</summary>
   
     
     <category term="教程" />
-    
-    <category term="个人博客" />
     
   
 
