@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>WenQi Wei</title>
   <subtitle>这里是，way的世界！welcome！</subtitle>
-  <updated>2025-03-21T10:43:54+08:00</updated>
+  <updated>2025-03-24T17:53:17+08:00</updated>
   <author>
     <name>WenQi Wei</name>
     <uri>http://localhost:4000/</uri>
@@ -20,11 +20,55 @@
 
   
   <entry>
+    <title>DeepKe开源框架实战：从环境配置到项目运行的踩坑之路</title>
+    <link href="http://localhost:4000/posts/Deepke%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E5%A4%8D%E7%8E%B0/" rel="alternate" type="text/html" title="DeepKe开源框架实战：从环境配置到项目运行的踩坑之路" />
+    <published>2025-03-24T10:30:00+08:00</published>
+  
+    <updated>2025-03-24T10:30:00+08:00</updated>
+  
+    <id>http://localhost:4000/posts/Deepke%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E5%A4%8D%E7%8E%B0/</id>
+    <content type="text/html" src="http://localhost:4000/posts/Deepke%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E5%A4%8D%E7%8E%B0/" />
+    <author>
+      <name>way-adventurer</name>
+    </author>
+
+  
+    
+    <category term="教程" />
+    
+  
+
+  <summary>DeepKe是一个开源的知识图谱抽取与构建工具，基于深度学习技术，支持多种任务类型。本文记录了我在配置 DeepKe 环境时遇到的各种问题及解决方案。
+
+
+前言
+
+在知识图谱构建领域，DeepKe 作为一个强大的开源工具，吸引了我的注意。它不仅支持实体关系抽取、属性抽取等多种任务，而且基于 PyTorch 实现，具有良好的扩展性。本文将详细记录我从零开始配置 DeepKe 环境的全过程，希望能帮助遇到类似问题的同学。
+
+环境配置详解
+
+一、代码获取
+
+首先，我们需要获取 DeepKe 的源代码。考虑到国内网络环境，我选择了从 Gitee 克隆代码：
+
+git clone https://gitee.com/openkg/deepke.git
+
+
+二、环境依赖问题的解决
+
+在配置过程中，我遇到了 conda 命令无法使用的问题。这是一个典型的环境变量配置问题，解决过程如下：
+
+1. 问...</summary>
+
+  </entry>
+
+  
+  <entry>
     <title>从零搭建Web图片压缩工具：前端技术实战</title>
     <link href="http://localhost:4000/posts/%E5%9B%BE%E7%89%87%E5%8E%8B%E7%BC%A9/" rel="alternate" type="text/html" title="从零搭建Web图片压缩工具：前端技术实战" />
     <published>2025-03-20T10:35:00+08:00</published>
   
-    <updated>2025-03-20T20:36:07+08:00</updated>
+    <updated>2025-03-21T10:44:51+08:00</updated>
   
     <id>http://localhost:4000/posts/%E5%9B%BE%E7%89%87%E5%8E%8B%E7%BC%A9/</id>
     <content type="text/html" src="http://localhost:4000/posts/%E5%9B%BE%E7%89%87%E5%8E%8B%E7%BC%A9/" />
@@ -68,7 +112,7 @@ dropZone.addEventListener(&amp;#39;drop&amp;#39;, (e)...</summary>
     <link href="http://localhost:4000/posts/%E5%B8%B8%E7%94%A8Git%E6%8C%87%E4%BB%A4/" rel="alternate" type="text/html" title="Git 常用指令全攻略：掌握版本控制的艺术" />
     <published>2025-03-19T10:35:00+08:00</published>
   
-    <updated>2025-03-20T20:36:07+08:00</updated>
+    <updated>2025-03-21T10:44:51+08:00</updated>
   
     <id>http://localhost:4000/posts/%E5%B8%B8%E7%94%A8Git%E6%8C%87%E4%BB%A4/</id>
     <content type="text/html" src="http://localhost:4000/posts/%E5%B8%B8%E7%94%A8Git%E6%8C%87%E4%BB%A4/" />
@@ -98,7 +142,7 @@ dropZone.addEventListener(&amp;#39;drop&amp;#39;, (e)...</summary>
     <link href="http://localhost:4000/posts/%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA/" rel="alternate" type="text/html" title="搭建个人博客网站：从零开始的 GitHub Pages + Jekyll 之旅" />
     <published>2025-03-19T00:44:00+08:00</published>
   
-    <updated>2025-03-20T20:36:07+08:00</updated>
+    <updated>2025-03-21T10:44:51+08:00</updated>
   
     <id>http://localhost:4000/posts/%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA/</id>
     <content type="text/html" src="http://localhost:4000/posts/%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA/" />
