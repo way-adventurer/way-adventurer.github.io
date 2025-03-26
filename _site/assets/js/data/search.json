@@ -1,7 +1,24 @@
 [
   {
-    "title": "DeepKe开源框架实战：从环境配置到项目运行的踩坑之路",
-    "url": "/posts/Deepke%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E5%A4%8D%E7%8E%B0/",
+    "title": "DeepKe开源框架实战1：从环境配置到项目运行的踩坑之路",
+    "url": "/posts/Deepke%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E5%A4%8D%E7%8E%B01/",
+    "categories": "教程",
+    "tags": "DeepKe, Pytorch, NLP, 知识图谱, CodeKGC",
+    "date": "2025-03-27 01:25:00 +0800",
+    "content": "DeepKE-LLM 是一个基于大型语言模型的知识抽取工具包，本文记录了我在实践 CodeKGC 项目时的探索历程和解决方案。
+
+
+前言
+
+在知识图谱构建领域，基于代码语言模型的方法越来越受到关注。DeepKE 项目中的 CodeKGC 模块提供了一种新颖的解决方案，通过将知识抽取任务转化为代码生成任务来实现。本文将详细记录我在实践这个项目时的经验，希望能为后来者提供参考。
+
+项目概述
+
+C..."
+  },
+  {
+    "title": "DeepKe开源框架实战0：从环境配置到项目运行的踩坑之路",
+    "url": "/posts/Deepke%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E5%A4%8D%E7%8E%B00/",
     "categories": "教程",
     "tags": "DeepKe, Pytorch, NLP, 知识图谱",
     "date": "2025-03-24 10:30:00 +0800",
