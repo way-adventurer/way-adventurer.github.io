@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>WenQi Wei</title>
   <subtitle>这里是，way的世界！welcome！</subtitle>
-  <updated>2025-03-27T01:27:16+08:00</updated>
+  <updated>2025-03-27T17:19:43+08:00</updated>
   <author>
     <name>WenQi Wei</name>
     <uri>http://localhost:4000/</uri>
@@ -17,6 +17,57 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>DeepKe开源框架实战2：从环境配置到项目运行的踩坑之路</title>
+    <link href="http://localhost:4000/posts/Deepke%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E5%A4%8D%E7%8E%B02/" rel="alternate" type="text/html" title="DeepKe开源框架实战2：从环境配置到项目运行的踩坑之路" />
+    <published>2025-03-27T17:03:00+08:00</published>
+  
+    <updated>2025-03-27T17:03:00+08:00</updated>
+  
+    <id>http://localhost:4000/posts/Deepke%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E5%A4%8D%E7%8E%B02/</id>
+    <content type="text/html" src="http://localhost:4000/posts/Deepke%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E5%A4%8D%E7%8E%B02/" />
+    <author>
+      <name>way-adventurer</name>
+    </author>
+
+  
+    
+    <category term="深度学习" />
+    
+  
+
+  <summary>在人工智能快速发展的今天，将大语言模型与知识图谱技术相结合成为一个重要趋势。本文详细记录了在 DeepKE 框架下进行知识抽取的实践经验。
+
+
+一、基于ICL的知识抽取实践
+
+1. 环境配置与准备
+
+
+  
+    环境配置
+
+    激活 Conda 环境
+
+    conda activate deepke-llm
+    
+
+    下载引用库
+
+    pip install easyinstruct
+pip install hydra-core
+    
+
+    如果pip install easyinstruct报错参考上一篇博客
+  
+  
+    数据
+
+    这里的数据指的是用于In-Context Learning的examples数据，放在data文件夹中，其中的.json文件是各种任务默认的examples数据，用户可以自定义其中的example，但需要遵...</summary>
+
+  </entry>
 
   
   <entry>
@@ -180,67 +231,6 @@ dropZone.addEventListener(&amp;#39;drop&amp;#39;, (e)...</summary>
 在踏上 Git 的旅程之前，我们需要先搭建好舞台。安装 Git 是一切的起点。对于 Windows 用户，可以从 Git 官方网站下载安装包，一路点击“Next”即可完成安装；Mac 用户则可以通过 Homebrew（brew install git）轻松搞定；Linux 用户更是简单，使用包管理器（如 apt、yum）就能安装。
 
 安装完成后，别忘了配置你的 Git 环境。使用以下命令设置你的用...</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>搭建个人博客网站：从零开始的 GitHub Pages + Jekyll 之旅</title>
-    <link href="http://localhost:4000/posts/%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA/" rel="alternate" type="text/html" title="搭建个人博客网站：从零开始的 GitHub Pages + Jekyll 之旅" />
-    <published>2025-03-19T00:44:00+08:00</published>
-  
-    <updated>2025-03-21T10:44:51+08:00</updated>
-  
-    <id>http://localhost:4000/posts/%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA/</id>
-    <content type="text/html" src="http://localhost:4000/posts/%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA/" />
-    <author>
-      <name>way-adventurer</name>
-    </author>
-
-  
-    
-    <category term="教程" />
-    
-  
-
-  <summary>在这个信息爆炸的时代，拥有一个属于自己的博客不仅能够记录知识、分享经验，更是一种个人品牌的打造。本文将带你从零开始，详细讲解如何使用 GitHub Pages 和 Jekyll 搭建一个专业的个人博客网站。
-
-
-
-一、前期准备：认识你的工具箱
-
-核心技术栈介绍
-
-
-  
-    
-      技术
-      说明
-      用途
-    
-  
-  
-    
-      GitHub Pages
-      静态网站托管服务
-      免费托管、自动部署
-    
-    
-      Jekyll
-      静态网站生成器
-      将 Markdown 转换为网站
-    
-    
-      Ruby
-      编程语言
-      Jekyll 的运行环境
-    
-    
-      Git
-      版本控制系统
-      代码管理与部署
-    
-...</summary>
 
   </entry>
 

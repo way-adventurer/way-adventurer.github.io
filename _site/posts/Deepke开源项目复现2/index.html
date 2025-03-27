@@ -1,0 +1,2933 @@
+<!doctype html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div id="animation">
+    <div class="animation-circle"></div>
+    <div class="animation-circle"></div>
+    <div class="animation-circle"></div>
+    <div class="animation-circle"></div>
+    <div class="animation-circle"></div>
+    <div class="animation-circle"></div>
+    <div class="animation-circle"></div>
+    <div class="animation-circle"></div>
+    <div class="animation-circle"></div>
+    <div class="animation-circle"></div>
+    <div class="animation-circle"></div>
+    <div class="animation-circle"></div>
+    <div class="animation-circle"></div>
+    <div class="animation-circle"></div>
+    <div class="animation-circle"></div>
+    <div class="animation-circle"></div>
+    <div class="animation-circle"></div>
+    <div class="animation-circle"></div>
+    <div class="animation-circle"></div>
+    <div class="animation-circle"></div>
+    <div class="animation-circle"></div>
+    <div class="animation-circle"></div>
+    <div class="animation-circle"></div>
+    <div class="animation-circle"></div>
+    <div class="animation-circle"></div>
+    <div class="animation-circle"></div>
+    <div class="animation-circle"></div>
+    <div class="animation-circle"></div>
+    <div class="animation-circle"></div>
+    <div class="animation-circle"></div>
+    <div class="animation-circle"></div>
+    <div class="animation-circle"></div>
+    <div class="animation-circle"></div>
+    <div class="animation-circle"></div>
+    <div class="animation-circle"></div>
+    <div class="animation-circle"></div>
+    <div class="animation-circle"></div>
+    <div class="animation-circle"></div>
+    <div class="animation-circle"></div>
+    <div class="animation-circle"></div>
+    <div class="animation-circle"></div>
+    <div class="animation-circle"></div>
+    <div class="animation-circle"></div>
+    <div class="animation-circle"></div>
+    <div class="animation-circle"></div>
+    <div class="animation-circle"></div>
+    <div class="animation-circle"></div>
+    <div class="animation-circle"></div>
+    <div class="animation-circle"></div>
+    <div class="animation-circle"></div>
+  </div>
+
+
+<!-- `site.alt_lang` can specify a language different from the UI -->
+<html lang="en" >
+  <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f7f7f7">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1b1b1e">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta
+    name="viewport"
+    content="width=device-width, user-scalable=no initial-scale=1, shrink-to-fit=no, viewport-fit=cover"
+  ><!-- Setup Open Graph image -->
+
+  
+
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="DeepKe开源框架实战2：从环境配置到项目运行的踩坑之路" />
+<meta name="author" content="way-adventurer" />
+<meta property="og:locale" content="en" />
+<meta name="description" content="在人工智能快速发展的今天，将大语言模型与知识图谱技术相结合成为一个重要趋势。本文详细记录了在 DeepKE 框架下进行知识抽取的实践经验。" />
+<meta property="og:description" content="在人工智能快速发展的今天，将大语言模型与知识图谱技术相结合成为一个重要趋势。本文详细记录了在 DeepKE 框架下进行知识抽取的实践经验。" />
+<link rel="canonical" href="http://localhost:4000/posts/Deepke%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E5%A4%8D%E7%8E%B02/" />
+<meta property="og:url" content="http://localhost:4000/posts/Deepke%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E5%A4%8D%E7%8E%B02/" />
+<meta property="og:site_name" content="WenQi Wei" />
+<meta property="og:image" content="http://localhost:4000/assets/img/posts/20250327/cover1.png" />
+<meta property="og:image:alt" content="DeepKE进阶探索" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-03-27T17:03:00+08:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="http://localhost:4000/assets/img/posts/20250327/cover1.png" />
+<meta name="twitter:image:alt" content="DeepKE进阶探索" />
+<meta property="twitter:title" content="DeepKe开源框架实战2：从环境配置到项目运行的踩坑之路" />
+<meta name="twitter:site" content="@way_adventurer" />
+<meta name="twitter:creator" content="@way-adventurer" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"way-adventurer"},"dateModified":"2025-03-27T17:03:00+08:00","datePublished":"2025-03-27T17:03:00+08:00","description":"在人工智能快速发展的今天，将大语言模型与知识图谱技术相结合成为一个重要趋势。本文详细记录了在 DeepKE 框架下进行知识抽取的实践经验。","headline":"DeepKe开源框架实战2：从环境配置到项目运行的踩坑之路","image":{"alt":"DeepKE进阶探索","lqip":"data:image/webp;base64,UklGRpoAAABXRUJQVlA4WAoAAAAQAAAADwAABwAAQUxQSDIAAAARL0AmbZurmr57yyIiqE8oiG0bejIYEQTgqiDA9vqnsUSI6H+oAERp2HZ65qP/VIAWAFZQOCBCAAAA8AEAnQEqEAAIAAVAfCWkAALp8sF8rgRgAP7o9FDvMCkMde9PK7euH5M1m6VWoDXf2FkP3BqV0ZYbO6NA/VFIAAAA","url":"http://localhost:4000/assets/img/posts/20250327/cover1.png","@type":"imageObject"},"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/Deepke%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E5%A4%8D%E7%8E%B02/"},"url":"http://localhost:4000/posts/Deepke%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E5%A4%8D%E7%8E%B02/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  <title>DeepKe开源框架实战2：从环境配置到项目运行的踩坑之路 | WenQi Wei
+  </title>
+
+  <!--
+  The Favicons for Web, Android, Microsoft, and iOS (iPhone and iPad) Apps
+  Generated by: https://realfavicongenerator.net/
+-->
+
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicons/favicon-16x16.png">
+
+  <link rel="manifest" href="/assets/img/favicons/site.webmanifest">
+
+<link rel="shortcut icon" href="/assets/img/favicons/favicon.ico">
+<meta name="apple-mobile-web-app-title" content="WenQi Wei">
+<meta name="application-name" content="WenQi Wei">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="/assets/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+
+
+  <!-- Resource Hints -->
+  
+    
+      
+        <link rel="preconnect" href="https://fonts.googleapis.com" >
+      
+        <link rel="dns-prefetch" href="https://fonts.googleapis.com" >
+      
+    
+      
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      
+        <link rel="dns-prefetch" href="https://fonts.gstatic.com" >
+      
+    
+      
+        <link rel="preconnect" href="https://cdn.jsdelivr.net" >
+      
+        <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" >
+      
+    
+  
+
+  <!-- Bootstrap -->
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  
+
+  <!-- Theme style -->
+  <link rel="stylesheet" href="/assets/css/jekyll-theme-chirpy.css">
+
+  <!-- Web Font -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Source+Sans+Pro:wght@400;600;700;900&display=swap">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.1/css/all.min.css">
+
+  <!-- 3rd-party Dependencies -->
+
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tocbot@4.32.2/dist/tocbot.min.css">
+  
+
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/loading-attribute-polyfill@2.1.1/dist/loading-attribute-polyfill.min.css">
+  
+
+  
+    <!-- Image Popup -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox@3.3.0/dist/css/glightbox.min.css">
+  
+
+  <!-- Scripts -->
+
+  <script src="/assets/js/dist/theme.min.js"></script>
+
+  <!-- JS selector for site. -->
+
+<!-- commons -->
+
+
+
+<!-- layout specified -->
+
+
+  
+
+  
+    <!-- image lazy-loading & popup & clipboard -->
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+
+    
+
+  
+
+  
+    
+
+    
+
+  
+
+  
+    
+
+    
+
+  
+
+  
+    
+
+    
+
+  
+
+  
+    
+
+    
+
+  
+
+  
+    
+
+    
+
+  
+
+  
+    
+
+    
+
+  
+
+  
+    
+
+    
+
+  
+
+  
+    
+
+    
+
+  
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/combine/npm/simple-jekyll-search@1.10.0/dest/simple-jekyll-search.min.js,npm/loading-attribute-polyfill@2.1.1/dist/loading-attribute-polyfill.umd.min.js,npm/glightbox@3.3.0/dist/js/glightbox.min.js,npm/clipboard@2.0.11/dist/clipboard.min.js,npm/dayjs@1.11.13/dayjs.min.js,npm/dayjs@1.11.13/locale/en.js,npm/dayjs@1.11.13/plugin/relativeTime.js,npm/dayjs@1.11.13/plugin/localizedFormat.js,npm/tocbot@4.32.2/dist/tocbot.min.js"></script>
+
+
+
+
+
+
+
+<script defer src="/assets/js/dist/post.min.js"></script>
+
+
+
+<!-- Pageviews -->
+
+  
+
+  
+
+
+
+  
+
+  <!-- A placeholder to allow defining custom metadata -->
+
+</head>
+
+
+  <body>
+    <!-- The Side Bar -->
+
+<aside aria-label="Sidebar" id="sidebar" class="d-flex flex-column align-items-end">
+  <header class="profile-wrapper">
+    <a href="/" id="avatar" class="rounded-circle"><img src="/assets/img/avatar.jpg" width="112" height="112" alt="avatar" onerror="this.style.display='none'"></a>
+
+    <a class="site-title d-block" href="/">WenQi Wei</a>
+    <p class="site-subtitle fst-italic mb-0">Show me the code</p>
+  </header>
+  <!-- .profile-wrapper -->
+
+  <nav class="flex-column flex-grow-1 w-100 ps-0">
+    <ul class="nav">
+      <!-- home -->
+      <li class="nav-item">
+        <a href="/" class="nav-link">
+          <i class="fa-fw fas fa-home"></i>
+          <span>HOME</span>
+        </a>
+      </li>
+      <!-- the real tabs -->
+      
+        <li class="nav-item">
+          <a href="/categories/" class="nav-link">
+            <i class="fa-fw fas fa-stream"></i>
+            
+
+            <span>CATEGORIES</span>
+          </a>
+        </li>
+        <!-- .nav-item -->
+      
+        <li class="nav-item">
+          <a href="/tags/" class="nav-link">
+            <i class="fa-fw fas fa-tags"></i>
+            
+
+            <span>TAGS</span>
+          </a>
+        </li>
+        <!-- .nav-item -->
+      
+        <li class="nav-item">
+          <a href="/archives/" class="nav-link">
+            <i class="fa-fw fas fa-archive"></i>
+            
+
+            <span>ARCHIVES</span>
+          </a>
+        </li>
+        <!-- .nav-item -->
+      
+        <li class="nav-item">
+          <a href="/about/" class="nav-link">
+            <i class="fa-fw fas fa-info-circle"></i>
+            
+
+            <span>ABOUT</span>
+          </a>
+        </li>
+        <!-- .nav-item -->
+      
+    </ul>
+  </nav>
+
+  <!-- Friends link -->
+  
+      <!-- 友链设置，在 sidebar.html 中插入 -->
+<div class="friends">
+    <hr style="color:white;border: 1px solid ">
+    <p><i class="fas fa-user-friends"></i><span>FRIENDS</span></p>
+    <div class="friend-links">
+      
+      <a href="https://luanyu.xyz/" class="friend-link" target="_blank" rel="noopener">
+        <span class="friend-name">Xjh</span>
+      </a>
+      
+      <a href="https://mosfish.github.io/" class="friend-link" target="_blank" rel="noopener">
+        <span class="friend-name">Wxy</span>
+      </a>
+      
+    </div>
+</div>
+  
+
+  <div class="sidebar-bottom d-flex flex-wrap  align-items-center w-100">
+    
+      <button type="button" class="btn btn-link nav-link" aria-label="Switch Mode" id="mode-toggle">
+        <i class="fas fa-adjust"></i>
+      </button>
+
+      
+        <span class="icon-border"></span>
+      
+    
+
+    
+      
+
+      
+        <a
+          href="https://github.com/WAY-ADVENTURER"
+          aria-label="github"
+          
+
+          
+            target="_blank"
+            
+          
+
+          
+
+          
+            rel="noopener noreferrer"
+          
+        >
+          <i class="fab fa-github"></i>
+        </a>
+      
+    
+      
+
+      
+        <a
+          href="https://twitter.com/way_adventurer"
+          aria-label="twitter"
+          
+
+          
+            target="_blank"
+            
+          
+
+          
+
+          
+            rel="noopener noreferrer"
+          
+        >
+          <i class="fa-brands fa-x-twitter"></i>
+        </a>
+      
+    
+      
+
+      
+        <a
+          href="javascript:location.href = 'mailto:' + ['2992850181','qq.com'].join('@')"
+          aria-label="email"
+          
+
+          
+
+          
+
+          
+        >
+          <i class="fas fa-envelope"></i>
+        </a>
+      
+    
+      
+
+      
+        <a
+          href="/feed.xml"
+          aria-label="rss"
+          
+
+          
+
+          
+
+          
+        >
+          <i class="fas fa-rss"></i>
+        </a>
+      
+    
+  </div>
+  <!-- .sidebar-bottom -->
+</aside>
+<!-- #sidebar -->
+
+
+    <div id="main-wrapper" class="d-flex justify-content-center">
+      <div class="container d-flex flex-column px-xxl-5">
+        <!-- The Top Bar -->
+
+<header id="topbar-wrapper" aria-label="Top Bar">
+  <div
+    id="topbar"
+    class="d-flex align-items-center justify-content-between px-lg-3 h-100"
+  >
+    <nav id="breadcrumb" aria-label="Breadcrumb">
+      
+
+      
+        
+          
+            <span>
+              <a href="/">Home</a>
+            </span>
+
+          
+        
+          
+        
+          
+            
+              <span>DeepKe开源框架实战2：从环境配置到项目运行的踩坑之路</span>
+            
+
+          
+        
+      
+    </nav>
+    <!-- endof #breadcrumb -->
+
+    <button type="button" id="sidebar-trigger" class="btn btn-link">
+      <i class="fas fa-bars fa-fw"></i>
+    </button>
+
+    <div id="topbar-title">
+      Post
+    </div>
+
+    <button type="button" id="search-trigger" class="btn btn-link">
+      <i class="fas fa-search fa-fw"></i>
+    </button>
+
+    <search id="search" class="align-items-center ms-3 ms-lg-0">
+      <i class="fas fa-search fa-fw"></i>
+      <input
+        class="form-control"
+        id="search-input"
+        type="search"
+        aria-label="search"
+        autocomplete="off"
+        placeholder="Search..."
+      >
+    </search>
+    <button type="button" class="btn btn-link text-decoration-none" id="search-cancel">Cancel</button>
+  </div>
+</header>
+
+
+        <div class="row flex-grow-1">
+          <main aria-label="Main Content" class="col-12 col-lg-11 col-xl-9 px-md-4">
+            
+              <!-- Refactor the HTML structure -->
+
+
+
+<!--
+  In order to allow a wide table to scroll horizontally,
+  we suround the markdown table with `<div class="table-wrapper">` and `</div>`
+-->
+
+
+
+<!--
+  Fixed kramdown code highlight rendering:
+  https://github.com/penibelst/jekyll-compress-html/issues/101
+  https://github.com/penibelst/jekyll-compress-html/issues/71#issuecomment-188144901
+-->
+
+
+
+<!-- Change the icon of checkbox -->
+
+
+
+<!-- Handle images -->
+
+
+
+
+  
+  
+
+  
+    
+      
+      
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+
+    <!-- take out classes -->
+    
+
+    
+    
+
+    
+
+    
+      
+      
+
+      
+
+      <!-- add image placeholder -->
+      
+
+    
+
+    <!-- lazy-load images -->
+    
+
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
+
+      
+        <!-- create the image wrapper -->
+        
+
+        
+        
+      
+    
+
+    <!-- combine -->
+    
+  
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+
+    <!-- take out classes -->
+    
+
+    
+    
+
+    
+
+    
+      
+    
+
+    <!-- lazy-load images -->
+    
+
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
+
+      
+        <!-- create the image wrapper -->
+        
+
+        
+        
+      
+    
+
+    <!-- combine -->
+    
+  
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+
+    <!-- take out classes -->
+    
+
+    
+    
+
+    
+
+    
+      
+    
+
+    <!-- lazy-load images -->
+    
+
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
+
+      
+        <!-- create the image wrapper -->
+        
+
+        
+        
+      
+    
+
+    <!-- combine -->
+    
+  
+
+  
+
+
+<!-- Add header for code snippets -->
+
+
+
+<!-- Create heading anchors -->
+
+
+
+
+
+  
+  
+
+  
+    
+    
+
+    
+      
+        
+        
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+
+    
+  
+
+  
+  
+
+  
+    
+    
+
+    
+      
+        
+        
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+
+    
+  
+
+  
+  
+
+  
+    
+    
+
+    
+      
+        
+        
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+
+    
+  
+
+  
+  
+
+  
+
+
+
+
+<!-- return -->
+
+
+
+
+
+
+
+
+
+
+<article class="px-1" data-toc="true">
+  <header>
+    <h1 data-toc-skip>DeepKe开源框架实战2：从环境配置到项目运行的踩坑之路</h1>
+    
+
+    <div class="post-meta text-muted">
+      <!-- published date -->
+      <span>
+        Posted
+        <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1743066180"
+  data-df="ll"
+  
+    data-bs-toggle="tooltip" data-bs-placement="bottom"
+  
+>
+  Mar 27, 2025
+</time>
+
+      </span>
+
+      <!-- lastmod date -->
+      
+
+      
+        
+        
+        
+
+        
+
+        <div class="mt-3 mb-3">
+          <a href="/assets/img/posts/20250327/cover1.png" class="popup img-link preview-img blur"><img data-src="/assets/img/posts/20250327/cover1.png"  alt="DeepKE进阶探索" width="1200" height="630" data-lqip="true" src="data:image/webp;base64,UklGRpoAAABXRUJQVlA4WAoAAAAQAAAADwAABwAAQUxQSDIAAAARL0AmbZurmr57yyIiqE8oiG0bejIYEQTgqiDA9vqnsUSI6H+oAERp2HZ65qP/VIAWAFZQOCBCAAAA8AEAnQEqEAAIAAVAfCWkAALp8sF8rgRgAP7o9FDvMCkMde9PK7euH5M1m6VWoDXf2FkP3BqV0ZYbO6NA/VFIAAAA"></a><figcaption class="text-center pt-2 pb-2">DeepKE进阶探索</figcaption></div>
+      
+
+      <div class="d-flex justify-content-between">
+        <!-- author(s) -->
+        <span>
+          
+
+          By
+
+          <em>
+            
+              
+                
+                
+              
+            
+          </em>
+        </span>
+
+        <div>
+          <!-- pageviews -->
+          
+
+          <!-- read time -->
+          <!-- Calculate the post's reading time, and display the word count in tooltip -->
+
+
+
+<!-- words per minute -->
+
+
+
+
+
+
+
+
+
+
+<!-- return element -->
+<span
+  class="readtime"
+  data-bs-toggle="tooltip"
+  data-bs-placement="bottom"
+  title="1974 words"
+>
+  <em>10 min</em> read</span>
+
+        </div>
+      </div>
+    </div>
+  </header>
+
+  
+    <div id="toc-bar" class="d-flex align-items-center justify-content-between invisible">
+      <span class="label text-truncate">DeepKe开源框架实战2：从环境配置到项目运行的踩坑之路</span>
+      <button type="button" class="toc-trigger btn me-1">
+        <i class="fa-solid fa-list-ul fa-fw"></i>
+      </button>
+    </div>
+
+    <button id="toc-solo-trigger" type="button" class="toc-trigger btn btn-outline-secondary btn-sm">
+      <span class="label ps-2 pe-1">Contents</span>
+      <i class="fa-solid fa-angle-right fa-fw"></i>
+    </button>
+
+    <dialog id="toc-popup" class="p-0">
+      <div class="header d-flex flex-row align-items-center justify-content-between">
+        <div class="label text-truncate py-2 ms-4">DeepKe开源框架实战2：从环境配置到项目运行的踩坑之路</div>
+        <button id="toc-popup-close" type="button" class="btn mx-1 my-1 opacity-75">
+          <i class="fas fa-close"></i>
+        </button>
+      </div>
+      <div id="toc-popup-content" class="px-4 py-3 pb-4"></div>
+    </dialog>
+  
+
+  <div class="content">
+    <blockquote>
+  <p>在人工智能快速发展的今天，将大语言模型与知识图谱技术相结合成为一个重要趋势。本文详细记录了在 DeepKE 框架下进行知识抽取的实践经验。</p>
+</blockquote>
+
+<h2 id="一基于icl的知识抽取实践"><span class="me-2">一、基于ICL的知识抽取实践</span><a href="#一基于icl的知识抽取实践" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+
+<h3 id="1-环境配置与准备"><span class="me-2">1. 环境配置与准备</span><a href="#1-环境配置与准备" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<ul>
+  <li>
+    <p>环境配置</p>
+
+    <p>激活 Conda 环境</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="code-header">
+        <span data-label-text="Plaintext"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>conda activate deepke-llm
+</pre></td></tr></tbody></table></code></div>    </div>
+
+    <p>下载引用库</p>
+
+    <div class="language-shell highlighter-rouge"><div class="code-header">
+        <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre>pip <span class="nb">install </span>easyinstruct
+pip <span class="nb">install </span>hydra-core
+</pre></td></tr></tbody></table></code></div>    </div>
+
+    <p>如果pip install easyinstruct报错参考上一篇博客</p>
+  </li>
+  <li>
+    <p>数据</p>
+
+    <p>这里的数据指的是用于<code class="language-plaintext highlighter-rouge">In-Context Learning</code>的examples数据，放在<code class="language-plaintext highlighter-rouge">data</code>文件夹中，其中的<code class="language-plaintext highlighter-rouge">.json</code>文件是各种任务默认的examples数据，用户可以自定义其中的example，但需要遵守给定的数据格式。</p>
+  </li>
+  <li>
+    <p>参数配置</p>
+
+    <p><code class="language-plaintext highlighter-rouge">conf</code>文件夹保存所设置的参数。调用大模型接口所需要的参数都通过此文件夹中文件传入。</p>
+
+    <ul>
+      <li>
+        <p>在命名实体识别任务(<code class="language-plaintext highlighter-rouge">ner</code>)中，<code class="language-plaintext highlighter-rouge">text_input</code>参数为预测文本；<code class="language-plaintext highlighter-rouge">domain</code>为预测文本所属领域，可为空；<code class="language-plaintext highlighter-rouge">labels</code>为实体标签集，如无自定义的标签集，该参数可为空。</p>
+      </li>
+      <li>
+        <p>在关系抽取任务(<code class="language-plaintext highlighter-rouge">re</code>)中，<code class="language-plaintext highlighter-rouge">text_input</code>参数为文本；<code class="language-plaintext highlighter-rouge">domain</code>为文本所属领域，可为空；<code class="language-plaintext highlighter-rouge">labels</code>为关系类型标签集，如无自定义的标签集，该参数可为空；<code class="language-plaintext highlighter-rouge">head_entity</code>和<code class="language-plaintext highlighter-rouge">tail_entity</code>为待预测关系的头实体和尾实体；<code class="language-plaintext highlighter-rouge">head_type</code>和<code class="language-plaintext highlighter-rouge">tail_type</code>为待预测关系的头尾实体类型。</p>
+      </li>
+      <li>
+        <p>在事件抽取任务(<code class="language-plaintext highlighter-rouge">ee</code>)中，<code class="language-plaintext highlighter-rouge">text_input</code>参数为待预测文本；<code class="language-plaintext highlighter-rouge">domain</code>为预测文本所属领域，可为空。</p>
+      </li>
+      <li>
+        <p>在三元组抽取任务(<code class="language-plaintext highlighter-rouge">rte</code>)中，<code class="language-plaintext highlighter-rouge">text_input</code>参数为待预测文本；<code class="language-plaintext highlighter-rouge">domain</code>为预测文本所属领域，可为空。</p>
+      </li>
+      <li>
+        <p>其他参数的具体含义：</p>
+        <ul>
+          <li><code class="language-plaintext highlighter-rouge">task</code>参数用于指定任务类型，其中<code class="language-plaintext highlighter-rouge">ner</code>表示命名实体识别任务，<code class="language-plaintext highlighter-rouge">re</code>表示关系抽取任务<code class="language-plaintext highlighter-rouge">ee</code>表示事件抽取任务，<code class="language-plaintext highlighter-rouge">rte</code>表示三元组抽取任务；</li>
+          <li><code class="language-plaintext highlighter-rouge">language</code>表示任务的语言，<code class="language-plaintext highlighter-rouge">en</code>表示英文抽取任务，<code class="language-plaintext highlighter-rouge">ch</code>表示中文抽取任务；</li>
+          <li><code class="language-plaintext highlighter-rouge">engine</code>表示所用的大模型名称，要与OpenAI API规定的模型名称一致；</li>
+          <li><code class="language-plaintext highlighter-rouge">api_key</code>是用户的API密钥；</li>
+          <li><code class="language-plaintext highlighter-rouge">zero_shot</code>表示是否为零样本设定，为<code class="language-plaintext highlighter-rouge">True</code>时表示只使用instruction提示模型进行信息抽取，为<code class="language-plaintext highlighter-rouge">False</code>时表示使用in-context的形式进行信息抽取；</li>
+          <li><code class="language-plaintext highlighter-rouge">instruction</code>参数用于规定用户自定义的提示指令，当为空时采用默认的指令；</li>
+          <li><code class="language-plaintext highlighter-rouge">data_path</code>表示in-context examples的存储目录，默认为<code class="language-plaintext highlighter-rouge">data</code>文件夹。</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="2-环境问题排查与解决"><span class="me-2">2. 环境问题排查与解决</span><a href="#2-环境问题排查与解决" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<h4 id="相对导入问题解决"><span class="me-2">相对导入问题解决</span><a href="#相对导入问题解决" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
+<p>在运行过程中遇到的第一个问题是 Python 的相对导入错误：</p>
+
+<div class="language-python highlighter-rouge"><div class="code-header">
+        <span data-label-text="Python"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nb">ImportError</span><span class="p">:</span> <span class="n">attempted</span> <span class="n">relative</span> <span class="kn">import</span> <span class="n">with</span> <span class="n">no</span> <span class="n">known</span> <span class="n">parent</span> <span class="n">package</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<p><strong>问题分析</strong>：</p>
+<ul>
+  <li>原因：Python 模块导入路径解析问题</li>
+  <li>影响：无法正确加载预处理模块</li>
+  <li>解决方案：修改导入语句或使用 -m 参数</li>
+</ul>
+
+<h4 id="api-访问优化"><span class="me-2">API 访问优化</span><a href="#api-访问优化" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
+<p>在与 OpenAI API 交互时遇到了连接和速率限制问题：</p>
+
+<ol>
+  <li><strong>代理配置</strong>
+    <div class="language-bash highlighter-rouge"><div class="code-header">
+        <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre><span class="nb">set </span><span class="nv">http_proxy</span><span class="o">=</span>http://127.0.0.1:7890
+<span class="nb">set </span><span class="nv">https_proxy</span><span class="o">=</span>http://127.0.0.1:7890
+</pre></td></tr></tbody></table></code></div>    </div>
+  </li>
+  <li><strong>重试机制实现</strong>
+通过 tenacity 库实现了智能重试：
+    <div class="language-python highlighter-rouge"><div class="code-header">
+        <span data-label-text="Python"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+</pre></td><td class="rouge-code"><pre><span class="nd">@retry</span><span class="p">(</span>
+ <span class="n">stop</span><span class="o">=</span><span class="nf">stop_after_attempt</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span>
+ <span class="n">wait</span><span class="o">=</span><span class="nf">wait_exponential</span><span class="p">(</span><span class="n">multiplier</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="nb">min</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="nb">max</span><span class="o">=</span><span class="mi">10</span><span class="p">),</span>
+ <span class="n">retry</span><span class="o">=</span><span class="nf">retry_if_exception_type</span><span class="p">(</span><span class="n">openai</span><span class="p">.</span><span class="n">RateLimitError</span><span class="p">)</span>
+<span class="p">)</span>
+<span class="k">def</span> <span class="nf">call_openai_with_retry</span><span class="p">(</span><span class="n">ie_prompter</span><span class="p">):</span>
+ <span class="k">try</span><span class="p">:</span>
+     <span class="k">return</span> <span class="n">ie_prompter</span><span class="p">.</span><span class="nf">get_openai_result</span><span class="p">()</span>
+ <span class="k">except</span> <span class="n">openai</span><span class="p">.</span><span class="n">RateLimitError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+     <span class="n">logger</span><span class="p">.</span><span class="nf">warning</span><span class="p">(</span><span class="sa">f</span><span class="sh">"</span><span class="s">Rate limit hit, retrying... (</span><span class="si">{</span><span class="nf">str</span><span class="p">(</span><span class="n">e</span><span class="p">)</span><span class="si">}</span><span class="s">)</span><span class="sh">"</span><span class="p">)</span>
+     <span class="k">raise</span>
+ <span class="k">except</span> <span class="nb">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+     <span class="n">logger</span><span class="p">.</span><span class="nf">error</span><span class="p">(</span><span class="sa">f</span><span class="sh">"</span><span class="s">Error calling OpenAI API: </span><span class="si">{</span><span class="nf">str</span><span class="p">(</span><span class="n">e</span><span class="p">)</span><span class="si">}</span><span class="sh">"</span><span class="p">)</span>
+     <span class="k">return</span> <span class="bp">None</span>
+</pre></td></tr></tbody></table></code></div>    </div>
+  </li>
+</ol>
+
+<h3 id="3-运行结果分析"><span class="me-2">3. 运行结果分析</span><a href="#3-运行结果分析" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<p><a href="/assets/img/posts/20250327/2_1.png" class="popup img-link shadow shimmer"><img src="/assets/img/posts/20250327/2_1.png" alt="API速率限制"  loading="lazy"></a>
+<em class="text-center">OpenAI API 速率限制提示</em></p>
+
+<p><strong>结果分析</strong>：</p>
+<ol>
+  <li><strong>API 限制影响</strong>
+    <ul>
+      <li>表现：请求被限制</li>
+      <li>原因：新账户政策调整</li>
+      <li>启示：需要合理规划 API 使用</li>
+    </ul>
+  </li>
+  <li><strong>系统响应</strong>
+    <ul>
+      <li>错误处理完善</li>
+      <li>日志记录清晰</li>
+      <li>重试机制有效</li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="二llm-数据增强实验"><span class="me-2">二、LLM 数据增强实验</span><a href="#二llm-数据增强实验" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+
+<h3 id="1-参数配置优化"><span class="me-2">1. 参数配置优化</span><a href="#1-参数配置优化" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<p>run.yaml参数设置</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">task</code>设置为<code class="language-plaintext highlighter-rouge">da</code>；</li>
+  <li><code class="language-plaintext highlighter-rouge">text_input</code>设置为要增强的关系标签，比如<code class="language-plaintext highlighter-rouge">org:founded_by</code>；</li>
+  <li><code class="language-plaintext highlighter-rouge">zero_shot</code>设为<code class="language-plaintext highlighter-rouge">False</code>，并在<code class="language-plaintext highlighter-rouge">data</code>文件夹下<code class="language-plaintext highlighter-rouge">da</code>对应的文件中设置少样本样例；</li>
+  <li><code class="language-plaintext highlighter-rouge">labels</code>中可以指定头尾实体的标签范围。</li>
+</ul>
+
+<h3 id="2-实验过程与结果"><span class="me-2">2. 实验过程与结果</span><a href="#2-实验过程与结果" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<p><a href="/assets/img/posts/20250327/2_2.png" class="popup img-link shadow shimmer"><img src="/assets/img/posts/20250327/2_2.png" alt="数据增强输出"  loading="lazy"></a>
+<em class="text-center">数据增强模型输出示例</em></p>
+
+<p><strong>技术分析</strong>：</p>
+<ol>
+  <li><strong>数据质量评估</strong>
+    <ul>
+      <li>语义完整性：良好</li>
+      <li>实体关系：明确</li>
+      <li>上下文一致性：符合预期</li>
+    </ul>
+  </li>
+  <li><strong>系统性能表现</strong>
+    <ul>
+      <li>响应时间：合理</li>
+      <li>输出格式：规范</li>
+      <li>错误处理：完善</li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="三ccks2023知识图谱构建实践"><span class="me-2">三、CCKS2023知识图谱构建实践</span><a href="#三ccks2023知识图谱构建实践" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+
+<h3 id="1-配置优化与问题排查"><span class="me-2">1. 配置优化与问题排查</span><a href="#1-配置优化与问题排查" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<p>首先发现并解决了配置文件中的参数不一致问题：</p>
+<div class="language-yaml highlighter-rouge"><div class="code-header">
+        <span data-label-text="YAML"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="rouge-code"><pre><span class="c1"># 原配置</span>
+<span class="na">language</span><span class="pi">:</span> <span class="s">ch/en</span>
+
+<span class="c1"># 修正配置</span>
+<span class="na">language</span><span class="pi">:</span> <span class="s">cn</span>  <span class="c1"># 与数据文件匹配</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<h3 id="2-参数设置详解"><span class="me-2">2. 参数设置详解</span><a href="#2-参数设置详解" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<p>该评测任务本质上是一个三元组抽取(rte)任务，使用该模块时详细参数与配置可见上文中的<a href="#环境与数据">环境与数据</a>部分。主要的参数设置如下：</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">task</code>设置为<code class="language-plaintext highlighter-rouge">rte</code>，表示三元组抽取任务；</li>
+  <li><code class="language-plaintext highlighter-rouge">language</code>设置为<code class="language-plaintext highlighter-rouge">cn</code>，表示该任务是中文数据；(原项目文件写的是ch但是data文件夹下全是cn后缀)</li>
+  <li><code class="language-plaintext highlighter-rouge">engine</code>设置为想要使用的OpenAI大模型名称(由于OpenAI GPT-4 API未完全开放，本模块目前暂不支持GPT-4 API的使用)；</li>
+  <li><code class="language-plaintext highlighter-rouge">text_input</code>设置为数据集中的<code class="language-plaintext highlighter-rouge">input</code>文本：”2006年，弗雷泽出战中国天津举行的女子水球世界杯，协助国家队夺得冠军。2008年，弗雷泽代表澳大利亚参加北京奥运会女子水球比赛，赢得铜牌。”</li>
+  <li><code class="language-plaintext highlighter-rouge">zero_shot</code>可根据需要设置，如设置为<code class="language-plaintext highlighter-rouge">False</code>，需要在<code class="language-plaintext highlighter-rouge">/data/rte_cn.json</code>文件中按照特定格式设置in-context learning所需的examples；</li>
+  <li><code class="language-plaintext highlighter-rouge">instruction</code>可设置为数据集中的<code class="language-plaintext highlighter-rouge">instruction</code>字段，如果为<code class="language-plaintext highlighter-rouge">None</code>则表示使用模块默认的指令：”使用自然语言抽取三元组,已知下列句子,请从句子中抽取出可能的实体、关系,抽取实体类型为{‘专业’,’时间’,’人类’,’组织’,’地理地区’,’事件’},关系类型为{‘体育运动’,’包含行政领土’,’参加’,’国家’,’邦交国’,’夺得’,’举办地点’,’属于’,’获奖’},你可以先识别出实体再判断实体之间的关系,以(头实体,关系,尾实体)的形式回答”</li>
+  <li><code class="language-plaintext highlighter-rouge">labels</code>可设置为实体类型，也可为空；</li>
+</ul>
+
+<p><strong>实验分析</strong>：</p>
+<ol>
+  <li><strong>抽取质量</strong>
+    <ul>
+      <li>实体识别准确率高</li>
+      <li>关系类型判断合理</li>
+      <li>三元组结构完整</li>
+    </ul>
+  </li>
+  <li><strong>系统性能</strong>
+    <ul>
+      <li>中文处理能力强</li>
+      <li>复杂句式理解准确</li>
+      <li>输出格式规范</li>
+    </ul>
+  </li>
+  <li><strong>应用价值</strong>
+    <ul>
+      <li>适用于大规模知识抽取</li>
+      <li>支持多语言场景</li>
+      <li>易于集成到现有系统</li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="经验总结与展望"><span class="me-2">经验总结与展望</span><a href="#经验总结与展望" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+
+<h3 id="1-技术经验总结"><span class="me-2">1. 技术经验总结</span><a href="#1-技术经验总结" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<ol>
+  <li><strong>工程实践要点</strong>
+    <ul>
+      <li>环境配置规范化</li>
+      <li>错误处理系统化</li>
+      <li>日志记录完整化</li>
+    </ul>
+  </li>
+  <li><strong>性能优化建议</strong>
+    <ul>
+      <li>实现请求队列管理</li>
+      <li>优化重试策略</li>
+      <li>添加结果缓存机制</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="2-未来展望"><span class="me-2">2. 未来展望</span><a href="#2-未来展望" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<ol>
+  <li><strong>技术方向</strong>
+    <ul>
+      <li>探索其他 LLM 提供商</li>
+      <li>研究本地部署方案</li>
+      <li>优化系统性能指标</li>
+    </ul>
+  </li>
+  <li><strong>应用领域</strong>
+    <ul>
+      <li>垂直领域知识图谱构建</li>
+      <li>跨语言信息抽取</li>
+      <li>实时知识更新</li>
+    </ul>
+  </li>
+</ol>
+
+<blockquote>
+  <p>技术笔记：在进行大语言模型应用开发时，建议建立完整的监控和日志系统，这对于问题排查和性能优化都非常重要。</p>
+</blockquote>
+
+<p>通过这次实践，我们不仅掌握了 DeepKE 与 LLM 结合的技术要点，也深入理解了大语言模型在知识抽取领域的应用价值。期待在后续的探索中有更多发现。</p>
+
+  </div>
+
+  <div class="post-tail-wrapper text-muted">
+    <!-- categories -->
+    
+      <div class="post-meta mb-3">
+        <i class="far fa-folder-open fa-fw me-1"></i>
+        
+          <a href="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">深度学习</a>
+      </div>
+    
+
+    <!-- tags -->
+    
+      <div class="post-tags">
+        <i class="fa fa-tags fa-fw me-1"></i>
+        
+          <a
+            href="/tags/deepke/"
+            class="post-tag no-text-decoration"
+          >DeepKe</a>
+        
+          <a
+            href="/tags/llm/"
+            class="post-tag no-text-decoration"
+          >LLM</a>
+        
+          <a
+            href="/tags/nlp/"
+            class="post-tag no-text-decoration"
+          >NLP</a>
+        
+          <a
+            href="/tags/%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1/"
+            class="post-tag no-text-decoration"
+          >知识图谱</a>
+        
+          <a
+            href="/tags/%E4%BF%A1%E6%81%AF%E6%8A%BD%E5%8F%96/"
+            class="post-tag no-text-decoration"
+          >信息抽取</a>
+        
+      </div>
+    
+
+    <div
+      class="
+        post-tail-bottom
+        d-flex justify-content-between align-items-center mt-5 pb-2
+      "
+    >
+      <div class="license-wrapper">
+        
+          
+
+          This post is licensed under 
+        <a href="https://creativecommons.org/licenses/by/4.0/">
+          CC BY 4.0
+        </a>
+         by the author.
+        
+      </div>
+
+      <!-- Post sharing snippet -->
+
+<div class="share-wrapper d-flex align-items-center">
+  <span class="share-label text-muted">Share</span>
+  <span class="share-icons">
+    
+    
+    
+
+    
+
+      
+
+      <a href="https://twitter.com/intent/tweet?text=DeepKe%E5%BC%80%E6%BA%90%E6%A1%86%E6%9E%B6%E5%AE%9E%E6%88%982%EF%BC%9A%E4%BB%8E%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E5%88%B0%E9%A1%B9%E7%9B%AE%E8%BF%90%E8%A1%8C%E7%9A%84%E8%B8%A9%E5%9D%91%E4%B9%8B%E8%B7%AF%20-%20WenQi%20Wei&url=http%3A%2F%2Flocalhost%3A4000%2Fposts%2FDeepke%25E5%25BC%2580%25E6%25BA%2590%25E9%25A1%25B9%25E7%259B%25AE%25E5%25A4%258D%25E7%258E%25B02%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
+        <i class="fa-fw fa-brands fa-square-x-twitter"></i>
+      </a>
+    
+
+      
+
+      <a href="https://www.facebook.com/sharer/sharer.php?title=DeepKe%E5%BC%80%E6%BA%90%E6%A1%86%E6%9E%B6%E5%AE%9E%E6%88%982%EF%BC%9A%E4%BB%8E%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E5%88%B0%E9%A1%B9%E7%9B%AE%E8%BF%90%E8%A1%8C%E7%9A%84%E8%B8%A9%E5%9D%91%E4%B9%8B%E8%B7%AF%20-%20WenQi%20Wei&u=http%3A%2F%2Flocalhost%3A4000%2Fposts%2FDeepke%25E5%25BC%2580%25E6%25BA%2590%25E9%25A1%25B9%25E7%259B%25AE%25E5%25A4%258D%25E7%258E%25B02%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
+        <i class="fa-fw fab fa-facebook-square"></i>
+      </a>
+    
+
+      
+
+      <a href="https://t.me/share/url?url=http%3A%2F%2Flocalhost%3A4000%2Fposts%2FDeepke%25E5%25BC%2580%25E6%25BA%2590%25E9%25A1%25B9%25E7%259B%25AE%25E5%25A4%258D%25E7%258E%25B02%2F&text=DeepKe%E5%BC%80%E6%BA%90%E6%A1%86%E6%9E%B6%E5%AE%9E%E6%88%982%EF%BC%9A%E4%BB%8E%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E5%88%B0%E9%A1%B9%E7%9B%AE%E8%BF%90%E8%A1%8C%E7%9A%84%E8%B8%A9%E5%9D%91%E4%B9%8B%E8%B7%AF%20-%20WenQi%20Wei" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
+        <i class="fa-fw fab fa-telegram"></i>
+      </a>
+    
+
+    <button
+      id="copy-link"
+      aria-label="Copy link"
+      class="btn small"
+      data-bs-toggle="tooltip"
+      data-bs-placement="top"
+      title="Copy link"
+      data-title-succeed="Link copied successfully!"
+    >
+      <i class="fa-fw fas fa-link pe-none fs-6"></i>
+    </button>
+  </span>
+</div>
+
+    </div>
+    <!-- .post-tail-bottom -->
+  </div>
+  <!-- div.post-tail-wrapper -->
+</article>
+
+
+            
+          </main>
+
+          <!-- panel -->
+          <aside aria-label="Panel" id="panel-wrapper" class="col-xl-3 ps-2 text-muted">
+            <div class="access">
+              <!-- Get 5 last posted/updated posts -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <section id="access-lastmod">
+    <h2 class="panel-heading">Recently Updated</h2>
+    <ul class="content list-unstyled ps-0 pb-1 ms-1 mt-2">
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/posts/Deepke%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E5%A4%8D%E7%8E%B02/">DeepKe开源框架实战2：从环境配置到项目运行的踩坑之路</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/posts/Deepke%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E5%A4%8D%E7%8E%B01/">DeepKe开源框架实战1：从环境配置到项目运行的踩坑之路</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/posts/Deepke%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E5%A4%8D%E7%8E%B00/">DeepKe开源框架实战0：从环境配置到项目运行的踩坑之路</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/posts/%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA/">搭建个人博客网站：从零开始的 GitHub Pages + Jekyll 之旅</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/posts/%E5%B8%B8%E7%94%A8Git%E6%8C%87%E4%BB%A4/">Git 常用指令全攻略：掌握版本控制的艺术</a>
+        </li>
+      
+    </ul>
+  </section>
+  <!-- #access-lastmod -->
+
+
+              <!-- The trending tags list -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+
+
+  <section>
+    <h2 class="panel-heading">Trending Tags</h2>
+    <div class="d-flex flex-wrap mt-3 mb-1 me-3">
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/deepke/">DeepKe</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/nlp/">NLP</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1/">知识图谱</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/github/">github</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/pytorch/">Pytorch</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/codekgc/">CodeKGC</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/css3/">CSS3</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/html5/">HTML5</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/javascript/">JavaScript</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/jekyll/">jekyll</a>
+      
+    </div>
+  </section>
+
+
+            </div>
+
+            
+              
+              
+
+
+
+
+
+
+  <div class="toc-border-cover z-3"></div>
+  <section id="toc-wrapper" class="invisible position-sticky ps-0 pe-4 pb-4">
+    <h2 class="panel-heading ps-3 pb-2 mb-0">Contents</h2>
+    <nav id="toc"></nav>
+  </section>
+
+
+            
+          </aside>
+        </div>
+
+        <div class="row">
+          <!-- tail -->
+          <div id="tail-wrapper" class="col-12 col-lg-11 col-xl-9 px-md-4">
+            
+              
+              <!-- Recommend the other 3 posts according to the tags and categories of the current post. -->
+
+<!-- The total size of related posts -->
+
+
+<!-- An random integer that bigger than 0 -->
+
+
+<!-- Equals to TAG_SCORE / {max_categories_hierarchy} -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+
+
+
+
+
+
+
+
+
+
+  <aside id="related-posts" aria-labelledby="related-label">
+    <h3 class="mb-4" id="related-label">Further Reading</h3>
+    <nav class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 mb-4">
+      
+        <article class="col">
+          <a href="/posts/Deepke%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E5%A4%8D%E7%8E%B01/" class="post-preview card h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1743009900"
+  data-df="ll"
+  
+>
+  Mar 27, 2025
+</time>
+
+              <h4 class="pt-0 my-2">DeepKe开源框架实战1：从环境配置到项目运行的踩坑之路</h4>
+              <div class="text-muted">
+                <p>DeepKE-LLM 是一个基于大型语言模型的知识抽取工具包，本文记录了我在实践 CodeKGC 项目时的探索历程和解决方案。
+
+
+前言
+
+在知识图谱构建领域，基于代码语言模型的方法越来越受到关注。DeepKE 项目中的 CodeKGC 模块提供了一种新颖的解决方案，通过将知识抽取任务转化为代码生成任务来实现。本文将详细记录我在实践这个项目时的经验，希望能为后来者提供参考。
+
+项目概述
+
+C...</p>
+              </div>
+            </div>
+          </a>
+        </article>
+      
+        <article class="col">
+          <a href="/posts/Deepke%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E5%A4%8D%E7%8E%B00/" class="post-preview card h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1742783400"
+  data-df="ll"
+  
+>
+  Mar 24, 2025
+</time>
+
+              <h4 class="pt-0 my-2">DeepKe开源框架实战0：从环境配置到项目运行的踩坑之路</h4>
+              <div class="text-muted">
+                <p>DeepKe是一个开源的知识图谱抽取与构建工具，基于深度学习技术，支持多种任务类型。本文记录了我在配置 DeepKe 环境时遇到的各种问题及解决方案。
+
+
+前言
+
+在知识图谱构建领域，DeepKe 作为一个强大的开源工具，吸引了我的注意。它不仅支持实体关系抽取、属性抽取等多种任务，而且基于 PyTorch 实现，具有良好的扩展性。本文将详细记录我从零开始配置 DeepKe 环境的全过程，希望...</p>
+              </div>
+            </div>
+          </a>
+        </article>
+      
+    </nav>
+  </aside>
+  <!-- #related-posts -->
+
+
+            
+              
+              <!-- Navigation buttons at the bottom of the post. -->
+
+<nav class="post-navigation d-flex justify-content-between" aria-label="Post Navigation">
+  
+  
+
+  
+    <a
+      href="/posts/Deepke%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E5%A4%8D%E7%8E%B01/"
+      class="btn btn-outline-primary"
+      aria-label="Older"
+    >
+      <p>DeepKe开源框架实战1：从环境配置到项目运行的踩坑之路</p>
+    </a>
+  
+
+  
+    <div class="btn btn-outline-primary disabled" aria-label="Newer">
+      <p>-</p>
+    </div>
+  
+</nav>
+
+            
+
+            <!-- The Footer -->
+
+<footer
+  aria-label="Site Info"
+  class="
+    d-flex flex-column justify-content-center text-muted
+    flex-lg-row justify-content-lg-between align-items-lg-center pb-lg-3
+  "
+>
+  <p>©
+    <time>2025</time>
+
+    
+      <a href="https://twitter.com/way_adventurer">WenQi Wei</a>.
+    
+
+    
+      <span
+        data-bs-toggle="tooltip"
+        data-bs-placement="top"
+        title="Except where otherwise noted, the blog posts on this site are licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0) License by the author."
+      >Some rights reserved.</span>
+    
+  </p>
+
+  <!-- 站点统计 -->
+  <p> 
+    <!-- 不蒜子站点统计，放在页脚处 (footer.html 中插入) -->
+<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<i class="fa fa-user" aria-hidden="true"></i> <span id="busuanzi_value_site_uv"></span> |
+<i class="fa fa-eye" aria-hidden="true"></i> <span id="busuanzi_value_site_pv"></span>
+  </p>
+
+  <p>Using the <a
+        data-bs-toggle="tooltip"
+        data-bs-placement="top"
+        title="v7.2.4"
+        href="https://github.com/cotes2020/jekyll-theme-chirpy"
+        target="_blank"
+        rel="noopener"
+      >Chirpy</a> theme for <a href="https://jekyllrb.com" target="_blank" rel="noopener">Jekyll</a>.
+  </p>
+</footer>
+
+          </div>
+        </div>
+
+        <!-- The Search results -->
+
+<div id="search-result-wrapper" class="d-flex justify-content-center d-none">
+  <div class="col-11 content">
+    <div id="search-hints">
+      <!-- The trending tags list -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+
+
+  <section>
+    <h2 class="panel-heading">Trending Tags</h2>
+    <div class="d-flex flex-wrap mt-3 mb-1 me-3">
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/deepke/">DeepKe</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/nlp/">NLP</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1/">知识图谱</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/github/">github</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/pytorch/">Pytorch</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/codekgc/">CodeKGC</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/css3/">CSS3</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/html5/">HTML5</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/javascript/">JavaScript</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/jekyll/">jekyll</a>
+      
+    </div>
+  </section>
+
+
+    </div>
+    <div id="search-results" class="d-flex flex-wrap justify-content-center text-muted mt-3"></div>
+  </div>
+</div>
+
+      </div>
+
+      <aside aria-label="Scroll to Top">
+        <button id="back-to-top" type="button" class="btn btn-lg btn-box-shadow">
+          <i class="fas fa-angle-up"></i>
+        </button>
+      </aside>
+    </div>
+
+    <div id="mask" class="d-none position-fixed w-100 h-100 z-1"></div>
+
+    
+      <aside
+  id="notification"
+  class="toast"
+  role="alert"
+  aria-live="assertive"
+  aria-atomic="true"
+  data-bs-animation="true"
+  data-bs-autohide="false"
+>
+  <div class="toast-header">
+    <button
+      type="button"
+      class="btn-close ms-auto"
+      data-bs-dismiss="toast"
+      aria-label="Close"
+    ></button>
+  </div>
+  <div class="toast-body text-center pt-0">
+    <p class="px-2 mb-3">A new version of content is available.</p>
+    <button type="button" class="btn btn-primary" aria-label="Update">
+      Update
+    </button>
+  </div>
+</aside>
+
+    
+
+    <!-- Embedded scripts -->
+
+    
+      
+      <!-- The comments switcher -->
+
+  
+  <!-- https://giscus.app/ -->
+<script>
+  (function () {
+    const themeMapper = Theme.getThemeMapper('light', 'dark_dimmed');
+    const initTheme = themeMapper[Theme.visualState];
+
+    let lang = 'zh-CN';if (lang.length > 2 && !lang.startsWith('zh')) {
+      lang = lang.slice(0, 2);
+    }
+
+    let giscusAttributes = {
+      src: 'https://giscus.app/client.js',
+      'data-repo': 'way-adventurer/way-adventurer.github.io',
+      'data-repo-id': 'R_kgDOOKaeKg',
+      'data-category': 'Announcements',
+      'data-category-id': 'DIC_kwDOOKaeKs4CoLO7',
+      'data-mapping': 'pathname',
+      'data-strict' : '0',
+      'data-reactions-enabled': '1',
+      'data-emit-metadata': '0',
+      'data-theme': initTheme,
+      'data-input-position': 'bottom',
+      'data-lang': lang,
+      'data-loading': 'lazy',
+      crossorigin: 'anonymous',
+      async: ''
+    };
+
+    let giscusNode = document.createElement('script');
+    Object.entries(giscusAttributes).forEach(([key, value]) =>
+      giscusNode.setAttribute(key, value)
+    );
+
+    const $footer = document.querySelector('footer');
+    $footer.insertAdjacentElement("beforebegin", giscusNode);
+
+    addEventListener('message', (event) => {
+      if (event.source === window && event.data && event.data.id === Theme.ID) {
+        const newTheme = themeMapper[Theme.visualState];
+
+        const message = {
+          setConfig: {
+            theme: newTheme
+          }
+        };
+
+        const giscus =
+          document.getElementsByClassName('giscus-frame')[0].contentWindow;
+        giscus.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+    });
+  })();
+</script>
+
+
+
+    
+
+    <!--
+  Jekyll Simple Search loader
+  See: <https://github.com/christian-fei/Simple-Jekyll-Search>
+-->
+
+
+
+
+
+<script>
+  
+  document.addEventListener('DOMContentLoaded', () => {
+    SimpleJekyllSearch({
+      searchInput: document.getElementById('search-input'),
+      resultsContainer: document.getElementById('search-results'),
+      json: '/assets/js/data/search.json',
+      searchResultTemplate: '  <article class="px-1 px-sm-2 px-lg-4 px-xl-0">    <header>      <h2><a href="{url}">{title}</a></h2>      <div class="post-meta d-flex flex-column flex-sm-row text-muted mt-1 mb-1">        {categories}        {tags}      </div>    </header>    <p>{snippet}</p>  </article>',
+      noResultsText: '<p class="mt-5">Oops! No results found.</p>',
+      templateMiddleware: function(prop, value, template) {
+        if (prop === 'categories') {
+          if (value === '') {
+            return `${value}`;
+          } else {
+            return `<div class="me-sm-4"><i class="far fa-folder fa-fw"></i>${value}</div>`;
+          }
+        }
+
+        if (prop === 'tags') {
+          if (value === '') {
+            return `${value}`;
+          } else {
+            return `<div><i class="fa fa-tag fa-fw"></i>${value}</div>`;
+          }
+        }
+      }
+    });
+  });
+</script>
+
+  </body>
+</html>
+

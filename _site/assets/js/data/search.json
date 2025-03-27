@@ -1,5 +1,31 @@
 [
   {
+    "title": "DeepKe开源框架实战2：从环境配置到项目运行的踩坑之路",
+    "url": "/posts/Deepke%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E5%A4%8D%E7%8E%B02/",
+    "categories": "深度学习",
+    "tags": "DeepKe, LLM, NLP, 知识图谱, 信息抽取",
+    "date": "2025-03-27 17:03:00 +0800",
+    "content": "在人工智能快速发展的今天，将大语言模型与知识图谱技术相结合成为一个重要趋势。本文详细记录了在 DeepKE 框架下进行知识抽取的实践经验。
+
+
+一、基于ICL的知识抽取实践
+
+1. 环境配置与准备
+
+
+  
+    环境配置
+
+    激活 Conda 环境
+
+    conda activate deepke-llm
+    
+
+    下载引用库
+
+    pip install eas..."
+  },
+  {
     "title": "DeepKe开源框架实战1：从环境配置到项目运行的踩坑之路",
     "url": "/posts/Deepke%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E5%A4%8D%E7%8E%B01/",
     "categories": "教程",
