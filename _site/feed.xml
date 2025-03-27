@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>WenQi Wei</title>
   <subtitle>这里是，way的世界！welcome！</subtitle>
-  <updated>2025-03-27T17:42:03+08:00</updated>
+  <updated>2025-03-27T17:57:10+08:00</updated>
   <author>
     <name>WenQi Wei</name>
     <uri>http://localhost:4000/</uri>
@@ -24,7 +24,7 @@
     <link href="http://localhost:4000/posts/Deepke%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E5%A4%8D%E7%8E%B02/" rel="alternate" type="text/html" title="DeepKe开源框架实战2：从环境配置到项目运行的踩坑之路" />
     <published>2025-03-27T17:03:00+08:00</published>
   
-    <updated>2025-03-27T17:03:00+08:00</updated>
+    <updated>2025-03-27T17:45:44+08:00</updated>
   
     <id>http://localhost:4000/posts/Deepke%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E5%A4%8D%E7%8E%B02/</id>
     <content type="text/html" src="http://localhost:4000/posts/Deepke%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E5%A4%8D%E7%8E%B02/" />
@@ -34,38 +34,27 @@
 
   
     
-    <category term="深度学习" />
+    <category term="教程" />
     
   
 
   <summary>在人工智能快速发展的今天，将大语言模型与知识图谱技术相结合成为一个重要趋势。本文详细记录了在 DeepKE 框架下进行知识抽取的实践经验。
 
 
-一、基于ICL的知识抽取实践
+一、深入理解 In-Context Learning
 
-1. 环境配置与准备
+1. ICL 原理解析
+
+In-Context Learning (ICL) 是大语言模型的一个重要特性，它允许模型通过少量示例来理解并执行特定任务。在 DeepKE 中的实现主要包括：
 
 
-  
-    环境配置
-
-    激活 Conda 环境
-
-    conda activate deepke-llm
-    
-
-    下载引用库
-
-    pip install easyinstruct
-pip install hydra-core
-    
-
-    如果pip install easyinstruct报错参考上一篇博客
-  
-  
-    数据
-
-    这里的数据指的是用于In-Context Learning的examples数据，放在data文件夹中，其中的.json文件是各种任务默认的examples数据，用户可以自定义其中的example，但需要遵...</summary>
+  示例构造
+    def prepare_examples(data_path: str, task_type: str, language: str) -&amp;amp;gt; List[Dict]:
+ &amp;quot;&amp;quot;&amp;quot;构建上下文学习示例
+ Args:
+     data_path: 示例数据路径
+     task_type: 任务类型 (ner/re/ee/rte)
+     language: 语言类型 (en...</summary>
 
   </entry>
 

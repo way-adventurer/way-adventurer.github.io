@@ -104,7 +104,7 @@
 <meta name="twitter:site" content="@way_adventurer" />
 <meta name="twitter:creator" content="@way-adventurer" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"way-adventurer"},"dateModified":"2025-03-27T17:03:00+08:00","datePublished":"2025-03-27T17:03:00+08:00","description":"在人工智能快速发展的今天，将大语言模型与知识图谱技术相结合成为一个重要趋势。本文详细记录了在 DeepKE 框架下进行知识抽取的实践经验。","headline":"DeepKe开源框架实战2：从环境配置到项目运行的踩坑之路","image":{"alt":"DeepKE进阶探索","lqip":"data:image/webp;base64,UklGRpoAAABXRUJQVlA4WAoAAAAQAAAADwAABwAAQUxQSDIAAAARL0AmbZurmr57yyIiqE8oiG0bejIYEQTgqiDA9vqnsUSI6H+oAERp2HZ65qP/VIAWAFZQOCBCAAAA8AEAnQEqEAAIAAVAfCWkAALp8sF8rgRgAP7o9FDvMCkMde9PK7euH5M1m6VWoDXf2FkP3BqV0ZYbO6NA/VFIAAAA","url":"http://localhost:4000/assets/img/posts/20250327/cover1.png","@type":"imageObject"},"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/Deepke%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E5%A4%8D%E7%8E%B02/"},"url":"http://localhost:4000/posts/Deepke%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E5%A4%8D%E7%8E%B02/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"way-adventurer"},"dateModified":"2025-03-27T17:45:44+08:00","datePublished":"2025-03-27T17:03:00+08:00","description":"在人工智能快速发展的今天，将大语言模型与知识图谱技术相结合成为一个重要趋势。本文详细记录了在 DeepKE 框架下进行知识抽取的实践经验。","headline":"DeepKe开源框架实战2：从环境配置到项目运行的踩坑之路","image":{"alt":"DeepKE进阶探索","lqip":"data:image/webp;base64,UklGRpoAAABXRUJQVlA4WAoAAAAQAAAADwAABwAAQUxQSDIAAAARL0AmbZurmr57yyIiqE8oiG0bejIYEQTgqiDA9vqnsUSI6H+oAERp2HZ65qP/VIAWAFZQOCBCAAAA8AEAnQEqEAAIAAVAfCWkAALp8sF8rgRgAP7o9FDvMCkMde9PK7euH5M1m6VWoDXf2FkP3BqV0ZYbO6NA/VFIAAAA","url":"http://localhost:4000/assets/img/posts/20250327/cover1.png","@type":"imageObject"},"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/Deepke%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E5%A4%8D%E7%8E%B02/"},"url":"http://localhost:4000/posts/Deepke%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E5%A4%8D%E7%8E%B02/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -909,6 +909,39 @@
 
       
     
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
 
     
   
@@ -924,6 +957,61 @@
       
         
         
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
       
 
       
@@ -1115,6 +1203,29 @@
 
       <!-- lastmod date -->
       
+        <span>
+          Updated
+          <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1743068744"
+  data-df="ll"
+  
+    data-bs-toggle="tooltip" data-bs-placement="bottom"
+  
+>
+  Mar 27, 2025
+</time>
+
+        </span>
+      
 
       
         
@@ -1169,9 +1280,9 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="1974 words"
+  title="2546 words"
 >
-  <em>10 min</em> read</span>
+  <em>14 min</em> read</span>
 
         </div>
       </div>
@@ -1206,6 +1317,84 @@
     <blockquote>
   <p>在人工智能快速发展的今天，将大语言模型与知识图谱技术相结合成为一个重要趋势。本文详细记录了在 DeepKE 框架下进行知识抽取的实践经验。</p>
 </blockquote>
+
+<h2 id="一深入理解-in-context-learning"><span class="me-2">一、深入理解 In-Context Learning</span><a href="#一深入理解-in-context-learning" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+
+<h3 id="1-icl-原理解析"><span class="me-2">1. ICL 原理解析</span><a href="#1-icl-原理解析" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<p>In-Context Learning (ICL) 是大语言模型的一个重要特性，它允许模型通过少量示例来理解并执行特定任务。在 DeepKE 中的实现主要包括：</p>
+
+<ol>
+  <li><strong>示例构造</strong>
+    <div class="language-python highlighter-rouge"><div class="code-header">
+        <span data-label-text="Python"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">prepare_examples</span><span class="p">(</span><span class="n">data_path</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">task_type</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">language</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">Dict</span><span class="p">]:</span>
+ <span class="sh">"""</span><span class="s">构建上下文学习示例
+ Args:
+     data_path: 示例数据路径
+     task_type: 任务类型 (ner/re/ee/rte)
+     language: 语言类型 (en/ch)
+ Returns:
+     examples: 格式化的示例列表
+ </span><span class="sh">"""</span>
+ <span class="o">//</span> <span class="p">...</span><span class="n">implementation</span> <span class="n">details</span><span class="bp">...</span>
+</pre></td></tr></tbody></table></code></div>    </div>
+  </li>
+  <li><strong>提示工程优化</strong>
+    <ul>
+      <li>示例选择策略</li>
+      <li>模板设计原则</li>
+      <li>上下文长度控制</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="2-知识抽取核心机制"><span class="me-2">2. 知识抽取核心机制</span><a href="#2-知识抽取核心机制" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<p>在 DeepKE 框架中，知识抽取任务主要涉及以下技术点：</p>
+
+<ol>
+  <li><strong>实体识别 (NER)</strong>
+```python
+class NERExtractor:
+ “"”命名实体识别器
+ 支持:
+    <ul>
+      <li>嵌套实体识别</li>
+      <li>跨句实体链接</li>
+      <li>实体属性抽取
+ “””
+ def <strong>init</strong>(self, model_config):
+  self.tokenizer = AutoTokenizer.from_pretrained(model_config.model_name)
+  // …initialization code…
+```</li>
+    </ul>
+  </li>
+  <li><strong>关系抽取 (RE)</strong>
+    <ul>
+      <li>实体对分类</li>
+      <li>语义依存分析</li>
+      <li>远程监督学习</li>
+    </ul>
+  </li>
+  <li><strong>事件抽取 (EE)</strong>
+    <ul>
+      <li>触发词识别</li>
+      <li>论元角色分类</li>
+      <li>事件链推理</li>
+    </ul>
+  </li>
+</ol>
 
 <h2 id="一基于icl的知识抽取实践"><span class="me-2">一、基于ICL的知识抽取实践</span><a href="#一基于icl的知识抽取实践" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 
@@ -1458,6 +1647,139 @@ pip <span class="nb">install </span>hydra-core
   </li>
 </ol>
 
+<h2 id="四系统架构与性能优化"><span class="me-2">四、系统架构与性能优化</span><a href="#四系统架构与性能优化" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+
+<h3 id="1-分布式处理方案"><span class="me-2">1. 分布式处理方案</span><a href="#1-分布式处理方案" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<p>为了提高系统处理能力，可以采用以下优化策略：</p>
+
+<div class="language-python highlighter-rouge"><div class="code-header">
+        <span data-label-text="Python"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+</pre></td><td class="rouge-code"><pre><span class="kn">from</span> <span class="n">concurrent.futures</span> <span class="kn">import</span> <span class="n">ThreadPoolExecutor</span>
+<span class="kn">from</span> <span class="n">queue</span> <span class="kn">import</span> <span class="n">Queue</span>
+<span class="kn">import</span> <span class="n">threading</span>
+
+<span class="k">class</span> <span class="nc">BatchProcessor</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">32</span><span class="p">):</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">queue</span> <span class="o">=</span> <span class="nc">Queue</span><span class="p">()</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">executor</span> <span class="o">=</span> <span class="nc">ThreadPoolExecutor</span><span class="p">(</span><span class="n">max_workers</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">batch_size</span> <span class="o">=</span> <span class="n">batch_size</span>
+        
+    <span class="k">def</span> <span class="nf">process_batch</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">items</span><span class="p">):</span>
+        <span class="sh">"""</span><span class="s">批量处理请求</span><span class="sh">"""</span>
+        <span class="n">futures</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">items</span><span class="p">:</span>
+            <span class="n">future</span> <span class="o">=</span> <span class="n">self</span><span class="p">.</span><span class="n">executor</span><span class="p">.</span><span class="nf">submit</span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">_process_single</span><span class="p">,</span> <span class="n">item</span><span class="p">)</span>
+            <span class="n">futures</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="n">future</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">futures</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<h3 id="2-缓存优化"><span class="me-2">2. 缓存优化</span><a href="#2-缓存优化" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<p>实现智能缓存机制：</p>
+
+<div class="language-python highlighter-rouge"><div class="code-header">
+        <span data-label-text="Python"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+</pre></td><td class="rouge-code"><pre><span class="kn">from</span> <span class="n">functools</span> <span class="kn">import</span> <span class="n">lru_cache</span>
+<span class="kn">import</span> <span class="n">hashlib</span>
+
+<span class="k">class</span> <span class="nc">ResultCache</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">capacity</span><span class="o">=</span><span class="mi">1000</span><span class="p">):</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">cache</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">capacity</span> <span class="o">=</span> <span class="n">capacity</span>
+        
+    <span class="nd">@lru_cache</span><span class="p">(</span><span class="n">maxsize</span><span class="o">=</span><span class="mi">1000</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">get_cached_result</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">text</span><span class="p">,</span> <span class="n">task_type</span><span class="p">):</span>
+        <span class="sh">"""</span><span class="s">获取缓存结果
+        Args:
+            text: 输入文本
+            task_type: 任务类型
+        Returns:
+            cached_result: 缓存的结果
+        </span><span class="sh">"""</span>
+        <span class="n">cache_key</span> <span class="o">=</span> <span class="n">self</span><span class="p">.</span><span class="nf">_generate_cache_key</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">task_type</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">self</span><span class="p">.</span><span class="n">cache</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="n">cache_key</span><span class="p">)</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<h2 id="五高级应用场景"><span class="me-2">五、高级应用场景</span><a href="#五高级应用场景" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+
+<h3 id="1-知识图谱增强"><span class="me-2">1. 知识图谱增强</span><a href="#1-知识图谱增强" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<p>通过以下方式扩展知识图谱：</p>
+
+<ol>
+  <li><strong>实体对齐</strong>
+    <div class="language-python highlighter-rouge"><div class="code-header">
+        <span data-label-text="Python"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">entity_alignment</span><span class="p">(</span><span class="n">entity1</span><span class="p">,</span> <span class="n">entity2</span><span class="p">,</span> <span class="n">threshold</span><span class="o">=</span><span class="mf">0.85</span><span class="p">):</span>
+ <span class="sh">"""</span><span class="s">实体对齐算法
+ Args:
+     entity1: 源实体
+     entity2: 目标实体
+     threshold: 对齐阈值
+ Returns:
+     is_aligned: 是否对齐
+     confidence: 置信度
+ </span><span class="sh">"""</span>
+ <span class="o">//</span> <span class="p">...</span><span class="n">alignment</span> <span class="n">logic</span><span class="bp">...</span>
+</pre></td></tr></tbody></table></code></div>    </div>
+  </li>
+  <li><strong>知识融合</strong>
+    <ul>
+      <li>冲突检测</li>
+      <li>可信度评估</li>
+      <li>版本控制</li>
+    </ul>
+  </li>
+</ol>
+
 <h2 id="经验总结与展望"><span class="me-2">经验总结与展望</span><a href="#经验总结与展望" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 
 <h3 id="1-技术经验总结"><span class="me-2">1. 技术经验总结</span><a href="#1-技术经验总结" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
@@ -1512,7 +1834,7 @@ pip <span class="nb">install </span>hydra-core
       <div class="post-meta mb-3">
         <i class="far fa-folder-open fa-fw me-1"></i>
         
-          <a href="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">深度学习</a>
+          <a href="/categories/%E6%95%99%E7%A8%8B/">教程</a>
       </div>
     
 
@@ -2187,6 +2509,30 @@ pip <span class="nb">install </span>hydra-core
   
 
   
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
     
 
 
@@ -2267,6 +2613,38 @@ C...</p>
 前言
 
 在知识图谱构建领域，DeepKe 作为一个强大的开源工具，吸引了我的注意。它不仅支持实体关系抽取、属性抽取等多种任务，而且基于 PyTorch 实现，具有良好的扩展性。本文将详细记录我从零开始配置 DeepKe 环境的全过程，希望...</p>
+              </div>
+            </div>
+          </a>
+        </article>
+      
+        <article class="col">
+          <a href="/posts/%E5%B8%B8%E7%94%A8Git%E6%8C%87%E4%BB%A4/" class="post-preview card h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1742351700"
+  data-df="ll"
+  
+>
+  Mar 19, 2025
+</time>
+
+              <h4 class="pt-0 my-2">Git 常用指令全攻略：掌握版本控制的艺术</h4>
+              <div class="text-muted">
+                <p>在当今的软件开发领域，Git 早已成为不可或缺的版本控制系统。它如同一位智慧的守护者，默默记录着代码的每一次变迁，让团队协作变得高效而有序。无论是初出茅庐的开发者，还是经验丰富的技术专家，掌握 Git 的常用指令都是迈向高效开发的关键一步。本文将带你深入 Git 的世界，从基础到进阶，逐一剖析那些常用的 Git 指令，助你轻松驾驭版本控制的精髓。
+
+一、初识 Git：搭建你的版本控制舞台
+
+...</p>
               </div>
             </div>
           </a>
