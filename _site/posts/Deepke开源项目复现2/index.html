@@ -104,7 +104,7 @@
 <meta name="twitter:site" content="@way_adventurer" />
 <meta name="twitter:creator" content="@way-adventurer" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"way-adventurer"},"dateModified":"2025-03-27T17:45:44+08:00","datePublished":"2025-03-27T17:03:00+08:00","description":"在人工智能快速发展的今天，将大语言模型与知识图谱技术相结合成为一个重要趋势。本文详细记录了在 DeepKE 框架下进行知识抽取的实践经验。","headline":"DeepKe开源框架实战2：从环境配置到项目运行的踩坑之路","image":{"alt":"DeepKE进阶探索","lqip":"data:image/webp;base64,UklGRpoAAABXRUJQVlA4WAoAAAAQAAAADwAABwAAQUxQSDIAAAARL0AmbZurmr57yyIiqE8oiG0bejIYEQTgqiDA9vqnsUSI6H+oAERp2HZ65qP/VIAWAFZQOCBCAAAA8AEAnQEqEAAIAAVAfCWkAALp8sF8rgRgAP7o9FDvMCkMde9PK7euH5M1m6VWoDXf2FkP3BqV0ZYbO6NA/VFIAAAA","url":"http://localhost:4000/assets/img/posts/20250327/cover1.png","@type":"imageObject"},"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/Deepke%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E5%A4%8D%E7%8E%B02/"},"url":"http://localhost:4000/posts/Deepke%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E5%A4%8D%E7%8E%B02/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"way-adventurer"},"dateModified":"2025-03-27T17:57:56+08:00","datePublished":"2025-03-27T17:03:00+08:00","description":"在人工智能快速发展的今天，将大语言模型与知识图谱技术相结合成为一个重要趋势。本文详细记录了在 DeepKE 框架下进行知识抽取的实践经验。","headline":"DeepKe开源框架实战2：从环境配置到项目运行的踩坑之路","image":{"alt":"DeepKE进阶探索","lqip":"data:image/webp;base64,UklGRpoAAABXRUJQVlA4WAoAAAAQAAAADwAABwAAQUxQSDIAAAARL0AmbZurmr57yyIiqE8oiG0bejIYEQTgqiDA9vqnsUSI6H+oAERp2HZ65qP/VIAWAFZQOCBCAAAA8AEAnQEqEAAIAAVAfCWkAALp8sF8rgRgAP7o9FDvMCkMde9PK7euH5M1m6VWoDXf2FkP3BqV0ZYbO6NA/VFIAAAA","url":"http://localhost:4000/assets/img/posts/20250327/cover1.png","@type":"imageObject"},"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/Deepke%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E5%A4%8D%E7%8E%B02/"},"url":"http://localhost:4000/posts/Deepke%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E5%A4%8D%E7%8E%B02/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -1100,17 +1100,6 @@
 
       
     
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
 
     
   
@@ -1215,7 +1204,7 @@
 
 <time
   
-  data-ts="1743068744"
+  data-ts="1743069476"
   data-df="ll"
   
     data-bs-toggle="tooltip" data-bs-placement="bottom"
@@ -1280,9 +1269,9 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="2546 words"
+  title="2465 words"
 >
-  <em>14 min</em> read</span>
+  <em>13 min</em> read</span>
 
         </div>
       </div>
@@ -1591,30 +1580,13 @@ pip <span class="nb">install </span>hydra-core
 
 <h2 id="三ccks2023知识图谱构建实践"><span class="me-2">三、CCKS2023知识图谱构建实践</span><a href="#三ccks2023知识图谱构建实践" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 
-<h3 id="1-配置优化与问题排查"><span class="me-2">1. 配置优化与问题排查</span><a href="#1-配置优化与问题排查" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
-
-<p>首先发现并解决了配置文件中的参数不一致问题：</p>
-<div class="language-yaml highlighter-rouge"><div class="code-header">
-        <span data-label-text="YAML"><i class="fas fa-code fa-fw small"></i></span>
-      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-</pre></td><td class="rouge-code"><pre><span class="c1"># 原配置</span>
-<span class="na">language</span><span class="pi">:</span> <span class="s">ch/en</span>
-
-<span class="c1"># 修正配置</span>
-<span class="na">language</span><span class="pi">:</span> <span class="s">cn</span>  <span class="c1"># 与数据文件匹配</span>
-</pre></td></tr></tbody></table></code></div></div>
-
-<h3 id="2-参数设置详解"><span class="me-2">2. 参数设置详解</span><a href="#2-参数设置详解" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<h3 id="参数设置详解"><span class="me-2">参数设置详解</span><a href="#参数设置详解" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
 <p>该评测任务本质上是一个三元组抽取(rte)任务，使用该模块时详细参数与配置可见上文中的环境与数据部分。主要的参数设置如下：</p>
 
 <ul>
   <li><code class="language-plaintext highlighter-rouge">task</code>设置为<code class="language-plaintext highlighter-rouge">rte</code>，表示三元组抽取任务；</li>
-  <li><code class="language-plaintext highlighter-rouge">language</code>设置为<code class="language-plaintext highlighter-rouge">cn</code>，表示该任务是中文数据；(原项目文件写的是ch但是data文件夹下全是cn后缀)</li>
+  <li><code class="language-plaintext highlighter-rouge">language</code>设置为<code class="language-plaintext highlighter-rouge">ch</code>，表示该任务是中文数据；</li>
   <li><code class="language-plaintext highlighter-rouge">engine</code>设置为想要使用的OpenAI大模型名称(由于OpenAI GPT-4 API未完全开放，本模块目前暂不支持GPT-4 API的使用)；</li>
   <li><code class="language-plaintext highlighter-rouge">text_input</code>设置为数据集中的<code class="language-plaintext highlighter-rouge">input</code>文本：”2006年，弗雷泽出战中国天津举行的女子水球世界杯，协助国家队夺得冠军。2008年，弗雷泽代表澳大利亚参加北京奥运会女子水球比赛，赢得铜牌。”</li>
   <li><code class="language-plaintext highlighter-rouge">zero_shot</code>可根据需要设置，如设置为<code class="language-plaintext highlighter-rouge">False</code>，需要在<code class="language-plaintext highlighter-rouge">/data/rte_cn.json</code>文件中按照特定格式设置in-context learning所需的examples；</li>
