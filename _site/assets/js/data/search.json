@@ -1,6 +1,37 @@
 [
   {
-    "title": "TensorFlow学习笔记(零)：环境配置与版本兼容性解析",
+    "title": "TensorFlow学习笔记(2.1)：BasicModels章linear_regression篇",
+    "url": "/posts/Tensorflow%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02_1/",
+    "categories": "教程",
+    "tags": "TensorFlow, Python, 线性回归",
+    "date": "2025-04-05 14:30:00 +0800",
+    "content": "本文是 TensorFlow 学习笔记系列的实操第二篇，主要介绍 TensorFlow 的线性回归。通过实际代码示例，帮助初学者快速入门 TensorFlow 2.x。
+
+
+1. 线性回归简介
+线性回归是机器学习中最基础的算法之一，用于预测连续型数值。本教程将使用 TensorFlow 2.x 实现一个简单的线性回归模型。
+
+2. 环境准备
+from __future__ import ab..."
+  },
+  {
+    "title": "TensorFlow学习笔记(1)：Introduction章helloworld与basic_operations篇",
+    "url": "/posts/Tensorflow%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01/",
+    "categories": "教程",
+    "tags": "TensorFlow, Python, 张量计算",
+    "date": "2025-04-05 14:30:00 +0800",
+    "content": "本文是 TensorFlow 学习笔记系列的实操第一篇，主要介绍 TensorFlow 的基础概念和张量运算。通过实际代码示例，帮助初学者快速入门 TensorFlow 2.x。
+
+
+一、helloworld
+1. 简介
+这是一个最基础的 TensorFlow 入门示例，通过创建和操作简单的张量来帮助初学者理解 TensorFlow 的基本概念。
+
+2. 环境准备
+TensorFlow 2...."
+  },
+  {
+    "title": "TensorFlow学习笔记(0)：环境配置与版本兼容性解析",
     "url": "/posts/Tensorflow%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B00/",
     "categories": "教程",
     "tags": "TensorFlow, Python, 环境配置",

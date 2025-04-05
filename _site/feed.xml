@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>WenQi Wei</title>
   <subtitle>这里是，way的世界！welcome！</subtitle>
-  <updated>2025-04-03T20:46:42+08:00</updated>
+  <updated>2025-04-05T23:25:17+08:00</updated>
   <author>
     <name>WenQi Wei</name>
     <uri>http://localhost:4000/</uri>
@@ -20,8 +20,94 @@
 
   
   <entry>
-    <title>TensorFlow学习笔记(零)：环境配置与版本兼容性解析</title>
-    <link href="http://localhost:4000/posts/Tensorflow%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B00/" rel="alternate" type="text/html" title="TensorFlow学习笔记(零)：环境配置与版本兼容性解析" />
+    <title>TensorFlow学习笔记(2.1)：BasicModels章linear_regression篇</title>
+    <link href="http://localhost:4000/posts/Tensorflow%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02_1/" rel="alternate" type="text/html" title="TensorFlow学习笔记(2.1)：BasicModels章linear_regression篇" />
+    <published>2025-04-05T14:30:00+08:00</published>
+  
+    <updated>2025-04-05T14:30:00+08:00</updated>
+  
+    <id>http://localhost:4000/posts/Tensorflow%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02_1/</id>
+    <content type="text/html" src="http://localhost:4000/posts/Tensorflow%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02_1/" />
+    <author>
+      <name>way-adventurer</name>
+    </author>
+
+  
+    
+    <category term="教程" />
+    
+  
+
+  <summary>本文是 TensorFlow 学习笔记系列的实操第二篇，主要介绍 TensorFlow 的线性回归。通过实际代码示例，帮助初学者快速入门 TensorFlow 2.x。
+
+
+1. 线性回归简介
+线性回归是机器学习中最基础的算法之一，用于预测连续型数值。本教程将使用 TensorFlow 2.x 实现一个简单的线性回归模型。
+
+2. 环境准备
+from __future__ import absolute_import, division, print_function
+import tensorflow as tf
+import numpy as np
+rng = np.random
+
+
+3. 模型参数设置
+# 模型超参数
+learning_rate = 0.01    # 学习率
+training_steps = 1000   # 训练步数
+display_step = 50   ...</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>TensorFlow学习笔记(1)：Introduction章helloworld与basic_operations篇</title>
+    <link href="http://localhost:4000/posts/Tensorflow%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01/" rel="alternate" type="text/html" title="TensorFlow学习笔记(1)：Introduction章helloworld与basic_operations篇" />
+    <published>2025-04-05T14:30:00+08:00</published>
+  
+    <updated>2025-04-05T14:30:00+08:00</updated>
+  
+    <id>http://localhost:4000/posts/Tensorflow%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01/</id>
+    <content type="text/html" src="http://localhost:4000/posts/Tensorflow%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01/" />
+    <author>
+      <name>way-adventurer</name>
+    </author>
+
+  
+    
+    <category term="教程" />
+    
+  
+
+  <summary>本文是 TensorFlow 学习笔记系列的实操第一篇，主要介绍 TensorFlow 的基础概念和张量运算。通过实际代码示例，帮助初学者快速入门 TensorFlow 2.x。
+
+
+一、helloworld
+1. 简介
+这是一个最基础的 TensorFlow 入门示例，通过创建和操作简单的张量来帮助初学者理解 TensorFlow 的基本概念。
+
+2. 环境准备
+TensorFlow 2.x 版本的安装与配置：
+import tensorflow as tf
+
+
+3. 张量(Tensor)基础
+张量是 TensorFlow 中的核心概念，它是一个多维数组，类似于 NumPy 的 ndarray。
+
+3.1 创建第一个张量
+# 创建一个字符串张量
+hello = tf.constant(&amp;quot;hello world&amp;quot;)
+print(hello)  # 输出张量对象信息
+
+
+3.2 访问张...</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>TensorFlow学习笔记(0)：环境配置与版本兼容性解析</title>
+    <link href="http://localhost:4000/posts/Tensorflow%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B00/" rel="alternate" type="text/html" title="TensorFlow学习笔记(0)：环境配置与版本兼容性解析" />
     <published>2025-04-03T19:42:00+08:00</published>
   
     <updated>2025-04-03T19:42:00+08:00</updated>
@@ -155,94 +241,6 @@ CodeKGC 是一个基于代码语言模型的知识图谱构建工具，其核心
   完整的工具链
     
       提供数据预处...</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>DeepKe开源框架实战0：从环境配置到项目运行的踩坑之路</title>
-    <link href="http://localhost:4000/posts/Deepke%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E5%A4%8D%E7%8E%B00/" rel="alternate" type="text/html" title="DeepKe开源框架实战0：从环境配置到项目运行的踩坑之路" />
-    <published>2025-03-24T10:30:00+08:00</published>
-  
-    <updated>2025-03-24T10:30:00+08:00</updated>
-  
-    <id>http://localhost:4000/posts/Deepke%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E5%A4%8D%E7%8E%B00/</id>
-    <content type="text/html" src="http://localhost:4000/posts/Deepke%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E5%A4%8D%E7%8E%B00/" />
-    <author>
-      <name>way-adventurer</name>
-    </author>
-
-  
-    
-    <category term="教程" />
-    
-  
-
-  <summary>DeepKe是一个开源的知识图谱抽取与构建工具，基于深度学习技术，支持多种任务类型。本文记录了我在配置 DeepKe 环境时遇到的各种问题及解决方案。
-
-
-前言
-
-在知识图谱构建领域，DeepKe 作为一个强大的开源工具，吸引了我的注意。它不仅支持实体关系抽取、属性抽取等多种任务，而且基于 PyTorch 实现，具有良好的扩展性。本文将详细记录我从零开始配置 DeepKe 环境的全过程，希望能帮助遇到类似问题的同学。
-
-环境配置详解
-
-一、代码获取
-
-首先，我们需要获取 DeepKe 的源代码。考虑到国内网络环境，我选择了从 Gitee 克隆代码：
-
-git clone https://gitee.com/openkg/deepke.git
-
-
-二、环境依赖问题的解决
-
-在配置过程中，我遇到了 conda 命令无法使用的问题。这是一个典型的环境变量配置问题，解决过程如下：
-
-1. 问...</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>从零搭建Web图片压缩工具：前端技术实战</title>
-    <link href="http://localhost:4000/posts/%E5%9B%BE%E7%89%87%E5%8E%8B%E7%BC%A9/" rel="alternate" type="text/html" title="从零搭建Web图片压缩工具：前端技术实战" />
-    <published>2025-03-20T10:35:00+08:00</published>
-  
-    <updated>2025-03-21T10:44:51+08:00</updated>
-  
-    <id>http://localhost:4000/posts/%E5%9B%BE%E7%89%87%E5%8E%8B%E7%BC%A9/</id>
-    <content type="text/html" src="http://localhost:4000/posts/%E5%9B%BE%E7%89%87%E5%8E%8B%E7%BC%A9/" />
-    <author>
-      <name>way-adventurer</name>
-    </author>
-
-  
-    
-    <category term="实战项目" />
-    
-  
-
-  <summary>在当今网络时代，图片压缩已成为前端开发中不可或缺的一环。本文将带你一步步实现一个纯前端的图片压缩工具，深入探讨其中的技术要点与实现思路。
-
-一、项目概述
-
-1.1 开发背景
-随着高清图片的普及，图片体积越来越大，而网页加载速度却直接影响用户体验。因此，一个高效的图片压缩工具显得尤为重要。
-
-1.2 技术选型
-
-  前端框架：原生JavaScript (ES6+)
-  UI组件：CSS Grid/Flexbox
-  核心库：browser-image-compression
-  文件处理：HTML5 File API
-
-
-二、核心功能实现
-
-2.1 文件拖拽上传
-// 实现思路：监听拖拽事件，处理文件输入
-const dropZone = document.getElementById(&amp;#39;dropZone&amp;#39;);
-dropZone.addEventListener(&amp;#39;drop&amp;#39;, (e)...</summary>
 
   </entry>
 

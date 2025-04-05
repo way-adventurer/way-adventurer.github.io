@@ -85,30 +85,30 @@
 
   <!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v4.4.1" />
-<meta property="og:title" content="DeepKe开源框架实战0：从环境配置到项目运行的踩坑之路" />
+<meta property="og:title" content="TensorFlow学习笔记(1)：Introduction章helloworld与basic_operations篇" />
 <meta name="author" content="way-adventurer" />
 <meta property="og:locale" content="en" />
-<meta name="description" content="DeepKe是一个开源的知识图谱抽取与构建工具，基于深度学习技术，支持多种任务类型。本文记录了我在配置 DeepKe 环境时遇到的各种问题及解决方案。" />
-<meta property="og:description" content="DeepKe是一个开源的知识图谱抽取与构建工具，基于深度学习技术，支持多种任务类型。本文记录了我在配置 DeepKe 环境时遇到的各种问题及解决方案。" />
-<link rel="canonical" href="http://localhost:4000/posts/Deepke%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E5%A4%8D%E7%8E%B00/" />
-<meta property="og:url" content="http://localhost:4000/posts/Deepke%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E5%A4%8D%E7%8E%B00/" />
+<meta name="description" content="本文是 TensorFlow 学习笔记系列的实操第一篇，主要介绍 TensorFlow 的基础概念和张量运算。通过实际代码示例，帮助初学者快速入门 TensorFlow 2.x。" />
+<meta property="og:description" content="本文是 TensorFlow 学习笔记系列的实操第一篇，主要介绍 TensorFlow 的基础概念和张量运算。通过实际代码示例，帮助初学者快速入门 TensorFlow 2.x。" />
+<link rel="canonical" href="http://localhost:4000/posts/Tensorflow%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01/" />
+<meta property="og:url" content="http://localhost:4000/posts/Tensorflow%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01/" />
 <meta property="og:site_name" content="WenQi Wei" />
-<meta property="og:image" content="http://localhost:4000/assets/img/posts/20250324/cover.png" />
-<meta property="og:image:alt" content="DeepKe学习实战" />
+<meta property="og:image" content="http://localhost:4000/assets/img/posts/20250405/cover.png" />
+<meta property="og:image:alt" content="TensorFlow基础学习" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2025-03-24T10:30:00+08:00" />
+<meta property="article:published_time" content="2025-04-05T14:30:00+08:00" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta property="twitter:image" content="http://localhost:4000/assets/img/posts/20250324/cover.png" />
-<meta name="twitter:image:alt" content="DeepKe学习实战" />
-<meta property="twitter:title" content="DeepKe开源框架实战0：从环境配置到项目运行的踩坑之路" />
+<meta property="twitter:image" content="http://localhost:4000/assets/img/posts/20250405/cover.png" />
+<meta name="twitter:image:alt" content="TensorFlow基础学习" />
+<meta property="twitter:title" content="TensorFlow学习笔记(1)：Introduction章helloworld与basic_operations篇" />
 <meta name="twitter:site" content="@way_adventurer" />
 <meta name="twitter:creator" content="@way-adventurer" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"way-adventurer"},"dateModified":"2025-03-24T10:30:00+08:00","datePublished":"2025-03-24T10:30:00+08:00","description":"DeepKe是一个开源的知识图谱抽取与构建工具，基于深度学习技术，支持多种任务类型。本文记录了我在配置 DeepKe 环境时遇到的各种问题及解决方案。","headline":"DeepKe开源框架实战0：从环境配置到项目运行的踩坑之路","image":{"alt":"DeepKe学习实战","lqip":"data:image/webp;base64,UklGRpoAAABXRUJQVlA4WAoAAAAQAAAADwAABwAAQUxQSDIAAAARL0AmbZurmr57yyIiqE8oiG0bejIYEQTgqiDA9vqnsUSI6H+oAERp2HZ65qP/VIAWAFZQOCBCAAAA8AEAnQEqEAAIAAVAfCWkAALp8sF8rgRgAP7o9FDvMCkMde9PK7euH5M1m6VWoDXf2FkP3BqV0ZYbO6NA/VFIAAAA","url":"http://localhost:4000/assets/img/posts/20250324/cover.png","@type":"imageObject"},"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/Deepke%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E5%A4%8D%E7%8E%B00/"},"url":"http://localhost:4000/posts/Deepke%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E5%A4%8D%E7%8E%B00/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"way-adventurer"},"dateModified":"2025-04-05T14:30:00+08:00","datePublished":"2025-04-05T14:30:00+08:00","description":"本文是 TensorFlow 学习笔记系列的实操第一篇，主要介绍 TensorFlow 的基础概念和张量运算。通过实际代码示例，帮助初学者快速入门 TensorFlow 2.x。","headline":"TensorFlow学习笔记(1)：Introduction章helloworld与basic_operations篇","image":{"alt":"TensorFlow基础学习","url":"http://localhost:4000/assets/img/posts/20250405/cover.png","@type":"imageObject"},"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/Tensorflow%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01/"},"url":"http://localhost:4000/posts/Tensorflow%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
-  <title>DeepKe开源框架实战0：从环境配置到项目运行的踩坑之路 | WenQi Wei
+  <title>TensorFlow学习笔记(1)：Introduction章helloworld与basic_operations篇 | WenQi Wei
   </title>
 
   <!--
@@ -521,7 +521,7 @@
         
           
             
-              <span>DeepKe开源框架实战0：从环境配置到项目运行的踩坑之路</span>
+              <span>TensorFlow学习笔记(1)：Introduction章helloworld与basic_operations篇</span>
             
 
           
@@ -651,147 +651,6 @@
 
       
     
-      
-
-      
-      
-      
-
-      
-    
-
-    <!-- take out classes -->
-    
-
-    
-    
-
-    
-
-    
-      
-      
-
-      
-
-      <!-- add image placeholder -->
-      
-
-    
-
-    <!-- lazy-load images -->
-    
-
-    
-      <!-- make sure the `<img>` is wrapped by `<a>` -->
-      
-
-      
-        <!-- create the image wrapper -->
-        
-
-        
-        
-      
-    
-
-    <!-- combine -->
-    
-  
-    
-
-    
-    
-
-    
-
-    
-    
-
-    
-    
-    
-
-    
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-      
-
-      
-    
-
-    <!-- take out classes -->
-    
-
-    
-    
-
-    
-
-    
-      
-    
-
-    <!-- lazy-load images -->
-    
-
-    
-      <!-- make sure the `<img>` is wrapped by `<a>` -->
-      
-
-      
-        <!-- create the image wrapper -->
-        
-
-        
-        
-      
-    
-
-    <!-- combine -->
-    
-  
-    
-
-    
-    
-
-    
-
-    
-    
-
-    
-    
-    
-
-    
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-      
-
-      
-    
 
     <!-- take out classes -->
     
@@ -871,28 +730,6 @@
 
       
     
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
 
     
   
@@ -908,6 +745,138 @@
       
         
         
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
       
 
       
@@ -1036,7 +1005,7 @@
 
 <article class="px-1" data-toc="true">
   <header>
-    <h1 data-toc-skip>DeepKe开源框架实战0：从环境配置到项目运行的踩坑之路</h1>
+    <h1 data-toc-skip>TensorFlow学习笔记(1)：Introduction章helloworld与basic_operations篇</h1>
     
 
     <div class="post-meta text-muted">
@@ -1053,13 +1022,13 @@
 
 <time
   
-  data-ts="1742783400"
+  data-ts="1743834600"
   data-df="ll"
   
     data-bs-toggle="tooltip" data-bs-placement="bottom"
   
 >
-  Mar 24, 2025
+  Apr  5, 2025
 </time>
 
       </span>
@@ -1075,7 +1044,7 @@
         
 
         <div class="mt-3 mb-3">
-          <a href="/assets/img/posts/20250324/cover.png" class="popup img-link preview-img blur"><img data-src="/assets/img/posts/20250324/cover.png"  alt="DeepKe学习实战" width="1200" height="630" data-lqip="true" src="data:image/webp;base64,UklGRpoAAABXRUJQVlA4WAoAAAAQAAAADwAABwAAQUxQSDIAAAARL0AmbZurmr57yyIiqE8oiG0bejIYEQTgqiDA9vqnsUSI6H+oAERp2HZ65qP/VIAWAFZQOCBCAAAA8AEAnQEqEAAIAAVAfCWkAALp8sF8rgRgAP7o9FDvMCkMde9PK7euH5M1m6VWoDXf2FkP3BqV0ZYbO6NA/VFIAAAA"></a><figcaption class="text-center pt-2 pb-2">DeepKe学习实战</figcaption></div>
+          <a href="/assets/img/posts/20250405/cover.png" class="popup img-link preview-img shimmer"><img src="/assets/img/posts/20250405/cover.png"  alt="TensorFlow基础学习" width="1200" height="630"  loading="lazy"></a><figcaption class="text-center pt-2 pb-2">TensorFlow基础学习</figcaption></div>
       
 
       <div class="d-flex justify-content-between">
@@ -1120,7 +1089,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="776 words"
+  title="811 words"
 >
   <em>4 min</em> read</span>
 
@@ -1131,7 +1100,7 @@
 
   
     <div id="toc-bar" class="d-flex align-items-center justify-content-between invisible">
-      <span class="label text-truncate">DeepKe开源框架实战0：从环境配置到项目运行的踩坑之路</span>
+      <span class="label text-truncate">TensorFlow学习笔记(1)：Introduction章helloworld与basic_operations篇</span>
       <button type="button" class="toc-trigger btn me-1">
         <i class="fa-solid fa-list-ul fa-fw"></i>
       </button>
@@ -1144,7 +1113,7 @@
 
     <dialog id="toc-popup" class="p-0">
       <div class="header d-flex flex-row align-items-center justify-content-between">
-        <div class="label text-truncate py-2 ms-4">DeepKe开源框架实战0：从环境配置到项目运行的踩坑之路</div>
+        <div class="label text-truncate py-2 ms-4">TensorFlow学习笔记(1)：Introduction章helloworld与basic_operations篇</div>
         <button id="toc-popup-close" type="button" class="btn mx-1 my-1 opacity-75">
           <i class="fas fa-close"></i>
         </button>
@@ -1155,161 +1124,185 @@
 
   <div class="content">
     <blockquote>
-  <p>DeepKe是一个开源的知识图谱抽取与构建工具，基于深度学习技术，支持多种任务类型。本文记录了我在配置 DeepKe 环境时遇到的各种问题及解决方案。</p>
+  <p>本文是 TensorFlow 学习笔记系列的实操第一篇，主要介绍 TensorFlow 的基础概念和张量运算。通过实际代码示例，帮助初学者快速入门 TensorFlow 2.x。</p>
 </blockquote>
 
-<h2 id="前言"><span class="me-2">前言</span><a href="#前言" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<h2 id="一helloworld"><span class="me-2">一、helloworld</span><a href="#一helloworld" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<h3 id="1-简介"><span class="me-2">1. 简介</span><a href="#1-简介" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<p>这是一个最基础的 TensorFlow 入门示例，通过创建和操作简单的张量来帮助初学者理解 TensorFlow 的基本概念。</p>
 
-<p>在知识图谱构建领域，DeepKe 作为一个强大的开源工具，吸引了我的注意。它不仅支持实体关系抽取、属性抽取等多种任务，而且基于 PyTorch 实现，具有良好的扩展性。本文将详细记录我从零开始配置 DeepKe 环境的全过程，希望能帮助遇到类似问题的同学。</p>
-
-<h2 id="环境配置详解"><span class="me-2">环境配置详解</span><a href="#环境配置详解" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
-
-<h3 id="一代码获取"><span class="me-2">一、代码获取</span><a href="#一代码获取" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
-
-<p>首先，我们需要获取 DeepKe 的源代码。考虑到国内网络环境，我选择了从 Gitee 克隆代码：</p>
-
-<div class="language-bash highlighter-rouge"><div class="code-header">
-        <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span>
+<h3 id="2-环境准备"><span class="me-2">2. 环境准备</span><a href="#2-环境准备" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<p>TensorFlow 2.x 版本的安装与配置：</p>
+<div class="language-python highlighter-rouge"><div class="code-header">
+        <span data-label-text="Python"><i class="fas fa-code fa-fw small"></i></span>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>git clone https://gitee.com/openkg/deepke.git
+</pre></td><td class="rouge-code"><pre><span class="kn">import</span> <span class="n">tensorflow</span> <span class="k">as</span> <span class="n">tf</span>
 </pre></td></tr></tbody></table></code></div></div>
 
-<h3 id="二环境依赖问题的解决"><span class="me-2">二、环境依赖问题的解决</span><a href="#二环境依赖问题的解决" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<h3 id="3-张量tensor基础"><span class="me-2">3. 张量(Tensor)基础</span><a href="#3-张量tensor基础" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<p>张量是 TensorFlow 中的核心概念，它是一个多维数组，类似于 NumPy 的 ndarray。</p>
 
-<p>在配置过程中，我遇到了 conda 命令无法使用的问题。这是一个典型的环境变量配置问题，解决过程如下：</p>
-
-<h4 id="1-问题诊断"><span class="me-2">1. 问题诊断</span><a href="#1-问题诊断" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
-<p>首先通过版本检查确认问题：</p>
-<div class="language-bash highlighter-rouge"><div class="code-header">
-        <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span>
-      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>conda <span class="nt">--version</span>
-</pre></td></tr></tbody></table></code></div></div>
-<p>命令未返回版本号，说明 Anaconda 环境变量未正确配置。</p>
-
-<h4 id="2-环境变量配置"><span class="me-2">2. 环境变量配置</span><a href="#2-环境变量配置" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
-<p>在 Windows 系统中，需要添加以下路径到系统环境变量：</p>
-<div class="language-plaintext highlighter-rouge"><div class="code-header">
-        <span data-label-text="Plaintext"><i class="fas fa-code fa-fw small"></i></span>
+<h4 id="31-创建第一个张量"><span class="me-2">3.1 创建第一个张量</span><a href="#31-创建第一个张量" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
+<div class="language-python highlighter-rouge"><div class="code-header">
+        <span data-label-text="Python"><i class="fas fa-code fa-fw small"></i></span>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
-</pre></td><td class="rouge-code"><pre>E:\Anaconda3\Scripts
-E:\Anaconda3
-</pre></td></tr></tbody></table></code></div></div>
+3
+</pre></td><td class="rouge-code"><pre><span class="c1"># 创建一个字符串张量
+</span><span class="n">hello</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="nf">constant</span><span class="p">(</span><span class="sh">"</span><span class="s">hello world</span><span class="sh">"</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">hello</span><span class="p">)</span>  <span class="c1"># 输出张量对象信息
+</span></pre></td></tr></tbody></table></code></div></div>
 
-<blockquote>
-  <p>提示：请根据你的实际安装路径修改上述地址。</p>
-</blockquote>
-
-<h4 id="3-验证配置"><span class="me-2">3. 验证配置</span><a href="#3-验证配置" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
-<p>重新运行版本检查命令：</p>
-<div class="language-bash highlighter-rouge"><div class="code-header">
-        <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span>
+<h4 id="32-访问张量值"><span class="me-2">3.2 访问张量值</span><a href="#32-访问张量值" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
+<div class="language-python highlighter-rouge"><div class="code-header">
+        <span data-label-text="Python"><i class="fas fa-code fa-fw small"></i></span>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>conda <span class="nt">--version</span>
-</pre></td></tr></tbody></table></code></div></div>
-<p>返回 <code class="language-plaintext highlighter-rouge">conda 23.3.1</code>，表明环境变量配置成功。</p>
+2
+</pre></td><td class="rouge-code"><pre><span class="c1"># 使用 numpy() 方法获取张量的具体值
+</span><span class="nf">print</span><span class="p">(</span><span class="n">hello</span><span class="p">.</span><span class="nf">numpy</span><span class="p">())</span>  <span class="c1"># 输出: b'hello world'
+</span></pre></td></tr></tbody></table></code></div></div>
 
-<h3 id="三虚拟环境创建与激活"><span class="me-2">三、虚拟环境创建与激活</span><a href="#三虚拟环境创建与激活" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
-
-<p>创建专用的 Python 环境是一个好习惯，可以避免依赖冲突。</p>
-
-<div class="language-bash highlighter-rouge"><div class="code-header">
-        <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span>
-      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>conda create <span class="nt">-n</span> deepke-llm <span class="nv">python</span><span class="o">=</span>3.9
-</pre></td></tr></tbody></table></code></div></div>
-
-<p>然而，在激活环境时遇到了新的问题。</p>
-
-<h4 id="问题conda-activate-失效"><span class="me-2">问题：conda activate 失效</span><a href="#问题conda-activate-失效" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
-
-<p><strong>错误信息</strong>：
-<a href="/assets/img/posts/20250324/1.png" class="popup img-link  shimmer"><img src="/assets/img/posts/20250324/1.png" alt="conda激活错误" loading="lazy"></a></p>
-
-<p><strong>解决方案</strong>：</p>
+<h3 id="4-重要概念解释"><span class="me-2">4. 重要概念解释</span><a href="#4-重要概念解释" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 <ol>
-  <li>对于 PowerShell 用户：
-    <div class="language-powershell highlighter-rouge"><div class="code-header">
-        <span data-label-text="Powershell"><i class="fas fa-code fa-fw small"></i></span>
-      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre><span class="n">conda</span><span class="w"> </span><span class="nx">init</span><span class="w"> </span><span class="nx">powershell</span><span class="w">
-</span></pre></td></tr></tbody></table></code></div>    </div>
-  </li>
-  <li>对于 CMD 用户：
-    <pre><code class="language-cmd">conda init cmd.exe
-</code></pre>
-  </li>
-</ol>
-
-<blockquote>
-  <p>重要提示：初始化后必须重启终端才能生效。</p>
-</blockquote>
-
-<h3 id="四项目依赖安装"><span class="me-2">四、项目依赖安装</span><a href="#四项目依赖安装" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
-
-<ol>
-  <li>首先切换到项目目录：
-    <div class="language-bash highlighter-rouge"><div class="code-header">
-        <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span>
-      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre><span class="nb">cd </span>example/llm
-</pre></td></tr></tbody></table></code></div>    </div>
-  </li>
-  <li>安装项目依赖：
-    <div class="language-bash highlighter-rouge"><div class="code-header">
-        <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span>
-      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>pip <span class="nb">install</span> <span class="nt">-r</span> requirements.txt
-</pre></td></tr></tbody></table></code></div>    </div>
-  </li>
-</ol>
-
-<p><a href="/assets/img/posts/20250324/2.png" class="popup img-link  shimmer"><img src="/assets/img/posts/20250324/2.png" alt="依赖安装成功" loading="lazy"></a></p>
-
-<h2 id="环境配置要点总结"><span class="me-2">环境配置要点总结</span><a href="#环境配置要点总结" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
-
-<ol>
-  <li><strong>版本控制</strong>：
+  <li><strong>tf.constant()</strong>
     <ul>
-      <li>Python 3.9</li>
-      <li>最新版 conda</li>
-      <li>最新版 DeepKe</li>
+      <li>用于创建常量张量</li>
+      <li>支持多种数据类型（字符串、数值等）</li>
+      <li>创建后值不可改变</li>
     </ul>
   </li>
-  <li><strong>关键路径</strong>：
+  <li><strong>张量的属性</strong>
     <ul>
-      <li>Anaconda 安装路径</li>
-      <li>项目根目录</li>
-      <li>依赖文件位置</li>
-    </ul>
-  </li>
-  <li><strong>常见问题解决</strong>：
-    <ul>
-      <li>环境变量配置</li>
-      <li>conda 命令初始化</li>
-      <li>虚拟环境管理</li>
+      <li>shape: 张量的形状</li>
+      <li>dtype: 数据类型</li>
+      <li>device: 所在设备（CPU/GPU）</li>
     </ul>
   </li>
 </ol>
 
-<h2 id="后续计划"><span class="me-2">后续计划</span><a href="#后续计划" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
-
-<p>环境配置完成后，我计划：</p>
+<h3 id="5-注意事项"><span class="me-2">5. 注意事项</span><a href="#5-注意事项" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 <ol>
-  <li>深入学习 DeepKe 的核心功能</li>
-  <li>复现几个典型的知识图谱构建案例</li>
-  <li>尝试在实际项目中应用</li>
+  <li>TensorFlow 2.x 采用即时执行模式</li>
+  <li>不需要创建会话（Session）</li>
+  <li>张量可以直接通过 numpy() 方法转换为 NumPy 数组</li>
 </ol>
 
-<blockquote>
-  <p>经验总结：在配置深度学习环境时，注意记录每一步操作和可能遇到的问题，这对后续的问题排查和经验分享都很有帮助。</p>
-</blockquote>
+<h3 id="6-练习建议"><span class="me-2">6. 练习建议</span><a href="#6-练习建议" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<ol>
+  <li>尝试创建不同类型的张量（整数、浮点数等）</li>
+  <li>打印张量的各种属性</li>
+  <li>尝试在 CPU 和 GPU 上创建张量</li>
+</ol>
 
-<hr />
+<h3 id="参考资源"><span class="me-2">参考资源</span><a href="#参考资源" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<ul>
+  <li>TensorFlow 官方文档：https://tensorflow.org</li>
+  <li>GitHub 项目地址：https://github.com/aymericdamien/TensorFlow-Examples/</li>
+</ul>
 
-<p>本文是 DeepKe 学习系列的第一篇，后续我会继续分享使用心得和实战经验，欢迎感兴趣的同学一起交流学习。</p>
+<h2 id="二basic_operations"><span class="me-2">二、basic_operations</span><a href="#二basic_operations" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<h3 id="1-简介-1"><span class="me-2">1. 简介</span><a href="#1-简介-1" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<p>这是一个关于 TensorFlow 2.x 基本张量操作的教程。本教程将帮助你理解 TensorFlow 中最基础也是最重要的概念 - 张量(Tensor)操作。</p>
 
+<h3 id="2-环境准备-1"><span class="me-2">2. 环境准备</span><a href="#2-环境准备-1" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<p>首先需要导入必要的库：</p>
+<div class="language-python highlighter-rouge"><div class="code-header">
+        <span data-label-text="Python"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre><span class="kn">from</span> <span class="n">__future__</span> <span class="kn">import</span> <span class="n">print_function</span>
+<span class="kn">import</span> <span class="n">tensorflow</span> <span class="k">as</span> <span class="n">tf</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<h3 id="3-张量常量定义"><span class="me-2">3. 张量常量定义</span><a href="#3-张量常量定义" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<p>在 TensorFlow 中，我们可以使用 <code class="language-plaintext highlighter-rouge">tf.constant()</code> 来创建常量张量：</p>
+<div class="language-python highlighter-rouge"><div class="code-header">
+        <span data-label-text="Python"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="n">a</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="nf">constant</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>  <span class="c1"># 创建标量张量
+</span><span class="n">b</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="nf">constant</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="nf">constant</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<h3 id="4-基本数学运算"><span class="me-2">4. 基本数学运算</span><a href="#4-基本数学运算" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<p>TensorFlow 提供了丰富的张量运算操作：</p>
+
+<h4 id="41-算术运算"><span class="me-2">4.1 算术运算</span><a href="#41-算术运算" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
+<div class="language-python highlighter-rouge"><div class="code-header">
+        <span data-label-text="Python"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="rouge-code"><pre><span class="n">add</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="nf">add</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>      <span class="c1"># 加法
+</span><span class="n">sub</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="nf">subtract</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>  <span class="c1"># 减法
+</span><span class="n">mul</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="nf">multiply</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>  <span class="c1"># 乘法
+</span><span class="n">div</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="nf">divide</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>    <span class="c1"># 除法
+</span></pre></td></tr></tbody></table></code></div></div>
+<p>注意：也可以直接使用 Python 运算符 (+, -, *, /) 进行运算。</p>
+
+<h4 id="42-统计运算"><span class="me-2">4.2 统计运算</span><a href="#42-统计运算" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
+<div class="language-python highlighter-rouge"><div class="code-header">
+        <span data-label-text="Python"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre><span class="n">mean</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="nf">reduce_mean</span><span class="p">([</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">])</span>  <span class="c1"># 计算平均值
+</span><span class="nb">sum</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="nf">reduce_sum</span><span class="p">([</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">])</span>    <span class="c1"># 计算总和
+</span></pre></td></tr></tbody></table></code></div></div>
+
+<h3 id="5-矩阵运算"><span class="me-2">5. 矩阵运算</span><a href="#5-矩阵运算" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<p>TensorFlow 支持强大的矩阵运算功能：</p>
+<div class="language-python highlighter-rouge"><div class="code-header">
+        <span data-label-text="Python"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+</pre></td><td class="rouge-code"><pre><span class="c1"># 创建 2x2 矩阵
+</span><span class="n">matrix1</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="nf">constant</span><span class="p">([[</span><span class="mf">1.</span><span class="p">,</span> <span class="mf">2.</span><span class="p">],</span>
+                      <span class="p">[</span><span class="mf">3.</span><span class="p">,</span> <span class="mf">4.</span><span class="p">]])</span>
+<span class="n">matrix2</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="nf">constant</span><span class="p">([[</span><span class="mf">5.</span><span class="p">,</span> <span class="mf">6.</span><span class="p">],</span>
+                      <span class="p">[</span><span class="mf">7.</span><span class="p">,</span> <span class="mf">8.</span><span class="p">]])</span>
+
+<span class="c1"># 矩阵乘法
+</span><span class="n">product</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="nf">matmul</span><span class="p">(</span><span class="n">matrix1</span><span class="p">,</span> <span class="n">matrix2</span><span class="p">)</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<h3 id="6-张量与-numpy-互转"><span class="me-2">6. 张量与 NumPy 互转</span><a href="#6-张量与-numpy-互转" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<p>TensorFlow 张量可以方便地转换为 NumPy 数组：</p>
+<div class="language-python highlighter-rouge"><div class="code-header">
+        <span data-label-text="Python"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="n">numpy_array</span> <span class="o">=</span> <span class="n">product</span><span class="p">.</span><span class="nf">numpy</span><span class="p">()</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<h3 id="7-关键要点"><span class="me-2">7. 关键要点</span><a href="#7-关键要点" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<ul>
+  <li>TensorFlow 2.x 采用即时执行模式，无需创建会话（Session）</li>
+  <li>基本数学运算支持 Python 运算符</li>
+  <li>张量可以方便地与 NumPy 数组互转</li>
+  <li>张量支持 GPU 加速计算</li>
+</ul>
+
+<h3 id="8-练习建议"><span class="me-2">8. 练习建议</span><a href="#8-练习建议" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<ol>
+  <li>尝试创建不同维度的张量</li>
+  <li>实践各种数学运算</li>
+  <li>尝试更复杂的矩阵运算</li>
+  <li>熟悉张量的属性（如 shape, dtype 等）</li>
+</ol>
+
+<h3 id="参考资源-1"><span class="me-2">参考资源</span><a href="#参考资源-1" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<ul>
+  <li>TensorFlow 官方文档：https://tensorflow.org</li>
+  <li>GitHub 项目地址：https://github.com/aymericdamien/TensorFlow-Examples/</li>
+</ul>
 
   </div>
 
@@ -1329,24 +1322,19 @@ E:\Anaconda3
         <i class="fa fa-tags fa-fw me-1"></i>
         
           <a
-            href="/tags/deepke/"
+            href="/tags/tensorflow/"
             class="post-tag no-text-decoration"
-          >DeepKe</a>
+          >TensorFlow</a>
         
           <a
-            href="/tags/pytorch/"
+            href="/tags/python/"
             class="post-tag no-text-decoration"
-          >Pytorch</a>
+          >Python</a>
         
           <a
-            href="/tags/nlp/"
+            href="/tags/%E5%BC%A0%E9%87%8F%E8%AE%A1%E7%AE%97/"
             class="post-tag no-text-decoration"
-          >NLP</a>
-        
-          <a
-            href="/tags/%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1/"
-            class="post-tag no-text-decoration"
-          >知识图谱</a>
+          >张量计算</a>
         
       </div>
     
@@ -1382,21 +1370,21 @@ E:\Anaconda3
 
       
 
-      <a href="https://twitter.com/intent/tweet?text=DeepKe%E5%BC%80%E6%BA%90%E6%A1%86%E6%9E%B6%E5%AE%9E%E6%88%980%EF%BC%9A%E4%BB%8E%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E5%88%B0%E9%A1%B9%E7%9B%AE%E8%BF%90%E8%A1%8C%E7%9A%84%E8%B8%A9%E5%9D%91%E4%B9%8B%E8%B7%AF%20-%20WenQi%20Wei&url=http%3A%2F%2Flocalhost%3A4000%2Fposts%2FDeepke%25E5%25BC%2580%25E6%25BA%2590%25E9%25A1%25B9%25E7%259B%25AE%25E5%25A4%258D%25E7%258E%25B00%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
+      <a href="https://twitter.com/intent/tweet?text=TensorFlow%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(1)%EF%BC%9AIntroduction%E7%AB%A0helloworld%E4%B8%8Ebasic_operations%E7%AF%87%20-%20WenQi%20Wei&url=http%3A%2F%2Flocalhost%3A4000%2Fposts%2FTensorflow%25E5%25AD%25A6%25E4%25B9%25A0%25E7%25AC%2594%25E8%25AE%25B01%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
         <i class="fa-fw fa-brands fa-square-x-twitter"></i>
       </a>
     
 
       
 
-      <a href="https://www.facebook.com/sharer/sharer.php?title=DeepKe%E5%BC%80%E6%BA%90%E6%A1%86%E6%9E%B6%E5%AE%9E%E6%88%980%EF%BC%9A%E4%BB%8E%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E5%88%B0%E9%A1%B9%E7%9B%AE%E8%BF%90%E8%A1%8C%E7%9A%84%E8%B8%A9%E5%9D%91%E4%B9%8B%E8%B7%AF%20-%20WenQi%20Wei&u=http%3A%2F%2Flocalhost%3A4000%2Fposts%2FDeepke%25E5%25BC%2580%25E6%25BA%2590%25E9%25A1%25B9%25E7%259B%25AE%25E5%25A4%258D%25E7%258E%25B00%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
+      <a href="https://www.facebook.com/sharer/sharer.php?title=TensorFlow%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(1)%EF%BC%9AIntroduction%E7%AB%A0helloworld%E4%B8%8Ebasic_operations%E7%AF%87%20-%20WenQi%20Wei&u=http%3A%2F%2Flocalhost%3A4000%2Fposts%2FTensorflow%25E5%25AD%25A6%25E4%25B9%25A0%25E7%25AC%2594%25E8%25AE%25B01%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
         <i class="fa-fw fab fa-facebook-square"></i>
       </a>
     
 
       
 
-      <a href="https://t.me/share/url?url=http%3A%2F%2Flocalhost%3A4000%2Fposts%2FDeepke%25E5%25BC%2580%25E6%25BA%2590%25E9%25A1%25B9%25E7%259B%25AE%25E5%25A4%258D%25E7%258E%25B00%2F&text=DeepKe%E5%BC%80%E6%BA%90%E6%A1%86%E6%9E%B6%E5%AE%9E%E6%88%980%EF%BC%9A%E4%BB%8E%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E5%88%B0%E9%A1%B9%E7%9B%AE%E8%BF%90%E8%A1%8C%E7%9A%84%E8%B8%A9%E5%9D%91%E4%B9%8B%E8%B7%AF%20-%20WenQi%20Wei" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
+      <a href="https://t.me/share/url?url=http%3A%2F%2Flocalhost%3A4000%2Fposts%2FTensorflow%25E5%25AD%25A6%25E4%25B9%25A0%25E7%25AC%2594%25E8%25AE%25B01%2F&text=TensorFlow%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(1)%EF%BC%9AIntroduction%E7%AB%A0helloworld%E4%B8%8Ebasic_operations%E7%AF%87%20-%20WenQi%20Wei" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
         <i class="fa-fw fab fa-telegram"></i>
       </a>
     
@@ -2059,55 +2047,55 @@ E:\Anaconda3
   
 
   
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
     
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
   
 
   
@@ -2135,7 +2123,7 @@ E:\Anaconda3
     <nav class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 mb-4">
       
         <article class="col">
-          <a href="/posts/Deepke%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E5%A4%8D%E7%8E%B01/" class="post-preview card h-100">
+          <a href="/posts/Tensorflow%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02_1/" class="post-preview card h-100">
             <div class="card-body">
               <!--
   Date format snippet
@@ -2147,25 +2135,67 @@ E:\Anaconda3
 
 <time
   
-  data-ts="1743009900"
+  data-ts="1743834600"
   data-df="ll"
   
 >
-  Mar 27, 2025
+  Apr  5, 2025
 </time>
 
-              <h4 class="pt-0 my-2">DeepKe开源框架实战1：从环境配置到项目运行的踩坑之路</h4>
+              <h4 class="pt-0 my-2">TensorFlow学习笔记(2.1)：BasicModels章linear_regression篇</h4>
               <div class="text-muted">
-                <p>DeepKE-LLM 是一个基于大型语言模型的知识抽取工具包，本文记录了我在实践 CodeKGC 项目时的探索历程和解决方案。
+                <p>本文是 TensorFlow 学习笔记系列的实操第二篇，主要介绍 TensorFlow 的线性回归。通过实际代码示例，帮助初学者快速入门 TensorFlow 2.x。
 
 
-前言
+1. 线性回归简介
+线性回归是机器学习中最基础的算法之一，用于预测连续型数值。本教程将使用 TensorFlow 2.x 实现一个简单的线性回归模型。
 
-在知识图谱构建领域，基于代码语言模型的方法越来越受到关注。DeepKE 项目中的 CodeKGC 模块提供了一种新颖的解决方案，通过将知识抽取任务转化为代码生成任务来实现。本文将详细记录我在实践这个项目时的经验，希望能为后来者提供参考。
+2. 环境准备
+1
+2
+3
+4
+from __future__ i...</p>
+              </div>
+            </div>
+          </a>
+        </article>
+      
+        <article class="col">
+          <a href="/posts/Tensorflow%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B00/" class="post-preview card h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
 
-项目概述
 
-C...</p>
+
+
+<time
+  
+  data-ts="1743680520"
+  data-df="ll"
+  
+>
+  Apr  3, 2025
+</time>
+
+              <h4 class="pt-0 my-2">TensorFlow学习笔记(0)：环境配置与版本兼容性解析</h4>
+              <div class="text-muted">
+                <p>本系列博客将记录我在学习 TensorFlow 过程中的经验和心得。从环境配置到实际应用，希望能为其他学习者提供有价值的参考。
+
+
+一、项目介绍
+
+在开始 TensorFlow 学习之旅之前，我选择了一个非常优质的学习资源：TensorFlow Examples 项目。这个项目提供了从基础到进阶的多个实例，包括：
+
+
+  线性回归
+  逻辑回归
+  多层感知器
+  卷积神经网络
+  循环神经...</p>
               </div>
             </div>
           </a>
@@ -2209,45 +2239,6 @@ In-Context Learning (ICL) 是大语言模型的一个重要特性，它允许模
           </a>
         </article>
       
-        <article class="col">
-          <a href="/posts/Tensorflow%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02_1/" class="post-preview card h-100">
-            <div class="card-body">
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1743834600"
-  data-df="ll"
-  
->
-  Apr  5, 2025
-</time>
-
-              <h4 class="pt-0 my-2">TensorFlow学习笔记(2.1)：BasicModels章linear_regression篇</h4>
-              <div class="text-muted">
-                <p>本文是 TensorFlow 学习笔记系列的实操第二篇，主要介绍 TensorFlow 的线性回归。通过实际代码示例，帮助初学者快速入门 TensorFlow 2.x。
-
-
-1. 线性回归简介
-线性回归是机器学习中最基础的算法之一，用于预测连续型数值。本教程将使用 TensorFlow 2.x 实现一个简单的线性回归模型。
-
-2. 环境准备
-1
-2
-3
-4
-from __future__ i...</p>
-              </div>
-            </div>
-          </a>
-        </article>
-      
     </nav>
   </aside>
   <!-- #related-posts -->
@@ -2263,21 +2254,21 @@ from __future__ i...</p>
 
   
     <a
-      href="/posts/%E5%9B%BE%E7%89%87%E5%8E%8B%E7%BC%A9/"
+      href="/posts/Tensorflow%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B00/"
       class="btn btn-outline-primary"
       aria-label="Older"
     >
-      <p>从零搭建Web图片压缩工具：前端技术实战</p>
+      <p>TensorFlow学习笔记(0)：环境配置与版本兼容性解析</p>
     </a>
   
 
   
     <a
-      href="/posts/Deepke%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E5%A4%8D%E7%8E%B01/"
+      href="/posts/Tensorflow%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02_1/"
       class="btn btn-outline-primary"
       aria-label="Newer"
     >
-      <p>DeepKe开源框架实战1：从环境配置到项目运行的踩坑之路</p>
+      <p>TensorFlow学习笔记(2.1)：BasicModels章linear_regression篇</p>
     </a>
   
 </nav>
