@@ -1,9 +1,9 @@
 ---
 title: TensorFlow学习笔记(2.2)：BasicModels章logistic_regression篇
 author: way-adventurer
-date: 2025-04-05 23:38:00 +0800
+date: 2025-04-14 22:17:00 +0800
 categories: [教程]
-tags: [TensorFlow, Python, 线性回归]
+tags: [TensorFlow, Python, 逻辑回归]
 render_with_liquid: false
 image:
   path: /assets/img/posts/20250414/cover.png

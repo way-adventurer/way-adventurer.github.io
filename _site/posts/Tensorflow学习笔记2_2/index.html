@@ -96,7 +96,7 @@
 <meta property="og:image" content="http://localhost:4000/assets/img/posts/20250414/cover.png" />
 <meta property="og:image:alt" content="TensorFlow基础学习" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2025-04-05T23:38:00+08:00" />
+<meta property="article:published_time" content="2025-04-14T22:17:00+08:00" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta property="twitter:image" content="http://localhost:4000/assets/img/posts/20250414/cover.png" />
 <meta name="twitter:image:alt" content="TensorFlow基础学习" />
@@ -104,7 +104,7 @@
 <meta name="twitter:site" content="@way_adventurer" />
 <meta name="twitter:creator" content="@way-adventurer" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"way-adventurer"},"dateModified":"2025-04-05T23:38:00+08:00","datePublished":"2025-04-05T23:38:00+08:00","description":"本文是 TensorFlow 学习笔记系列的实操第二篇，将详细讲解如何使用 TensorFlow 2.x 实现逻辑回归模型来识别手写数字。我们将使用 MNIST 数据集，这是机器学习领域最基础和著名的数据集之一。","headline":"TensorFlow学习笔记(2.2)：BasicModels章logistic_regression篇","image":{"alt":"TensorFlow基础学习","url":"http://localhost:4000/assets/img/posts/20250414/cover.png","@type":"imageObject"},"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/Tensorflow%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02_2/"},"url":"http://localhost:4000/posts/Tensorflow%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02_2/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"way-adventurer"},"dateModified":"2025-04-14T22:17:00+08:00","datePublished":"2025-04-14T22:17:00+08:00","description":"本文是 TensorFlow 学习笔记系列的实操第二篇，将详细讲解如何使用 TensorFlow 2.x 实现逻辑回归模型来识别手写数字。我们将使用 MNIST 数据集，这是机器学习领域最基础和著名的数据集之一。","headline":"TensorFlow学习笔记(2.2)：BasicModels章logistic_regression篇","image":{"alt":"TensorFlow基础学习","url":"http://localhost:4000/assets/img/posts/20250414/cover.png","@type":"imageObject"},"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/Tensorflow%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02_2/"},"url":"http://localhost:4000/posts/Tensorflow%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02_2/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -1055,13 +1055,13 @@
 
 <time
   
-  data-ts="1743867480"
+  data-ts="1744640220"
   data-df="ll"
   
     data-bs-toggle="tooltip" data-bs-placement="bottom"
   
 >
-  Apr  5, 2025
+  Apr 14, 2025
 </time>
 
       </span>
@@ -1810,9 +1810,9 @@
           >Python</a>
         
           <a
-            href="/tags/%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/"
+            href="/tags/%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92/"
             class="post-tag no-text-decoration"
-          >线性回归</a>
+          >逻辑回归</a>
         
       </div>
     
@@ -2342,89 +2342,16 @@
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
+      
+        
+        
+
   
     
     
     
     
       
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
     
   
     
@@ -2441,15 +2368,23 @@
     
     
       
-        
-        
-
+    
   
     
     
     
     
       
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
     
   
     
@@ -2488,13 +2423,13 @@
         <a class="post-tag btn btn-outline-primary" href="/tags/pytorch/">Pytorch</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/">线性回归</a>
-      
-        
         <a class="post-tag btn btn-outline-primary" href="/tags/codekgc/">CodeKGC</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/css3/">CSS3</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/html5/">HTML5</a>
       
     </div>
   </section>
@@ -2638,19 +2573,19 @@
   
 
   
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
     
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
 
 
 
@@ -2694,11 +2629,7 @@
 线性回归是机器学习中最基础的算法之一，用于预测连续型数值。本教程将使用 TensorFlow 2.x 实现一个简单的线性回归模型。
 
 2. 环境准备
-1
-2
-3
-4
-from __future__ i...</p>
+from __future__ import ab...</p>
               </div>
             </div>
           </a>
@@ -2795,22 +2726,18 @@ TensorFlow 2....</p>
 
   
     <a
-      href="/posts/Tensorflow%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01/"
+      href="/posts/Tensorflow%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02_1/"
       class="btn btn-outline-primary"
       aria-label="Older"
     >
-      <p>TensorFlow学习笔记(1)：Introduction章helloworld与basic_operations篇</p>
+      <p>TensorFlow学习笔记(2.1)：BasicModels章linear_regression篇</p>
     </a>
   
 
   
-    <a
-      href="/posts/Tensorflow%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02_1/"
-      class="btn btn-outline-primary"
-      aria-label="Newer"
-    >
-      <p>TensorFlow学习笔记(2.1)：BasicModels章linear_regression篇</p>
-    </a>
+    <div class="btn btn-outline-primary disabled" aria-label="Newer">
+      <p>-</p>
+    </div>
   
 </nav>
 
@@ -3257,89 +3184,16 @@ TensorFlow 2....</p>
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
+      
+        
+        
+
   
     
     
     
     
       
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
     
   
     
@@ -3356,15 +3210,23 @@ TensorFlow 2....</p>
     
     
       
-        
-        
-
+    
   
     
     
     
     
       
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
     
   
     
@@ -3403,13 +3265,13 @@ TensorFlow 2....</p>
         <a class="post-tag btn btn-outline-primary" href="/tags/pytorch/">Pytorch</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/">线性回归</a>
-      
-        
         <a class="post-tag btn btn-outline-primary" href="/tags/codekgc/">CodeKGC</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/css3/">CSS3</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/html5/">HTML5</a>
       
     </div>
   </section>

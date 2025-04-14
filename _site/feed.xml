@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>WenQi Wei</title>
   <subtitle>这里是，way的世界！welcome！</subtitle>
-  <updated>2025-04-14T22:15:16+08:00</updated>
+  <updated>2025-04-14T22:17:27+08:00</updated>
   <author>
     <name>WenQi Wei</name>
     <uri>http://localhost:4000/</uri>
@@ -20,52 +20,11 @@
 
   
   <entry>
-    <title>TensorFlow学习笔记(2.1)：BasicModels章linear_regression篇</title>
-    <link href="http://localhost:4000/posts/Tensorflow%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02_1/" rel="alternate" type="text/html" title="TensorFlow学习笔记(2.1)：BasicModels章linear_regression篇" />
-    <published>2025-04-05T23:38:00+08:00</published>
-  
-    <updated>2025-04-05T23:28:45+08:00</updated>
-  
-    <id>http://localhost:4000/posts/Tensorflow%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02_1/</id>
-    <content type="text/html" src="http://localhost:4000/posts/Tensorflow%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02_1/" />
-    <author>
-      <name>way-adventurer</name>
-    </author>
-
-  
-    
-    <category term="教程" />
-    
-  
-
-  <summary>本文是 TensorFlow 学习笔记系列的实操第二篇，主要介绍 TensorFlow 的线性回归。通过实际代码示例，帮助初学者快速入门 TensorFlow 2.x。
-
-
-1. 线性回归简介
-线性回归是机器学习中最基础的算法之一，用于预测连续型数值。本教程将使用 TensorFlow 2.x 实现一个简单的线性回归模型。
-
-2. 环境准备
-from __future__ import absolute_import, division, print_function
-import tensorflow as tf
-import numpy as np
-rng = np.random
-
-
-3. 模型参数设置
-# 模型超参数
-learning_rate = 0.01    # 学习率
-training_steps = 1000   # 训练步数
-display_step = 50   ...</summary>
-
-  </entry>
-
-  
-  <entry>
     <title>TensorFlow学习笔记(2.2)：BasicModels章logistic_regression篇</title>
     <link href="http://localhost:4000/posts/Tensorflow%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02_2/" rel="alternate" type="text/html" title="TensorFlow学习笔记(2.2)：BasicModels章logistic_regression篇" />
-    <published>2025-04-05T23:38:00+08:00</published>
+    <published>2025-04-14T22:17:00+08:00</published>
   
-    <updated>2025-04-05T23:38:00+08:00</updated>
+    <updated>2025-04-14T22:17:00+08:00</updated>
   
     <id>http://localhost:4000/posts/Tensorflow%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02_2/</id>
     <content type="text/html" src="http://localhost:4000/posts/Tensorflow%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02_2/" />
@@ -107,6 +66,47 @@ import numpy as np
 4.1 数据预处理
 # 数据集参数
 num_classes = 10...</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>TensorFlow学习笔记(2.1)：BasicModels章linear_regression篇</title>
+    <link href="http://localhost:4000/posts/Tensorflow%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02_1/" rel="alternate" type="text/html" title="TensorFlow学习笔记(2.1)：BasicModels章linear_regression篇" />
+    <published>2025-04-05T23:38:00+08:00</published>
+  
+    <updated>2025-04-05T23:28:45+08:00</updated>
+  
+    <id>http://localhost:4000/posts/Tensorflow%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02_1/</id>
+    <content type="text/html" src="http://localhost:4000/posts/Tensorflow%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02_1/" />
+    <author>
+      <name>way-adventurer</name>
+    </author>
+
+  
+    
+    <category term="教程" />
+    
+  
+
+  <summary>本文是 TensorFlow 学习笔记系列的实操第二篇，主要介绍 TensorFlow 的线性回归。通过实际代码示例，帮助初学者快速入门 TensorFlow 2.x。
+
+
+1. 线性回归简介
+线性回归是机器学习中最基础的算法之一，用于预测连续型数值。本教程将使用 TensorFlow 2.x 实现一个简单的线性回归模型。
+
+2. 环境准备
+from __future__ import absolute_import, division, print_function
+import tensorflow as tf
+import numpy as np
+rng = np.random
+
+
+3. 模型参数设置
+# 模型超参数
+learning_rate = 0.01    # 学习率
+training_steps = 1000   # 训练步数
+display_step = 50   ...</summary>
 
   </entry>
 
