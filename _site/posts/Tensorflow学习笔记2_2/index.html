@@ -1,0 +1,3568 @@
+<!doctype html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div id="animation">
+    <div class="animation-circle"></div>
+    <div class="animation-circle"></div>
+    <div class="animation-circle"></div>
+    <div class="animation-circle"></div>
+    <div class="animation-circle"></div>
+    <div class="animation-circle"></div>
+    <div class="animation-circle"></div>
+    <div class="animation-circle"></div>
+    <div class="animation-circle"></div>
+    <div class="animation-circle"></div>
+    <div class="animation-circle"></div>
+    <div class="animation-circle"></div>
+    <div class="animation-circle"></div>
+    <div class="animation-circle"></div>
+    <div class="animation-circle"></div>
+    <div class="animation-circle"></div>
+    <div class="animation-circle"></div>
+    <div class="animation-circle"></div>
+    <div class="animation-circle"></div>
+    <div class="animation-circle"></div>
+    <div class="animation-circle"></div>
+    <div class="animation-circle"></div>
+    <div class="animation-circle"></div>
+    <div class="animation-circle"></div>
+    <div class="animation-circle"></div>
+    <div class="animation-circle"></div>
+    <div class="animation-circle"></div>
+    <div class="animation-circle"></div>
+    <div class="animation-circle"></div>
+    <div class="animation-circle"></div>
+    <div class="animation-circle"></div>
+    <div class="animation-circle"></div>
+    <div class="animation-circle"></div>
+    <div class="animation-circle"></div>
+    <div class="animation-circle"></div>
+    <div class="animation-circle"></div>
+    <div class="animation-circle"></div>
+    <div class="animation-circle"></div>
+    <div class="animation-circle"></div>
+    <div class="animation-circle"></div>
+    <div class="animation-circle"></div>
+    <div class="animation-circle"></div>
+    <div class="animation-circle"></div>
+    <div class="animation-circle"></div>
+    <div class="animation-circle"></div>
+    <div class="animation-circle"></div>
+    <div class="animation-circle"></div>
+    <div class="animation-circle"></div>
+    <div class="animation-circle"></div>
+    <div class="animation-circle"></div>
+  </div>
+
+
+<!-- `site.alt_lang` can specify a language different from the UI -->
+<html lang="en" >
+  <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f7f7f7">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1b1b1e">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta
+    name="viewport"
+    content="width=device-width, user-scalable=no initial-scale=1, shrink-to-fit=no, viewport-fit=cover"
+  ><!-- Setup Open Graph image -->
+
+  
+
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="TensorFlow学习笔记(2.2)：BasicModels章logistic_regression篇" />
+<meta name="author" content="way-adventurer" />
+<meta property="og:locale" content="en" />
+<meta name="description" content="本文是 TensorFlow 学习笔记系列的实操第二篇，将详细讲解如何使用 TensorFlow 2.x 实现逻辑回归模型来识别手写数字。我们将使用 MNIST 数据集，这是机器学习领域最基础和著名的数据集之一。" />
+<meta property="og:description" content="本文是 TensorFlow 学习笔记系列的实操第二篇，将详细讲解如何使用 TensorFlow 2.x 实现逻辑回归模型来识别手写数字。我们将使用 MNIST 数据集，这是机器学习领域最基础和著名的数据集之一。" />
+<link rel="canonical" href="http://localhost:4000/posts/Tensorflow%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02_2/" />
+<meta property="og:url" content="http://localhost:4000/posts/Tensorflow%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02_2/" />
+<meta property="og:site_name" content="WenQi Wei" />
+<meta property="og:image" content="http://localhost:4000/assets/img/posts/20250414/cover.png" />
+<meta property="og:image:alt" content="TensorFlow基础学习" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-04-05T23:38:00+08:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="http://localhost:4000/assets/img/posts/20250414/cover.png" />
+<meta name="twitter:image:alt" content="TensorFlow基础学习" />
+<meta property="twitter:title" content="TensorFlow学习笔记(2.2)：BasicModels章logistic_regression篇" />
+<meta name="twitter:site" content="@way_adventurer" />
+<meta name="twitter:creator" content="@way-adventurer" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"way-adventurer"},"dateModified":"2025-04-05T23:38:00+08:00","datePublished":"2025-04-05T23:38:00+08:00","description":"本文是 TensorFlow 学习笔记系列的实操第二篇，将详细讲解如何使用 TensorFlow 2.x 实现逻辑回归模型来识别手写数字。我们将使用 MNIST 数据集，这是机器学习领域最基础和著名的数据集之一。","headline":"TensorFlow学习笔记(2.2)：BasicModels章logistic_regression篇","image":{"alt":"TensorFlow基础学习","url":"http://localhost:4000/assets/img/posts/20250414/cover.png","@type":"imageObject"},"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/Tensorflow%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02_2/"},"url":"http://localhost:4000/posts/Tensorflow%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02_2/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  <title>TensorFlow学习笔记(2.2)：BasicModels章logistic_regression篇 | WenQi Wei
+  </title>
+
+  <!--
+  The Favicons for Web, Android, Microsoft, and iOS (iPhone and iPad) Apps
+  Generated by: https://realfavicongenerator.net/
+-->
+
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicons/favicon-16x16.png">
+
+  <link rel="manifest" href="/assets/img/favicons/site.webmanifest">
+
+<link rel="shortcut icon" href="/assets/img/favicons/favicon.ico">
+<meta name="apple-mobile-web-app-title" content="WenQi Wei">
+<meta name="application-name" content="WenQi Wei">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="/assets/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+
+
+  <!-- Resource Hints -->
+  
+    
+      
+        <link rel="preconnect" href="https://fonts.googleapis.com" >
+      
+        <link rel="dns-prefetch" href="https://fonts.googleapis.com" >
+      
+    
+      
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      
+        <link rel="dns-prefetch" href="https://fonts.gstatic.com" >
+      
+    
+      
+        <link rel="preconnect" href="https://cdn.jsdelivr.net" >
+      
+        <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" >
+      
+    
+  
+
+  <!-- Bootstrap -->
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  
+
+  <!-- Theme style -->
+  <link rel="stylesheet" href="/assets/css/jekyll-theme-chirpy.css">
+
+  <!-- Web Font -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Source+Sans+Pro:wght@400;600;700;900&display=swap">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.1/css/all.min.css">
+
+  <!-- 3rd-party Dependencies -->
+
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tocbot@4.32.2/dist/tocbot.min.css">
+  
+
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/loading-attribute-polyfill@2.1.1/dist/loading-attribute-polyfill.min.css">
+  
+
+  
+    <!-- Image Popup -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox@3.3.0/dist/css/glightbox.min.css">
+  
+
+  <!-- Scripts -->
+
+  <script src="/assets/js/dist/theme.min.js"></script>
+
+  <!-- JS selector for site. -->
+
+<!-- commons -->
+
+
+
+<!-- layout specified -->
+
+
+  
+
+  
+    <!-- image lazy-loading & popup & clipboard -->
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+
+    
+
+  
+
+  
+    
+
+    
+
+  
+
+  
+    
+
+    
+
+  
+
+  
+    
+
+    
+
+  
+
+  
+    
+
+    
+
+  
+
+  
+    
+
+    
+
+  
+
+  
+    
+
+    
+
+  
+
+  
+    
+
+    
+
+  
+
+  
+    
+
+    
+
+  
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/combine/npm/simple-jekyll-search@1.10.0/dest/simple-jekyll-search.min.js,npm/loading-attribute-polyfill@2.1.1/dist/loading-attribute-polyfill.umd.min.js,npm/glightbox@3.3.0/dist/js/glightbox.min.js,npm/clipboard@2.0.11/dist/clipboard.min.js,npm/dayjs@1.11.13/dayjs.min.js,npm/dayjs@1.11.13/locale/en.js,npm/dayjs@1.11.13/plugin/relativeTime.js,npm/dayjs@1.11.13/plugin/localizedFormat.js,npm/tocbot@4.32.2/dist/tocbot.min.js"></script>
+
+
+
+
+
+
+
+<script defer src="/assets/js/dist/post.min.js"></script>
+
+
+
+<!-- Pageviews -->
+
+  
+
+  
+
+
+
+  
+
+  <!-- A placeholder to allow defining custom metadata -->
+
+</head>
+
+
+  <body>
+    <!-- The Side Bar -->
+
+<aside aria-label="Sidebar" id="sidebar" class="d-flex flex-column align-items-end">
+  <header class="profile-wrapper">
+    <a href="/" id="avatar" class="rounded-circle"><img src="/assets/img/avatar.jpg" width="112" height="112" alt="avatar" onerror="this.style.display='none'"></a>
+
+    <a class="site-title d-block" href="/">WenQi Wei</a>
+    <p class="site-subtitle fst-italic mb-0">Show me the code</p>
+  </header>
+  <!-- .profile-wrapper -->
+
+  <nav class="flex-column flex-grow-1 w-100 ps-0">
+    <ul class="nav">
+      <!-- home -->
+      <li class="nav-item">
+        <a href="/" class="nav-link">
+          <i class="fa-fw fas fa-home"></i>
+          <span>HOME</span>
+        </a>
+      </li>
+      <!-- the real tabs -->
+      
+        <li class="nav-item">
+          <a href="/categories/" class="nav-link">
+            <i class="fa-fw fas fa-stream"></i>
+            
+
+            <span>CATEGORIES</span>
+          </a>
+        </li>
+        <!-- .nav-item -->
+      
+        <li class="nav-item">
+          <a href="/tags/" class="nav-link">
+            <i class="fa-fw fas fa-tags"></i>
+            
+
+            <span>TAGS</span>
+          </a>
+        </li>
+        <!-- .nav-item -->
+      
+        <li class="nav-item">
+          <a href="/archives/" class="nav-link">
+            <i class="fa-fw fas fa-archive"></i>
+            
+
+            <span>ARCHIVES</span>
+          </a>
+        </li>
+        <!-- .nav-item -->
+      
+        <li class="nav-item">
+          <a href="/about/" class="nav-link">
+            <i class="fa-fw fas fa-info-circle"></i>
+            
+
+            <span>ABOUT</span>
+          </a>
+        </li>
+        <!-- .nav-item -->
+      
+    </ul>
+  </nav>
+
+  <!-- Friends link -->
+  
+      <!-- 友链设置，在 sidebar.html 中插入 -->
+<div class="friends">
+    <hr style="color:white;border: 1px solid ">
+    <p><i class="fas fa-user-friends"></i><span>FRIENDS</span></p>
+    <div class="friend-links">
+      
+      <a href="https://luanyu.xyz/" class="friend-link" target="_blank" rel="noopener">
+        <span class="friend-name">Xjh</span>
+      </a>
+      
+      <a href="https://mosfish.github.io/" class="friend-link" target="_blank" rel="noopener">
+        <span class="friend-name">Wxy</span>
+      </a>
+      
+    </div>
+</div>
+  
+
+  <div class="sidebar-bottom d-flex flex-wrap  align-items-center w-100">
+    
+      <button type="button" class="btn btn-link nav-link" aria-label="Switch Mode" id="mode-toggle">
+        <i class="fas fa-adjust"></i>
+      </button>
+
+      
+        <span class="icon-border"></span>
+      
+    
+
+    
+      
+
+      
+        <a
+          href="https://github.com/WAY-ADVENTURER"
+          aria-label="github"
+          
+
+          
+            target="_blank"
+            
+          
+
+          
+
+          
+            rel="noopener noreferrer"
+          
+        >
+          <i class="fab fa-github"></i>
+        </a>
+      
+    
+      
+
+      
+        <a
+          href="https://twitter.com/way_adventurer"
+          aria-label="twitter"
+          
+
+          
+            target="_blank"
+            
+          
+
+          
+
+          
+            rel="noopener noreferrer"
+          
+        >
+          <i class="fa-brands fa-x-twitter"></i>
+        </a>
+      
+    
+      
+
+      
+        <a
+          href="javascript:location.href = 'mailto:' + ['2992850181','qq.com'].join('@')"
+          aria-label="email"
+          
+
+          
+
+          
+
+          
+        >
+          <i class="fas fa-envelope"></i>
+        </a>
+      
+    
+      
+
+      
+        <a
+          href="/feed.xml"
+          aria-label="rss"
+          
+
+          
+
+          
+
+          
+        >
+          <i class="fas fa-rss"></i>
+        </a>
+      
+    
+  </div>
+  <!-- .sidebar-bottom -->
+</aside>
+<!-- #sidebar -->
+
+
+    <div id="main-wrapper" class="d-flex justify-content-center">
+      <div class="container d-flex flex-column px-xxl-5">
+        <!-- The Top Bar -->
+
+<header id="topbar-wrapper" aria-label="Top Bar">
+  <div
+    id="topbar"
+    class="d-flex align-items-center justify-content-between px-lg-3 h-100"
+  >
+    <nav id="breadcrumb" aria-label="Breadcrumb">
+      
+
+      
+        
+          
+            <span>
+              <a href="/">Home</a>
+            </span>
+
+          
+        
+          
+        
+          
+            
+              <span>TensorFlow学习笔记(2.2)：BasicModels章logistic_regression篇</span>
+            
+
+          
+        
+      
+    </nav>
+    <!-- endof #breadcrumb -->
+
+    <button type="button" id="sidebar-trigger" class="btn btn-link">
+      <i class="fas fa-bars fa-fw"></i>
+    </button>
+
+    <div id="topbar-title">
+      Post
+    </div>
+
+    <button type="button" id="search-trigger" class="btn btn-link">
+      <i class="fas fa-search fa-fw"></i>
+    </button>
+
+    <search id="search" class="align-items-center ms-3 ms-lg-0">
+      <i class="fas fa-search fa-fw"></i>
+      <input
+        class="form-control"
+        id="search-input"
+        type="search"
+        aria-label="search"
+        autocomplete="off"
+        placeholder="Search..."
+      >
+    </search>
+    <button type="button" class="btn btn-link text-decoration-none" id="search-cancel">Cancel</button>
+  </div>
+</header>
+
+
+        <div class="row flex-grow-1">
+          <main aria-label="Main Content" class="col-12 col-lg-11 col-xl-9 px-md-4">
+            
+              <!-- Refactor the HTML structure -->
+
+
+
+<!--
+  In order to allow a wide table to scroll horizontally,
+  we suround the markdown table with `<div class="table-wrapper">` and `</div>`
+-->
+
+
+
+<!--
+  Fixed kramdown code highlight rendering:
+  https://github.com/penibelst/jekyll-compress-html/issues/101
+  https://github.com/penibelst/jekyll-compress-html/issues/71#issuecomment-188144901
+-->
+
+
+
+<!-- Change the icon of checkbox -->
+
+
+
+<!-- Handle images -->
+
+
+
+
+  
+  
+
+  
+    
+      
+      
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+
+    <!-- take out classes -->
+    
+
+    
+    
+
+    
+
+    
+      
+    
+
+    <!-- lazy-load images -->
+    
+
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
+
+      
+        <!-- create the image wrapper -->
+        
+
+        
+        
+      
+    
+
+    <!-- combine -->
+    
+  
+
+  
+
+
+<!-- Add header for code snippets -->
+
+
+
+<!-- Create heading anchors -->
+
+
+
+
+
+  
+  
+
+  
+    
+    
+
+    
+      
+        
+        
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+
+    
+  
+
+  
+  
+
+  
+    
+    
+
+    
+      
+        
+        
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+
+    
+  
+
+  
+  
+
+  
+    
+    
+
+    
+      
+        
+        
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+
+    
+  
+
+  
+  
+
+  
+
+
+
+
+<!-- return -->
+
+
+
+
+
+
+
+
+
+
+<article class="px-1" data-toc="true">
+  <header>
+    <h1 data-toc-skip>TensorFlow学习笔记(2.2)：BasicModels章logistic_regression篇</h1>
+    
+
+    <div class="post-meta text-muted">
+      <!-- published date -->
+      <span>
+        Posted
+        <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1743867480"
+  data-df="ll"
+  
+    data-bs-toggle="tooltip" data-bs-placement="bottom"
+  
+>
+  Apr  5, 2025
+</time>
+
+      </span>
+
+      <!-- lastmod date -->
+      
+
+      
+        
+        
+        
+
+        
+
+        <div class="mt-3 mb-3">
+          <a href="/assets/img/posts/20250414/cover.png" class="popup img-link preview-img shimmer"><img src="/assets/img/posts/20250414/cover.png"  alt="TensorFlow基础学习" width="1200" height="630"  loading="lazy"></a><figcaption class="text-center pt-2 pb-2">TensorFlow基础学习</figcaption></div>
+      
+
+      <div class="d-flex justify-content-between">
+        <!-- author(s) -->
+        <span>
+          
+
+          By
+
+          <em>
+            
+              
+                
+                
+              
+            
+          </em>
+        </span>
+
+        <div>
+          <!-- pageviews -->
+          
+
+          <!-- read time -->
+          <!-- Calculate the post's reading time, and display the word count in tooltip -->
+
+
+
+<!-- words per minute -->
+
+
+
+
+
+
+
+
+
+
+<!-- return element -->
+<span
+  class="readtime"
+  data-bs-toggle="tooltip"
+  data-bs-placement="bottom"
+  title="3587 words"
+>
+  <em>19 min</em> read</span>
+
+        </div>
+      </div>
+    </div>
+  </header>
+
+  
+    <div id="toc-bar" class="d-flex align-items-center justify-content-between invisible">
+      <span class="label text-truncate">TensorFlow学习笔记(2.2)：BasicModels章logistic_regression篇</span>
+      <button type="button" class="toc-trigger btn me-1">
+        <i class="fa-solid fa-list-ul fa-fw"></i>
+      </button>
+    </div>
+
+    <button id="toc-solo-trigger" type="button" class="toc-trigger btn btn-outline-secondary btn-sm">
+      <span class="label ps-2 pe-1">Contents</span>
+      <i class="fa-solid fa-angle-right fa-fw"></i>
+    </button>
+
+    <dialog id="toc-popup" class="p-0">
+      <div class="header d-flex flex-row align-items-center justify-content-between">
+        <div class="label text-truncate py-2 ms-4">TensorFlow学习笔记(2.2)：BasicModels章logistic_regression篇</div>
+        <button id="toc-popup-close" type="button" class="btn mx-1 my-1 opacity-75">
+          <i class="fas fa-close"></i>
+        </button>
+      </div>
+      <div id="toc-popup-content" class="px-4 py-3 pb-4"></div>
+    </dialog>
+  
+
+  <div class="content">
+    <blockquote>
+  <p>本文是 TensorFlow 学习笔记系列的实操第二篇，将详细讲解如何使用 TensorFlow 2.x 实现逻辑回归模型来识别手写数字。我们将使用 MNIST 数据集，这是机器学习领域最基础和著名的数据集之一。</p>
+</blockquote>
+
+<h2 id="2-mnist数据集介绍"><span class="me-2">2. MNIST数据集介绍</span><a href="#2-mnist数据集介绍" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+
+<p>MNIST数据集包含：</p>
+<ul>
+  <li>训练集：60,000张图片</li>
+  <li>测试集：10,000张图片</li>
+  <li>图片尺寸：28x28像素</li>
+  <li>数据特征：灰度图像，像素值范围0-255</li>
+  <li>分类目标：10个数字（0-9）</li>
+</ul>
+
+<h2 id="3-环境准备"><span class="me-2">3. 环境准备</span><a href="#3-环境准备" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+
+<p>导入库函数：</p>
+<div class="language-python highlighter-rouge"><div class="code-header">
+        <span data-label-text="Python"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="rouge-code"><pre><span class="kn">from</span> <span class="n">__future__</span> <span class="kn">import</span> <span class="n">absolute_import</span><span class="p">,</span> <span class="n">division</span><span class="p">,</span> <span class="n">print_function</span>
+
+<span class="kn">import</span> <span class="n">tensorflow</span> <span class="k">as</span> <span class="n">tf</span>
+<span class="kn">import</span> <span class="n">numpy</span> <span class="k">as</span> <span class="n">np</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<h2 id="4-代码详解"><span class="me-2">4. 代码详解</span><a href="#4-代码详解" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+
+<h3 id="41-数据预处理"><span class="me-2">4.1 数据预处理</span><a href="#41-数据预处理" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<div class="language-python highlighter-rouge"><div class="code-header">
+        <span data-label-text="Python"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre></td><td class="rouge-code"><pre><span class="c1"># 数据集参数
+</span><span class="n">num_classes</span> <span class="o">=</span> <span class="mi">10</span>    <span class="c1"># 分类数量（0-9）
+</span><span class="n">num_features</span> <span class="o">=</span> <span class="mi">784</span>  <span class="c1"># 特征数量（28*28=784）
+</span>
+<span class="c1"># 训练参数
+</span><span class="n">learning_rate</span> <span class="o">=</span> <span class="mf">0.01</span>      <span class="c1"># 学习率
+</span><span class="n">training_steps</span> <span class="o">=</span> <span class="mi">1000</span>     <span class="c1"># 训练步数
+</span><span class="n">batch_size</span> <span class="o">=</span> <span class="mi">256</span>          <span class="c1"># 批次大小
+</span><span class="n">display_step</span> <span class="o">=</span> <span class="mi">50</span>         <span class="c1"># 每隔多少步显示一次结果
+</span></pre></td></tr></tbody></table></code></div></div>
+
+<p>学习率（learning_rate）是机器学习和深度学习中优化算法的一个超参数，用于控制模型参数更新的步长。在梯度下降法中，学习率决定了沿着梯度方向每次迭代时参数更新的步伐大小。<code class="language-plaintext highlighter-rouge">learning_rate = 0.01</code>表示每次参数更新时，调整的幅度为当前梯度值的百分之一点。</p>
+
+<p>学习率的影响：</p>
+<ol>
+  <li>过大的学习率：可能导致损失函数值波动较大，无法稳定收敛，甚至可能发散。</li>
+  <li>过小的学习率：虽然可以更精确地接近最优解，但会导致训练过程非常缓慢，增加训练时间。</li>
+</ol>
+
+<div class="language-python highlighter-rouge"><div class="code-header">
+        <span data-label-text="Python"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre></td><td class="rouge-code"><pre><span class="c1"># 准备MNIST数据集
+</span><span class="kn">from</span> <span class="n">tensorflow.keras.datasets</span> <span class="kn">import</span> <span class="n">mnist</span>
+<span class="p">(</span><span class="n">x_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">),</span> <span class="p">(</span><span class="n">x_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span> <span class="o">=</span> <span class="n">mnist</span><span class="p">.</span><span class="nf">load_data</span><span class="p">()</span>
+<span class="c1"># 转换为float32类型
+</span><span class="n">x_train</span><span class="p">,</span> <span class="n">x_test</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">array</span><span class="p">(</span><span class="n">x_train</span><span class="p">,</span> <span class="n">np</span><span class="p">.</span><span class="n">float32</span><span class="p">),</span> <span class="n">np</span><span class="p">.</span><span class="nf">array</span><span class="p">(</span><span class="n">x_test</span><span class="p">,</span> <span class="n">np</span><span class="p">.</span><span class="n">float32</span><span class="p">)</span>
+<span class="c1"># 展平为二维图像
+</span><span class="n">x_train</span><span class="p">,</span> <span class="n">x_test</span> <span class="o">=</span> <span class="n">x_train</span><span class="p">.</span><span class="nf">reshape</span><span class="p">([</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">num_features</span><span class="p">]),</span> <span class="n">x_test</span><span class="p">.</span><span class="nf">reshape</span><span class="p">([</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">num_features</span><span class="p">])</span>
+<span class="c1"># 归一化像素值
+</span><span class="n">x_train</span><span class="p">,</span> <span class="n">x_test</span> <span class="o">=</span> <span class="n">x_train</span> <span class="o">/</span> <span class="mf">255.</span><span class="p">,</span> <span class="n">x_test</span> <span class="o">/</span> <span class="mf">255.</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<p>数据预处理步骤：</p>
+<ol>
+  <li>加载MNIST数据集，使用<code class="language-plaintext highlighter-rouge">x_train</code>、<code class="language-plaintext highlighter-rouge">y_train</code>作为训练集，<code class="language-plaintext highlighter-rouge">x_test</code>、<code class="language-plaintext highlighter-rouge">y_test</code>作为测试集</li>
+  <li>将图像数据转换为float32类型，确保后续计算时具有更高的精度。</li>
+  <li>将28x28的图像从原始的二维图像格式转换为适合输入到逻辑回归模型的一维特征向量，<code class="language-plaintext highlighter-rouge">-1</code> 表示自动计算该维度的大小（即样本数保持不变）；<code class="language-plaintext highlighter-rouge">num_features</code> 是展平后的特征数量，等于图像的高度乘以宽度</li>
+  <li>将像素值归一化到[0,1]区间</li>
+</ol>
+
+<div class="language-python highlighter-rouge"><div class="code-header">
+        <span data-label-text="Python"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="c1"># Use tf.data API to shuffle and batch data.
+</span><span class="n">train_data</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">data</span><span class="p">.</span><span class="n">Dataset</span><span class="p">.</span><span class="nf">from_tensor_slices</span><span class="p">((</span><span class="n">x_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">))</span>
+<span class="n">train_data</span> <span class="o">=</span> <span class="n">train_data</span><span class="p">.</span><span class="nf">repeat</span><span class="p">().</span><span class="nf">shuffle</span><span class="p">(</span><span class="mi">5000</span><span class="p">).</span><span class="nf">batch</span><span class="p">(</span><span class="n">batch_size</span><span class="p">).</span><span class="nf">prefetch</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<p>使用 TensorFlow 的 <code class="language-plaintext highlighter-rouge">tf.data</code> API 来处理训练数据集，使其更适合模型训练。</p>
+<ol>
+  <li>使用 <code class="language-plaintext highlighter-rouge">tf.data.Dataset.from_tensor_slices</code> 方法将训练数据 <code class="language-plaintext highlighter-rouge">x_train</code> 和标签 <code class="language-plaintext highlighter-rouge">y_train</code> 组合成一个数据集。<code class="language-plaintext highlighter-rouge">x_train</code> 包含图像数据，<code class="language-plaintext highlighter-rouge">y_train</code> 包含对应的标签。</li>
+  <li>无限重复数据集以支持多次遍历。打乱数据集以确保训练过程中的随机性。将数据集分成小批量，以便高效训练。预取数据以减少 I/O 延迟，提高训练速度。</li>
+</ol>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">repeat()</code> 表示重复数据集，这意味着在训练过程中，数据集会不断循环使用，直到达到指定的训练步数 <code class="language-plaintext highlighter-rouge">training_steps</code>。</li>
+  <li><code class="language-plaintext highlighter-rouge">shuffle(5000)</code> 表示打乱数据集，参数 <code class="language-plaintext highlighter-rouge">5000</code> 表示打乱时使用的缓冲区大小。较大的缓冲区可以更好地打乱数据，但会占用更多的内存。</li>
+  <li><code class="language-plaintext highlighter-rouge">batch(batch_size)</code> 表示将数据集批量化，<code class="language-plaintext highlighter-rouge">batch_size</code> 是每个批量的大小，这里设置为 <code class="language-plaintext highlighter-rouge">256</code>。批量处理可以提高训练效率，因为 GPU 和 CPU 可以并行处理多个样本。</li>
+  <li><code class="language-plaintext highlighter-rouge">prefetch(1)</code> 表示预取数据预取可以在训练模型的同时准备下一批数据，从而减少 I/O 操作的延迟，提高训练速度。
+参数 <code class="language-plaintext highlighter-rouge">1</code> 表示预取一个批量的数据。</li>
+</ul>
+
+<h3 id="42-逻辑回归模型实现"><span class="me-2">4.2 逻辑回归模型实现</span><a href="#42-逻辑回归模型实现" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<h4 id="模型参数"><span class="me-2">模型参数</span><a href="#模型参数" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
+<div class="language-python highlighter-rouge"><div class="code-header">
+        <span data-label-text="Python"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre><span class="n">W</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="nc">Variable</span><span class="p">(</span><span class="n">tf</span><span class="p">.</span><span class="nf">ones</span><span class="p">([</span><span class="n">num_features</span><span class="p">,</span> <span class="n">num_classes</span><span class="p">]),</span> <span class="n">name</span><span class="o">=</span><span class="sh">"</span><span class="s">weight</span><span class="sh">"</span><span class="p">)</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="nc">Variable</span><span class="p">(</span><span class="n">tf</span><span class="p">.</span><span class="nf">zeros</span><span class="p">([</span><span class="n">num_classes</span><span class="p">]),</span> <span class="n">name</span><span class="o">=</span><span class="sh">"</span><span class="s">bias</span><span class="sh">"</span><span class="p">)</span>
+</pre></td></tr></tbody></table></code></div></div>
+<p><strong>权重 <code class="language-plaintext highlighter-rouge">W</code> 的定义</strong>：</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">tf.Variable</code>：创建一个 TensorFlow 变量，用于存储模型的可训练参数。</li>
+  <li><code class="language-plaintext highlighter-rouge">tf.ones([num_features, num_classes])</code>：初始化权重矩阵 <code class="language-plaintext highlighter-rouge">W</code>，其形状为 <code class="language-plaintext highlighter-rouge">[num_features, num_classes]</code>，即 <code class="language-plaintext highlighter-rouge">[784, 10]</code>。这里使用全 1 的张量进行初始化。
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">num_features = 784</code>：表示每个 MNIST 图像被展平后的特征数（28x28=784）。</li>
+      <li><code class="language-plaintext highlighter-rouge">num_classes = 10</code>：表示分类任务的类别数（MNIST 数据集有 10 个数字类别：0-9）。</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">name="weight"</code>：为变量指定名称，便于调试和可视化。</li>
+</ul>
+
+<p><strong>偏置 <code class="language-plaintext highlighter-rouge">b</code> 的定义</strong>：</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">tf.Variable</code>：同样创建一个 TensorFlow 变量。</li>
+  <li><code class="language-plaintext highlighter-rouge">tf.zeros([num_classes])</code>：初始化偏置向量 <code class="language-plaintext highlighter-rouge">b</code>，其形状为 <code class="language-plaintext highlighter-rouge">[num_classes]</code>，即 <code class="language-plaintext highlighter-rouge">[10]</code>。这里使用全 0 的张量进行初始化。</li>
+  <li><code class="language-plaintext highlighter-rouge">name="bias"</code>：为变量指定名称。</li>
+</ul>
+
+<h4 id="核心函数解析"><span class="me-2">核心函数解析：</span><a href="#核心函数解析" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
+
+<ol>
+  <li><strong>逻辑回归函数</strong>
+    <div class="language-python highlighter-rouge"><div class="code-header">
+        <span data-label-text="Python"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">logistic_regression</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+ <span class="k">return</span> <span class="n">tf</span><span class="p">.</span><span class="n">nn</span><span class="p">.</span><span class="nf">softmax</span><span class="p">(</span><span class="n">tf</span><span class="p">.</span><span class="nf">matmul</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">W</span><span class="p">)</span> <span class="o">+</span> <span class="n">b</span><span class="p">)</span>
+</pre></td></tr></tbody></table></code></div>    </div>
+  </li>
+</ol>
+
+<p><code class="language-plaintext highlighter-rouge">x</code>: 输入特征矩阵，形状为 <code class="language-plaintext highlighter-rouge">[batch_size, num_features]</code>。</p>
+
+<p><strong>矩阵乘法 (<code class="language-plaintext highlighter-rouge">tf.matmul(x, W)</code>)</strong>:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">tf.matmul(x, W)</code> 计算输入特征 <code class="language-plaintext highlighter-rouge">x</code> 和权重矩阵 <code class="language-plaintext highlighter-rouge">W</code> 的矩阵乘法。</li>
+  <li>结果的形状为 <code class="language-plaintext highlighter-rouge">[batch_size, num_classes]</code>。每个输入样本会被映射到 10 个类别的得分（logits）。</li>
+</ul>
+
+<p><strong>偏置加法 (<code class="language-plaintext highlighter-rouge">+ b</code>)</strong>:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">+ b</code> 将偏置向量 <code class="language-plaintext highlighter-rouge">b</code> 加到每个样本的 logits 上。</li>
+  <li><code class="language-plaintext highlighter-rouge">b</code> 的形状为 <code class="language-plaintext highlighter-rouge">[num_classes]</code>，偏置会被广播到 <code class="language-plaintext highlighter-rouge">[batch_size, num_classes]</code> 的形状。</li>
+</ul>
+
+<p><strong>Softmax 函数 (<code class="language-plaintext highlighter-rouge">tf.nn.softmax(...)</code>)</strong>:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">tf.nn.softmax(...)</code> 将 logits 转换为概率分布。</li>
+  <li>Softmax 函数的输出是一个形状为 <code class="language-plaintext highlighter-rouge">[batch_size, num_classes]</code> 的矩阵，其中每一行的元素之和为 1，表示每个样本属于各个类别的概率。</li>
+</ul>
+
+<p>返回值是一个形状为 <code class="language-plaintext highlighter-rouge">[batch_size, num_classes]</code> 的矩阵，其中每个元素表示对应样本属于某个类别的概率。</p>
+
+<ol>
+  <li><strong>交叉熵损失函数</strong>
+    <div class="language-python highlighter-rouge"><div class="code-header">
+        <span data-label-text="Python"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">cross_entropy</span><span class="p">(</span><span class="n">y_pred</span><span class="p">,</span> <span class="n">y_true</span><span class="p">):</span>
+ <span class="n">y_true</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="nf">one_hot</span><span class="p">(</span><span class="n">y_true</span><span class="p">,</span> <span class="n">depth</span><span class="o">=</span><span class="n">num_classes</span><span class="p">)</span>
+ <span class="n">y_pred</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="nf">clip_by_value</span><span class="p">(</span><span class="n">y_pred</span><span class="p">,</span> <span class="mf">1e-9</span><span class="p">,</span> <span class="mf">1.</span><span class="p">)</span>
+ <span class="k">return</span> <span class="n">tf</span><span class="p">.</span><span class="nf">reduce_mean</span><span class="p">(</span><span class="o">-</span><span class="n">tf</span><span class="p">.</span><span class="nf">reduce_sum</span><span class="p">(</span><span class="n">y_true</span> <span class="o">*</span> <span class="n">tf</span><span class="p">.</span><span class="n">math</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="n">y_pred</span><span class="p">),</span><span class="mi">1</span><span class="p">))</span>
+</pre></td></tr></tbody></table></code></div>    </div>
+  </li>
+</ol>
+
+<p><code class="language-plaintext highlighter-rouge">y_pred</code>: 模型预测的概率分布，形状为 <code class="language-plaintext highlighter-rouge">[batch_size, num_classes]</code>。每个元素表示对应样本属于某个类别的概率。</p>
+
+<p><code class="language-plaintext highlighter-rouge">y_true</code>: 真实标签，形状为 <code class="language-plaintext highlighter-rouge">[batch_size]</code>。每个元素表示对应样本的真实类别（整数）。</p>
+
+<p><strong>将真实标签转换为 one-hot 编码</strong></p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">tf.one_hot(y_true, depth=num_classes)</code> 将真实标签 <code class="language-plaintext highlighter-rouge">y_true</code> 转换为 one-hot 编码。</li>
+  <li><code class="language-plaintext highlighter-rouge">y_true</code> 的形状从 <code class="language-plaintext highlighter-rouge">[batch_size]</code> 变为 <code class="language-plaintext highlighter-rouge">[batch_size, num_classes]</code>。</li>
+  <li>例如，如果 <code class="language-plaintext highlighter-rouge">y_true</code> 是 <code class="language-plaintext highlighter-rouge">[3, 1, 2]</code>，<code class="language-plaintext highlighter-rouge">num_classes</code> 是 <code class="language-plaintext highlighter-rouge">10</code>，那么 <code class="language-plaintext highlighter-rouge">y_true</code> 将被转换为：
+    <div class="language-python highlighter-rouge"><div class="code-header">
+        <span data-label-text="Python"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>  <span class="c1"># index=3处值为1
+</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>   <span class="c1"># index=1处值为1
+</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]]</span>   <span class="c1"># index=2处值为1
+</span></pre></td></tr></tbody></table></code></div>    </div>
+  </li>
+</ul>
+
+<p><strong>裁剪预测概率</strong></p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">tf.clip_by_value(y_pred, 1e-9, 1.)</code> 将 <code class="language-plaintext highlighter-rouge">y_pred</code> 中的值裁剪到 <code class="language-plaintext highlighter-rouge">[1e-9, 1]</code> 范围内。</li>
+  <li>这一步是为了防止在计算 <code class="language-plaintext highlighter-rouge">log(y_pred)</code> 时出现 <code class="language-plaintext highlighter-rouge">log(0)</code> 的情况，避免数值不稳定或 NaN 值。如果 <code class="language-plaintext highlighter-rouge">y_pred</code> 中有值接近 0，裁剪后这些值将变为 <code class="language-plaintext highlighter-rouge">1e-9</code>。</li>
+</ul>
+
+<p><strong>计算交叉熵损失</strong></p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">tf.math.log(y_pred)</code> 计算 <code class="language-plaintext highlighter-rouge">y_pred</code> 中每个元素的自然对数。</li>
+  <li><code class="language-plaintext highlighter-rouge">y_true * tf.math.log(y_pred)</code> 计算每个样本的真实类别对应的预测概率的对数。</li>
+  <li><code class="language-plaintext highlighter-rouge">tf.reduce_sum(..., 1)</code> 按照类别维度（即第二个维度）求和，得到每个样本的交叉熵损失。</li>
+  <li><code class="language-plaintext highlighter-rouge">-tf.reduce_sum(..., 1)</code> 取负值，得到每个样本的交叉熵损失。</li>
+  <li><code class="language-plaintext highlighter-rouge">tf.reduce_mean(...)</code> 计算所有样本的交叉熵损失的平均值。</li>
+</ul>
+
+<p>返回值是一个标量，表示整个批次的平均交叉熵损失。</p>
+
+<ol>
+  <li><strong>模型准确率函数</strong>
+    <div class="language-python highlighter-rouge"><div class="code-header">
+        <span data-label-text="Python"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">accuracy</span><span class="p">(</span><span class="n">y_pred</span><span class="p">,</span> <span class="n">y_true</span><span class="p">):</span>
+ <span class="c1"># Predicted class is the index of highest score in prediction vector (i.e. argmax).
+</span> <span class="n">correct_prediction</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="nf">equal</span><span class="p">(</span><span class="n">tf</span><span class="p">.</span><span class="nf">argmax</span><span class="p">(</span><span class="n">y_pred</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">tf</span><span class="p">.</span><span class="nf">cast</span><span class="p">(</span><span class="n">y_true</span><span class="p">,</span> <span class="n">tf</span><span class="p">.</span><span class="n">int64</span><span class="p">))</span>
+ <span class="k">return</span> <span class="n">tf</span><span class="p">.</span><span class="nf">reduce_mean</span><span class="p">(</span><span class="n">tf</span><span class="p">.</span><span class="nf">cast</span><span class="p">(</span><span class="n">correct_prediction</span><span class="p">,</span> <span class="n">tf</span><span class="p">.</span><span class="n">float32</span><span class="p">))</span>
+</pre></td></tr></tbody></table></code></div>    </div>
+  </li>
+</ol>
+
+<p><code class="language-plaintext highlighter-rouge">y_pred</code>: 模型预测的概率分布，形状为 <code class="language-plaintext highlighter-rouge">[batch_size, num_classes]</code>。每个元素表示对应样本属于某个类别的概率。</p>
+
+<p><code class="language-plaintext highlighter-rouge">y_true</code>: 真实标签，形状为 <code class="language-plaintext highlighter-rouge">[batch_size]</code>。每个元素表示对应样本的真实类别（整数）。</p>
+
+<p><strong>预测类别</strong></p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">tf.argmax(y_pred, 1)</code> 返回 <code class="language-plaintext highlighter-rouge">y_pred</code> 中每个样本预测概率最高的类别索引（即预测类别）。</li>
+  <li>例如，如果 <code class="language-plaintext highlighter-rouge">y_pred</code> 是 <code class="language-plaintext highlighter-rouge">[[0.1, 0.2, 0.7], [0.6, 0.2, 0.2]]</code>，<code class="language-plaintext highlighter-rouge">tf.argmax(y_pred, 1)</code> 将返回 <code class="language-plaintext highlighter-rouge">[2, 0]</code>，表示第一个样本预测为类别 2，第二个样本预测为类别 0。</li>
+</ul>
+
+<p><strong>比较预测类别与真实类别</strong></p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">tf.cast(y_true, tf.int64)</code> 将真实标签 <code class="language-plaintext highlighter-rouge">y_true</code> 转换为 <code class="language-plaintext highlighter-rouge">int64</code> 类型，以确保与 <code class="language-plaintext highlighter-rouge">tf.argmax(y_pred, 1)</code> 的输出类型一致。</li>
+  <li><code class="language-plaintext highlighter-rouge">tf.equal(tf.argmax(y_pred, 1), tf.cast(y_true, tf.int64))</code> 比较预测类别与真实类别，返回一个布尔张量 <code class="language-plaintext highlighter-rouge">correct_prediction</code>，其中每个元素表示对应样本的预测是否正确。</li>
+  <li>例如，如果<code class="language-plaintext highlighter-rouge">tf.argmax(y_pred, 1)</code> 返回 <code class="language-plaintext highlighter-rouge">[2, 0]</code>， <code class="language-plaintext highlighter-rouge">y_true</code> 是 <code class="language-plaintext highlighter-rouge">[2, 1]</code>，<code class="language-plaintext highlighter-rouge">correct_prediction</code> 将返回 <code class="language-plaintext highlighter-rouge">[True, False]</code>，表示第一个样本预测正确，第二个样本预测错误。</li>
+</ul>
+
+<p><strong>计算准确率</strong></p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">tf.cast(correct_prediction, tf.float32)</code> 将布尔张量 <code class="language-plaintext highlighter-rouge">correct_prediction</code> 转换为 <code class="language-plaintext highlighter-rouge">float32</code> 类型，其中 <code class="language-plaintext highlighter-rouge">True</code> 转换为 <code class="language-plaintext highlighter-rouge">1.0</code>，<code class="language-plaintext highlighter-rouge">False</code> 转换为 <code class="language-plaintext highlighter-rouge">0.0</code>。</li>
+  <li><code class="language-plaintext highlighter-rouge">tf.reduce_mean(tf.cast(correct_prediction, tf.float32))</code> 计算转换后的张量的平均值，即准确率。</li>
+  <li>例如，如果 <code class="language-plaintext highlighter-rouge">correct_prediction</code> 是 <code class="language-plaintext highlighter-rouge">[True, False]</code>，转换后的张量将是 <code class="language-plaintext highlighter-rouge">[1.0, 0.0]</code>，平均值为 <code class="language-plaintext highlighter-rouge">0.5</code>，表示准确率为 50%。</li>
+</ul>
+
+<p>返回值是一个标量，表示模型在给定批次上的准确率。</p>
+
+<h2 id="5-训练过程详解"><span class="me-2">5. 训练过程详解</span><a href="#5-训练过程详解" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+
+<h3 id="51-优化器"><span class="me-2">5.1 优化器</span><a href="#51-优化器" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<div class="language-python highlighter-rouge"><div class="code-header">
+        <span data-label-text="Python"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="n">optimizer</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">optimizers</span><span class="p">.</span><span class="nc">SGD</span><span class="p">(</span><span class="n">learning_rate</span><span class="p">)</span>
+</pre></td></tr></tbody></table></code></div></div>
+<p>使用随机梯度下降(SGD)优化器，学习率为0.01</p>
+
+<h3 id="52-训练过程详解"><span class="me-2">5.2 训练过程详解</span><a href="#52-训练过程详解" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<div class="language-python highlighter-rouge"><div class="code-header">
+        <span data-label-text="Python"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">run_optimization</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+    <span class="k">with</span> <span class="n">tf</span><span class="p">.</span><span class="nc">GradientTape</span><span class="p">()</span> <span class="k">as</span> <span class="n">g</span><span class="p">:</span>
+        <span class="n">pred</span> <span class="o">=</span> <span class="nf">logistic_regression</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="n">loss</span> <span class="o">=</span> <span class="nf">cross_entropy</span><span class="p">(</span><span class="n">pred</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+    <span class="n">gradients</span> <span class="o">=</span> <span class="n">g</span><span class="p">.</span><span class="nf">gradient</span><span class="p">(</span><span class="n">loss</span><span class="p">,</span> <span class="p">[</span><span class="n">W</span><span class="p">,</span> <span class="n">b</span><span class="p">])</span>
+    <span class="n">optimizer</span><span class="p">.</span><span class="nf">apply_gradients</span><span class="p">(</span><span class="nf">zip</span><span class="p">(</span><span class="n">gradients</span><span class="p">,</span> <span class="p">[</span><span class="n">W</span><span class="p">,</span> <span class="n">b</span><span class="p">]))</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<p><strong>GradientTape 的使用</strong></p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">tf.GradientTape()</code> 是 TensorFlow 的自动微分机制</li>
+  <li>作用：记录计算过程以便自动计算梯度</li>
+  <li>工作流程：
+    <ol>
+      <li>在 tape 的上下文中执行前向传播</li>
+      <li>计算损失值</li>
+      <li>使用 tape 计算梯度</li>
+      <li>应用梯度更新参数</li>
+    </ol>
+  </li>
+</ul>
+
+<p><strong>优化步骤详解</strong>：</p>
+
+<p>前向传播：<code class="language-plaintext highlighter-rouge">pred = logistic_regression(x)</code>，将输入数据传入模型得到预测值。</p>
+
+<p>计算损失：<code class="language-plaintext highlighter-rouge">loss = cross_entropy(pred, y)</code>，使用交叉熵计算预测值与真实值的差异。</p>
+
+<p>计算梯度：<code class="language-plaintext highlighter-rouge">gradients = g.gradient(loss, [W, b])</code>，自动计算损失对权重和偏置的梯度。</p>
+
+<p>更新参数：<code class="language-plaintext highlighter-rouge">optimizer.apply_gradients(zip(gradients, [W, b]))</code>，使用优化器根据梯度更新模型参数。</p>
+
+<div class="language-python highlighter-rouge"><div class="code-header">
+        <span data-label-text="Python"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="rouge-code"><pre><span class="k">for</span> <span class="n">step</span><span class="p">,</span> <span class="p">(</span><span class="n">batch_x</span><span class="p">,</span> <span class="n">batch_y</span><span class="p">)</span> <span class="ow">in</span> <span class="nf">enumerate</span><span class="p">(</span><span class="n">train_data</span><span class="p">.</span><span class="nf">take</span><span class="p">(</span><span class="n">training_steps</span><span class="p">),</span> <span class="mi">1</span><span class="p">):</span>
+    <span class="nf">run_optimization</span><span class="p">(</span><span class="n">batch_x</span><span class="p">,</span> <span class="n">batch_y</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">step</span> <span class="o">%</span> <span class="n">display_step</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">pred</span> <span class="o">=</span> <span class="nf">logistic_regression</span><span class="p">(</span><span class="n">batch_x</span><span class="p">)</span>
+        <span class="n">loss</span> <span class="o">=</span> <span class="nf">cross_entropy</span><span class="p">(</span><span class="n">pred</span><span class="p">,</span> <span class="n">batch_y</span><span class="p">)</span>
+        <span class="n">acc</span> <span class="o">=</span> <span class="nf">accuracy</span><span class="p">(</span><span class="n">pred</span><span class="p">,</span> <span class="n">batch_y</span><span class="p">)</span>
+        <span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">step: %i, loss: %f, accuracy: %f</span><span class="sh">"</span> <span class="o">%</span> <span class="p">(</span><span class="n">step</span><span class="p">,</span> <span class="n">loss</span><span class="p">,</span> <span class="n">acc</span><span class="p">))</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<p><strong>训练循环组成部分</strong>：</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">train_data.take(training_steps)</code>：获取指定步数的训练数据。</li>
+  <li><code class="language-plaintext highlighter-rouge">enumerate(..., 1)</code>：生成从1开始的步数计数。</li>
+  <li>定期监控：
+    <ul>
+      <li>每 <code class="language-plaintext highlighter-rouge">display_step</code> 步输出一次训练状态</li>
+      <li>输出内容包括：当前步数、损失值、准确率</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="6-模型评估与可视化"><span class="me-2">6. 模型评估与可视化</span><a href="#6-模型评估与可视化" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+
+<h3 id="61-模型测试"><span class="me-2">6.1 模型测试</span><a href="#61-模型测试" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<div class="language-python highlighter-rouge"><div class="code-header">
+        <span data-label-text="Python"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre><span class="n">pred</span> <span class="o">=</span> <span class="nf">logistic_regression</span><span class="p">(</span><span class="n">x_test</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">Test Accuracy: %f</span><span class="sh">"</span> <span class="o">%</span> <span class="nf">accuracy</span><span class="p">(</span><span class="n">pred</span><span class="p">,</span> <span class="n">y_test</span><span class="p">))</span>
+</pre></td></tr></tbody></table></code></div></div>
+<ul>
+  <li>在完整测试集上评估模型性能</li>
+  <li>使用准确率作为评估指标</li>
+  <li>无需分批处理，直接使用全部测试数据</li>
+</ul>
+
+<h3 id="62-预测结果可视化"><span class="me-2">6.2 预测结果可视化</span><a href="#62-预测结果可视化" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<div class="language-python highlighter-rouge"><div class="code-header">
+        <span data-label-text="Python"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+</pre></td><td class="rouge-code"><pre><span class="kn">import</span> <span class="n">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+
+<span class="n">n_images</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">test_images</span> <span class="o">=</span> <span class="n">x_test</span><span class="p">[:</span><span class="n">n_images</span><span class="p">]</span>
+<span class="n">predictions</span> <span class="o">=</span> <span class="nf">logistic_regression</span><span class="p">(</span><span class="n">test_images</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="n">n_images</span><span class="p">):</span>
+    <span class="n">plt</span><span class="p">.</span><span class="nf">imshow</span><span class="p">(</span><span class="n">np</span><span class="p">.</span><span class="nf">reshape</span><span class="p">(</span><span class="n">test_images</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="p">[</span><span class="mi">28</span><span class="p">,</span> <span class="mi">28</span><span class="p">]),</span> <span class="n">cmap</span><span class="o">=</span><span class="sh">'</span><span class="s">gray</span><span class="sh">'</span><span class="p">)</span>
+    <span class="n">plt</span><span class="p">.</span><span class="nf">show</span><span class="p">()</span>
+    <span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">Model prediction: %i</span><span class="sh">"</span> <span class="o">%</span> <span class="n">np</span><span class="p">.</span><span class="nf">argmax</span><span class="p">(</span><span class="n">predictions</span><span class="p">.</span><span class="nf">numpy</span><span class="p">()[</span><span class="n">i</span><span class="p">]))</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<p><strong>可视化步骤解析</strong>：</p>
+<ol>
+  <li>选择要显示的图片数量：<code class="language-plaintext highlighter-rouge">n_images = 5</code></li>
+  <li>获取测试图片：<code class="language-plaintext highlighter-rouge">test_images = x_test[:n_images]</code></li>
+  <li>进行预测：<code class="language-plaintext highlighter-rouge">predictions = logistic_regression(test_images)</code></li>
+  <li>显示图片和预测结果：
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">plt.imshow()</code> 显示原始图片</li>
+      <li><code class="language-plaintext highlighter-rouge">np.reshape()</code> 将展平的图片重新变为28x28</li>
+      <li><code class="language-plaintext highlighter-rouge">np.argmax()</code> 获取预测的数字类别</li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="7tensorflow核心函数详解"><span class="me-2">7.TensorFlow核心函数详解</span><a href="#7tensorflow核心函数详解" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+
+<h4 id="tfmatmul-函数"><span class="me-2">tf.matmul 函数</span><a href="#tfmatmul-函数" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
+<div class="language-python highlighter-rouge"><div class="code-header">
+        <span data-label-text="Python"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="n">tf</span><span class="p">.</span><span class="nf">matmul</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">W</span><span class="p">)</span>  <span class="c1"># 矩阵乘法运算
+</span></pre></td></tr></tbody></table></code></div></div>
+<ul>
+  <li>功能：实现两个张量的矩阵乘法</li>
+  <li>参数说明：
+    <ul>
+      <li>x：输入数据，shape为[batch_size, 784]</li>
+      <li>W：权重矩阵，shape为[784, 10]</li>
+    </ul>
+  </li>
+  <li>返回值：shape为[batch_size, 10]的矩阵</li>
+  <li>使用场景：在神经网络中进行线性变换</li>
+</ul>
+
+<h4 id="tfnnsoftmax-函数"><span class="me-2">tf.nn.softmax 函数</span><a href="#tfnnsoftmax-函数" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
+<div class="language-python highlighter-rouge"><div class="code-header">
+        <span data-label-text="Python"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="n">tf</span><span class="p">.</span><span class="n">nn</span><span class="p">.</span><span class="nf">softmax</span><span class="p">(</span><span class="n">logits</span><span class="p">)</span>  <span class="c1"># 将logits转换为概率分布
+</span></pre></td></tr></tbody></table></code></div></div>
+<ul>
+  <li>功能：将神经网络输出转换为概率分布</li>
+  <li>计算公式：softmax(x_i) = exp(x_i) / Σ exp(x_j)</li>
+  <li>特点：
+    <ul>
+      <li>输出值范围在[0,1]之间</li>
+      <li>所有输出值的和为1</li>
+      <li>常用于多分类问题</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="tfone_hot-函数"><span class="me-2">tf.one_hot 函数</span><a href="#tfone_hot-函数" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
+<div class="language-python highlighter-rouge"><div class="code-header">
+        <span data-label-text="Python"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="n">tf</span><span class="p">.</span><span class="nf">one_hot</span><span class="p">(</span><span class="n">indices</span><span class="p">,</span> <span class="n">depth</span><span class="o">=</span><span class="n">num_classes</span><span class="p">)</span>
+</pre></td></tr></tbody></table></code></div></div>
+<ul>
+  <li>功能：将标签转换为独热编码</li>
+  <li>参数说明：
+    <ul>
+      <li>indices：原始标签，如[3,1,2]</li>
+      <li>depth：编码维度，这里是10（数字0-9）</li>
+    </ul>
+  </li>
+  <li>示例：
+    <div class="language-python highlighter-rouge"><div class="code-header">
+        <span data-label-text="Python"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre><span class="c1"># 输入：2
+# 输出：[0,0,1,0,0,0,0,0,0,0]
+</span></pre></td></tr></tbody></table></code></div>    </div>
+  </li>
+</ul>
+
+<h4 id="tfclip_by_value-函数"><span class="me-2">tf.clip_by_value 函数</span><a href="#tfclip_by_value-函数" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
+<div class="language-python highlighter-rouge"><div class="code-header">
+        <span data-label-text="Python"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="n">tf</span><span class="p">.</span><span class="nf">clip_by_value</span><span class="p">(</span><span class="n">y_pred</span><span class="p">,</span> <span class="mf">1e-9</span><span class="p">,</span> <span class="mf">1.</span><span class="p">)</span>
+</pre></td></tr></tbody></table></code></div></div>
+<ul>
+  <li>功能：将张量的值裁剪到指定范围</li>
+  <li>参数说明：
+    <ul>
+      <li>tensor：需要裁剪的张量</li>
+      <li>min：最小值（这里是1e-9）</li>
+      <li>max：最大值（这里是1.0）</li>
+    </ul>
+  </li>
+  <li>使用原因：防止计算log(0)导致的数值问题</li>
+</ul>
+
+<h4 id="tfreduce_mean-和-tfreduce_sum-函数"><span class="me-2">tf.reduce_mean 和 tf.reduce_sum 函数</span><a href="#tfreduce_mean-和-tfreduce_sum-函数" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
+<div class="language-python highlighter-rouge"><div class="code-header">
+        <span data-label-text="Python"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre><span class="n">tf</span><span class="p">.</span><span class="nf">reduce_mean</span><span class="p">(</span><span class="nb">input</span><span class="p">)</span>  <span class="c1"># 计算平均值
+</span><span class="n">tf</span><span class="p">.</span><span class="nf">reduce_sum</span><span class="p">(</span><span class="nb">input</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># 按指定轴求和
+</span></pre></td></tr></tbody></table></code></div></div>
+<ul>
+  <li>reduce_mean：
+    <ul>
+      <li>功能：计算张量所有元素的平均值</li>
+      <li>常用于计算损失值</li>
+    </ul>
+  </li>
+  <li>reduce_sum：
+    <ul>
+      <li>功能：计算张量在指定维度上的和</li>
+      <li>axis参数指定求和的维度</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="tfdatadataset"><span class="me-2">tf.data.Dataset</span><a href="#tfdatadataset" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
+<div class="language-python highlighter-rouge"><div class="code-header">
+        <span data-label-text="Python"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="n">train_data</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">data</span><span class="p">.</span><span class="n">Dataset</span><span class="p">.</span><span class="nf">from_tensor_slices</span><span class="p">((</span><span class="n">x_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">))</span>
+</pre></td></tr></tbody></table></code></div></div>
+<ul>
+  <li>功能：创建数据集对象</li>
+  <li>主要方法：
+    <ul>
+      <li>repeat()：重复数据集</li>
+      <li>shuffle(buffer_size)：随机打乱数据</li>
+      <li>batch(batch_size)：设置批次大小</li>
+      <li>prefetch(1)：预加载下一个批次</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="tfvariable"><span class="me-2">tf.Variable</span><a href="#tfvariable" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
+<div class="language-python highlighter-rouge"><div class="code-header">
+        <span data-label-text="Python"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="n">W</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="nc">Variable</span><span class="p">(</span><span class="n">tf</span><span class="p">.</span><span class="nf">ones</span><span class="p">([</span><span class="n">num_features</span><span class="p">,</span> <span class="n">num_classes</span><span class="p">]))</span>
+</pre></td></tr></tbody></table></code></div></div>
+<ul>
+  <li>功能：创建可训练的变量</li>
+  <li>特点：
+    <ul>
+      <li>可以被优化器更新</li>
+      <li>在训练过程中保持状态</li>
+      <li>可以保存和恢复</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="8-实用技巧与注意事项"><span class="me-2">8. 实用技巧与注意事项</span><a href="#8-实用技巧与注意事项" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+
+<h3 id="81-性能优化技巧"><span class="me-2">8.1 性能优化技巧</span><a href="#81-性能优化技巧" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<ol>
+  <li><strong>数据预处理优化</strong>：
+    <ul>
+      <li>使用 <code class="language-plaintext highlighter-rouge">tf.data.Dataset</code> 进行数据管理</li>
+      <li>合理设置 <code class="language-plaintext highlighter-rouge">prefetch</code> 和 <code class="language-plaintext highlighter-rouge">shuffle</code> 参数</li>
+      <li>适当的批次大小选择</li>
+    </ul>
+  </li>
+  <li><strong>训练过程优化</strong>：
+    <ul>
+      <li>定期监控损失和准确率</li>
+      <li>适时调整学习率</li>
+      <li>注意梯度爆炸和消失问题</li>
+    </ul>
+  </li>
+  <li><strong>内存管理</strong>：
+    <ul>
+      <li>避免一次性加载过多数据</li>
+      <li>及时释放不需要的变量</li>
+      <li>使用 <code class="language-plaintext highlighter-rouge">tf.function</code> 优化计算图</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="82-调试建议"><span class="me-2">8.2 调试建议</span><a href="#82-调试建议" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<ol>
+  <li><strong>常见问题排查</strong>：
+    <ul>
+      <li>损失值未下降：检查学习率和梯度计算</li>
+      <li>准确率波动：检查数据预处理和批次大小</li>
+      <li>内存溢出：调整批次大小和数据加载方式</li>
+    </ul>
+  </li>
+  <li><strong>模型监控</strong>：
+    <ul>
+      <li>使用 TensorBoard 可视化训练过程</li>
+      <li>保存关键节点的中间结果</li>
+      <li>记录重要参数的变化趋势</li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="9-扩展与改进方向"><span class="me-2">9. 扩展与改进方向</span><a href="#9-扩展与改进方向" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+
+<ol>
+  <li><strong>模型改进</strong>：
+    <ul>
+      <li>添加正则化层</li>
+      <li>使用更复杂的神经网络结构</li>
+      <li>实现早停机制</li>
+    </ul>
+  </li>
+  <li><strong>功能扩展</strong>：
+    <ul>
+      <li>添加模型保存和加载功能</li>
+      <li>实现交叉验证</li>
+      <li>添加更多评估指标</li>
+    </ul>
+  </li>
+  <li><strong>实践应用</strong>：
+    <ul>
+      <li>应用到其他数据集</li>
+      <li>处理实际业务场景</li>
+      <li>部署模型服务</li>
+    </ul>
+  </li>
+</ol>
+
+  </div>
+
+  <div class="post-tail-wrapper text-muted">
+    <!-- categories -->
+    
+      <div class="post-meta mb-3">
+        <i class="far fa-folder-open fa-fw me-1"></i>
+        
+          <a href="/categories/%E6%95%99%E7%A8%8B/">教程</a>
+      </div>
+    
+
+    <!-- tags -->
+    
+      <div class="post-tags">
+        <i class="fa fa-tags fa-fw me-1"></i>
+        
+          <a
+            href="/tags/tensorflow/"
+            class="post-tag no-text-decoration"
+          >TensorFlow</a>
+        
+          <a
+            href="/tags/python/"
+            class="post-tag no-text-decoration"
+          >Python</a>
+        
+          <a
+            href="/tags/%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/"
+            class="post-tag no-text-decoration"
+          >线性回归</a>
+        
+      </div>
+    
+
+    <div
+      class="
+        post-tail-bottom
+        d-flex justify-content-between align-items-center mt-5 pb-2
+      "
+    >
+      <div class="license-wrapper">
+        
+          
+
+          This post is licensed under 
+        <a href="https://creativecommons.org/licenses/by/4.0/">
+          CC BY 4.0
+        </a>
+         by the author.
+        
+      </div>
+
+      <!-- Post sharing snippet -->
+
+<div class="share-wrapper d-flex align-items-center">
+  <span class="share-label text-muted">Share</span>
+  <span class="share-icons">
+    
+    
+    
+
+    
+
+      
+
+      <a href="https://twitter.com/intent/tweet?text=TensorFlow%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(2.2)%EF%BC%9ABasicModels%E7%AB%A0logistic_regression%E7%AF%87%20-%20WenQi%20Wei&url=http%3A%2F%2Flocalhost%3A4000%2Fposts%2FTensorflow%25E5%25AD%25A6%25E4%25B9%25A0%25E7%25AC%2594%25E8%25AE%25B02_2%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
+        <i class="fa-fw fa-brands fa-square-x-twitter"></i>
+      </a>
+    
+
+      
+
+      <a href="https://www.facebook.com/sharer/sharer.php?title=TensorFlow%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(2.2)%EF%BC%9ABasicModels%E7%AB%A0logistic_regression%E7%AF%87%20-%20WenQi%20Wei&u=http%3A%2F%2Flocalhost%3A4000%2Fposts%2FTensorflow%25E5%25AD%25A6%25E4%25B9%25A0%25E7%25AC%2594%25E8%25AE%25B02_2%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
+        <i class="fa-fw fab fa-facebook-square"></i>
+      </a>
+    
+
+      
+
+      <a href="https://t.me/share/url?url=http%3A%2F%2Flocalhost%3A4000%2Fposts%2FTensorflow%25E5%25AD%25A6%25E4%25B9%25A0%25E7%25AC%2594%25E8%25AE%25B02_2%2F&text=TensorFlow%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(2.2)%EF%BC%9ABasicModels%E7%AB%A0logistic_regression%E7%AF%87%20-%20WenQi%20Wei" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
+        <i class="fa-fw fab fa-telegram"></i>
+      </a>
+    
+
+    <button
+      id="copy-link"
+      aria-label="Copy link"
+      class="btn small"
+      data-bs-toggle="tooltip"
+      data-bs-placement="top"
+      title="Copy link"
+      data-title-succeed="Link copied successfully!"
+    >
+      <i class="fa-fw fas fa-link pe-none fs-6"></i>
+    </button>
+  </span>
+</div>
+
+    </div>
+    <!-- .post-tail-bottom -->
+  </div>
+  <!-- div.post-tail-wrapper -->
+</article>
+
+
+            
+          </main>
+
+          <!-- panel -->
+          <aside aria-label="Panel" id="panel-wrapper" class="col-xl-3 ps-2 text-muted">
+            <div class="access">
+              <!-- Get 5 last posted/updated posts -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <section id="access-lastmod">
+    <h2 class="panel-heading">Recently Updated</h2>
+    <ul class="content list-unstyled ps-0 pb-1 ms-1 mt-2">
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/posts/Tensorflow%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02_2/">TensorFlow学习笔记(2.2)：BasicModels章logistic_regression篇</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/posts/Tensorflow%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01/">TensorFlow学习笔记(1)：Introduction章helloworld与basic_operations篇</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/posts/Tensorflow%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02_1/">TensorFlow学习笔记(2.1)：BasicModels章linear_regression篇</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/posts/Tensorflow%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B00/">TensorFlow学习笔记(0)：环境配置与版本兼容性解析</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/posts/Deepke%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E5%A4%8D%E7%8E%B02/">DeepKe开源框架实战2：从环境配置到项目运行的踩坑之路</a>
+        </li>
+      
+    </ul>
+  </section>
+  <!-- #access-lastmod -->
+
+
+              <!-- The trending tags list -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+
+
+  <section>
+    <h2 class="panel-heading">Trending Tags</h2>
+    <div class="d-flex flex-wrap mt-3 mb-1 me-3">
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/python/">Python</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/tensorflow/">TensorFlow</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/deepke/">DeepKe</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/nlp/">NLP</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1/">知识图谱</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/github/">github</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/pytorch/">Pytorch</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/">线性回归</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/codekgc/">CodeKGC</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/css3/">CSS3</a>
+      
+    </div>
+  </section>
+
+
+            </div>
+
+            
+              
+              
+
+
+
+
+
+
+  <div class="toc-border-cover z-3"></div>
+  <section id="toc-wrapper" class="invisible position-sticky ps-0 pe-4 pb-4">
+    <h2 class="panel-heading ps-3 pb-2 mb-0">Contents</h2>
+    <nav id="toc"></nav>
+  </section>
+
+
+            
+          </aside>
+        </div>
+
+        <div class="row">
+          <!-- tail -->
+          <div id="tail-wrapper" class="col-12 col-lg-11 col-xl-9 px-md-4">
+            
+              
+              <!-- Recommend the other 3 posts according to the tags and categories of the current post. -->
+
+<!-- The total size of related posts -->
+
+
+<!-- An random integer that bigger than 0 -->
+
+
+<!-- Equals to TAG_SCORE / {max_categories_hierarchy} -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  <aside id="related-posts" aria-labelledby="related-label">
+    <h3 class="mb-4" id="related-label">Further Reading</h3>
+    <nav class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 mb-4">
+      
+        <article class="col">
+          <a href="/posts/Tensorflow%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02_1/" class="post-preview card h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1743867480"
+  data-df="ll"
+  
+>
+  Apr  5, 2025
+</time>
+
+              <h4 class="pt-0 my-2">TensorFlow学习笔记(2.1)：BasicModels章linear_regression篇</h4>
+              <div class="text-muted">
+                <p>本文是 TensorFlow 学习笔记系列的实操第二篇，主要介绍 TensorFlow 的线性回归。通过实际代码示例，帮助初学者快速入门 TensorFlow 2.x。
+
+
+1. 线性回归简介
+线性回归是机器学习中最基础的算法之一，用于预测连续型数值。本教程将使用 TensorFlow 2.x 实现一个简单的线性回归模型。
+
+2. 环境准备
+1
+2
+3
+4
+from __future__ i...</p>
+              </div>
+            </div>
+          </a>
+        </article>
+      
+        <article class="col">
+          <a href="/posts/Tensorflow%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01/" class="post-preview card h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1743866400"
+  data-df="ll"
+  
+>
+  Apr  5, 2025
+</time>
+
+              <h4 class="pt-0 my-2">TensorFlow学习笔记(1)：Introduction章helloworld与basic_operations篇</h4>
+              <div class="text-muted">
+                <p>本文是 TensorFlow 学习笔记系列的实操第一篇，主要介绍 TensorFlow 的基础概念和张量运算。通过实际代码示例，帮助初学者快速入门 TensorFlow 2.x。
+
+
+一、helloworld
+1. 简介
+这是一个最基础的 TensorFlow 入门示例，通过创建和操作简单的张量来帮助初学者理解 TensorFlow 的基本概念。
+
+2. 环境准备
+TensorFlow 2....</p>
+              </div>
+            </div>
+          </a>
+        </article>
+      
+        <article class="col">
+          <a href="/posts/Tensorflow%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B00/" class="post-preview card h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1743680520"
+  data-df="ll"
+  
+>
+  Apr  3, 2025
+</time>
+
+              <h4 class="pt-0 my-2">TensorFlow学习笔记(0)：环境配置与版本兼容性解析</h4>
+              <div class="text-muted">
+                <p>本系列博客将记录我在学习 TensorFlow 过程中的经验和心得。从环境配置到实际应用，希望能为其他学习者提供有价值的参考。
+
+
+一、项目介绍
+
+在开始 TensorFlow 学习之旅之前，我选择了一个非常优质的学习资源：TensorFlow Examples 项目。这个项目提供了从基础到进阶的多个实例，包括：
+
+
+  线性回归
+  逻辑回归
+  多层感知器
+  卷积神经网络
+  循环神经...</p>
+              </div>
+            </div>
+          </a>
+        </article>
+      
+    </nav>
+  </aside>
+  <!-- #related-posts -->
+
+
+            
+              
+              <!-- Navigation buttons at the bottom of the post. -->
+
+<nav class="post-navigation d-flex justify-content-between" aria-label="Post Navigation">
+  
+  
+
+  
+    <a
+      href="/posts/Tensorflow%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01/"
+      class="btn btn-outline-primary"
+      aria-label="Older"
+    >
+      <p>TensorFlow学习笔记(1)：Introduction章helloworld与basic_operations篇</p>
+    </a>
+  
+
+  
+    <a
+      href="/posts/Tensorflow%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02_1/"
+      class="btn btn-outline-primary"
+      aria-label="Newer"
+    >
+      <p>TensorFlow学习笔记(2.1)：BasicModels章linear_regression篇</p>
+    </a>
+  
+</nav>
+
+            
+
+            <!-- The Footer -->
+
+<footer
+  aria-label="Site Info"
+  class="
+    d-flex flex-column justify-content-center text-muted
+    flex-lg-row justify-content-lg-between align-items-lg-center pb-lg-3
+  "
+>
+  <p>©
+    <time>2025</time>
+
+    
+      <a href="https://twitter.com/way_adventurer">WenQi Wei</a>.
+    
+
+    
+      <span
+        data-bs-toggle="tooltip"
+        data-bs-placement="top"
+        title="Except where otherwise noted, the blog posts on this site are licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0) License by the author."
+      >Some rights reserved.</span>
+    
+  </p>
+
+  <!-- 站点统计 -->
+  <p> 
+    <!-- 不蒜子站点统计，放在页脚处 (footer.html 中插入) -->
+<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<i class="fa fa-user" aria-hidden="true"></i> <span id="busuanzi_value_site_uv"></span> |
+<i class="fa fa-eye" aria-hidden="true"></i> <span id="busuanzi_value_site_pv"></span>
+  </p>
+
+  <p>Using the <a
+        data-bs-toggle="tooltip"
+        data-bs-placement="top"
+        title="v7.2.4"
+        href="https://github.com/cotes2020/jekyll-theme-chirpy"
+        target="_blank"
+        rel="noopener"
+      >Chirpy</a> theme for <a href="https://jekyllrb.com" target="_blank" rel="noopener">Jekyll</a>.
+  </p>
+</footer>
+
+          </div>
+        </div>
+
+        <!-- The Search results -->
+
+<div id="search-result-wrapper" class="d-flex justify-content-center d-none">
+  <div class="col-11 content">
+    <div id="search-hints">
+      <!-- The trending tags list -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+
+
+  <section>
+    <h2 class="panel-heading">Trending Tags</h2>
+    <div class="d-flex flex-wrap mt-3 mb-1 me-3">
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/python/">Python</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/tensorflow/">TensorFlow</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/deepke/">DeepKe</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/nlp/">NLP</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1/">知识图谱</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/github/">github</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/pytorch/">Pytorch</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/">线性回归</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/codekgc/">CodeKGC</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/css3/">CSS3</a>
+      
+    </div>
+  </section>
+
+
+    </div>
+    <div id="search-results" class="d-flex flex-wrap justify-content-center text-muted mt-3"></div>
+  </div>
+</div>
+
+      </div>
+
+      <aside aria-label="Scroll to Top">
+        <button id="back-to-top" type="button" class="btn btn-lg btn-box-shadow">
+          <i class="fas fa-angle-up"></i>
+        </button>
+      </aside>
+    </div>
+
+    <div id="mask" class="d-none position-fixed w-100 h-100 z-1"></div>
+
+    
+      <aside
+  id="notification"
+  class="toast"
+  role="alert"
+  aria-live="assertive"
+  aria-atomic="true"
+  data-bs-animation="true"
+  data-bs-autohide="false"
+>
+  <div class="toast-header">
+    <button
+      type="button"
+      class="btn-close ms-auto"
+      data-bs-dismiss="toast"
+      aria-label="Close"
+    ></button>
+  </div>
+  <div class="toast-body text-center pt-0">
+    <p class="px-2 mb-3">A new version of content is available.</p>
+    <button type="button" class="btn btn-primary" aria-label="Update">
+      Update
+    </button>
+  </div>
+</aside>
+
+    
+
+    <!-- Embedded scripts -->
+
+    
+      
+      <!-- The comments switcher -->
+
+  
+  <!-- https://giscus.app/ -->
+<script>
+  (function () {
+    const themeMapper = Theme.getThemeMapper('light', 'dark_dimmed');
+    const initTheme = themeMapper[Theme.visualState];
+
+    let lang = 'zh-CN';if (lang.length > 2 && !lang.startsWith('zh')) {
+      lang = lang.slice(0, 2);
+    }
+
+    let giscusAttributes = {
+      src: 'https://giscus.app/client.js',
+      'data-repo': 'way-adventurer/way-adventurer.github.io',
+      'data-repo-id': 'R_kgDOOKaeKg',
+      'data-category': 'Announcements',
+      'data-category-id': 'DIC_kwDOOKaeKs4CoLO7',
+      'data-mapping': 'pathname',
+      'data-strict' : '0',
+      'data-reactions-enabled': '1',
+      'data-emit-metadata': '0',
+      'data-theme': initTheme,
+      'data-input-position': 'bottom',
+      'data-lang': lang,
+      'data-loading': 'lazy',
+      crossorigin: 'anonymous',
+      async: ''
+    };
+
+    let giscusNode = document.createElement('script');
+    Object.entries(giscusAttributes).forEach(([key, value]) =>
+      giscusNode.setAttribute(key, value)
+    );
+
+    const $footer = document.querySelector('footer');
+    $footer.insertAdjacentElement("beforebegin", giscusNode);
+
+    addEventListener('message', (event) => {
+      if (event.source === window && event.data && event.data.id === Theme.ID) {
+        const newTheme = themeMapper[Theme.visualState];
+
+        const message = {
+          setConfig: {
+            theme: newTheme
+          }
+        };
+
+        const giscus =
+          document.getElementsByClassName('giscus-frame')[0].contentWindow;
+        giscus.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+    });
+  })();
+</script>
+
+
+
+    
+
+    <!--
+  Jekyll Simple Search loader
+  See: <https://github.com/christian-fei/Simple-Jekyll-Search>
+-->
+
+
+
+
+
+<script>
+  
+  document.addEventListener('DOMContentLoaded', () => {
+    SimpleJekyllSearch({
+      searchInput: document.getElementById('search-input'),
+      resultsContainer: document.getElementById('search-results'),
+      json: '/assets/js/data/search.json',
+      searchResultTemplate: '  <article class="px-1 px-sm-2 px-lg-4 px-xl-0">    <header>      <h2><a href="{url}">{title}</a></h2>      <div class="post-meta d-flex flex-column flex-sm-row text-muted mt-1 mb-1">        {categories}        {tags}      </div>    </header>    <p>{snippet}</p>  </article>',
+      noResultsText: '<p class="mt-5">Oops! No results found.</p>',
+      templateMiddleware: function(prop, value, template) {
+        if (prop === 'categories') {
+          if (value === '') {
+            return `${value}`;
+          } else {
+            return `<div class="me-sm-4"><i class="far fa-folder fa-fw"></i>${value}</div>`;
+          }
+        }
+
+        if (prop === 'tags') {
+          if (value === '') {
+            return `${value}`;
+          } else {
+            return `<div><i class="fa fa-tag fa-fw"></i>${value}</div>`;
+          }
+        }
+      }
+    });
+  });
+</script>
+
+  </body>
+</html>
+

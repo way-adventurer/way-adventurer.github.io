@@ -4,7 +4,7 @@
     "url": "/posts/Tensorflow%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02_1/",
     "categories": "教程",
     "tags": "TensorFlow, Python, 线性回归",
-    "date": "2025-04-05 14:30:00 +0800",
+    "date": "2025-04-05 23:38:00 +0800",
     "content": "本文是 TensorFlow 学习笔记系列的实操第二篇，主要介绍 TensorFlow 的线性回归。通过实际代码示例，帮助初学者快速入门 TensorFlow 2.x。
 
 
@@ -15,11 +15,29 @@
 from __future__ import ab..."
   },
   {
+    "title": "TensorFlow学习笔记(2.2)：BasicModels章logistic_regression篇",
+    "url": "/posts/Tensorflow%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02_2/",
+    "categories": "教程",
+    "tags": "TensorFlow, Python, 线性回归",
+    "date": "2025-04-05 23:38:00 +0800",
+    "content": "本文是 TensorFlow 学习笔记系列的实操第二篇，将详细讲解如何使用 TensorFlow 2.x 实现逻辑回归模型来识别手写数字。我们将使用 MNIST 数据集，这是机器学习领域最基础和著名的数据集之一。
+
+
+2. MNIST数据集介绍
+
+MNIST数据集包含：
+
+  训练集：60,000张图片
+  测试集：10,000张图片
+  图片尺寸：28x28像素
+  数据特征：灰度图像，像..."
+  },
+  {
     "title": "TensorFlow学习笔记(1)：Introduction章helloworld与basic_operations篇",
     "url": "/posts/Tensorflow%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01/",
     "categories": "教程",
     "tags": "TensorFlow, Python, 张量计算",
-    "date": "2025-04-05 14:30:00 +0800",
+    "date": "2025-04-05 23:20:00 +0800",
     "content": "本文是 TensorFlow 学习笔记系列的实操第一篇，主要介绍 TensorFlow 的基础概念和张量运算。通过实际代码示例，帮助初学者快速入门 TensorFlow 2.x。
 
 
